@@ -1,15 +1,9 @@
-import NavLink from "../../components/NavLink/NavLink";
+import NavBar from "../../components/NavBar/NavBar";
 
 const HomePage = () => {
-  const navLinks = [
-    { title: "Home", path: "/" },
-  ];
-
   return (
     <div>
-      {navLinks.map(({ title }) => (
-        <NavLink key={title} title={title} />
-      ))}
+      <NavBar />
     </div>
   );
 };
