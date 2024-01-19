@@ -1,0 +1,7 @@
+.navItems {
+  cursor: pointer;
+  font-weight: 600;
+  color: var(--textLight);
+  user-select: none;
+  font-size: 1rem;
+}
