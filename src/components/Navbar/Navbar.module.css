@@ -1,9 +1,31 @@
+.navbarDiv {
+  position: relative;
+  top: 0;
+  z-index: 10;
+}
+
 .navbar {
   padding: 1rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: var(--navDark);
+}
+
+.hamburgerDiv {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  z-index: 11;
+  display: none;
+}
+
+.hamburger {
+  height: 2rem;
+  top: 1.5rem;
+  right: 1.5rem;
+  z-index: 11;
+  user-select: contain;
 }
 
 .navLinks {
@@ -30,10 +52,16 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    transform: translateY(-100%);
+    transition: all 0.5s ease;
+  }
+
+  .hamburgerDiv {
+    display: block;
   }
 
   .logoDiv {
-    margin-top: 0.5rem;
+    margin-top: 1rem;
   }
 
   .navLinks {
@@ -62,5 +90,13 @@
   .socialsDiv {
     display: flex;
     margin-bottom: 1rem;
+  }
+
+  .scrollUp {
+    transform: translateY(-100%);
+  }
+
+  .scrollDown {
+    transform: translateY(0);
   }
 }
