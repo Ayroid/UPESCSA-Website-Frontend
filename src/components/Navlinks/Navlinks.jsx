@@ -12,8 +12,8 @@ const Navlinks = ({ title, action, separatePage, size }) => {
       {separatePage ? (
         <Link to={action}>{title}</Link>
       ) : (
-        <a href={action}>{title}</a>
-        // <Link to={`/${action}`}>{title}</Link>
+        // <a href={action}>{title}</a>
+        <Link to={`/${action}`}>{title}</Link>
       )}
     </li>
   );
