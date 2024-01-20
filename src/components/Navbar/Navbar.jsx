@@ -2,9 +2,11 @@ import styles from "./Navbar.module.css";
 
 // COMPONENTS
 import Navlinks from "../Navlinks/Navlinks";
+import Socials from "../Socials/Socials";
 
 // CSS STYLES
-const { navbar, logoDiv, navLinks, verticalLine } = styles;
+const { navbar, logoDiv, navLinks, verticalLine, mobileLine, socialsDiv } =
+  styles;
 
 const Navbar = () => {
   // DATA
@@ -52,6 +54,7 @@ const Navbar = () => {
         />
       </div>
       <ul className={navLinks}>
+        <hr className={mobileLine} />
         {navlinks.map((navlink) => (
           <Navlinks
             key={navlink.title}
@@ -62,7 +65,11 @@ const Navbar = () => {
         ))}
         <hr className={verticalLine} />
         <Navlinks title={"Evortal"} action={"/evortal"} separatePage={true} />
+        <hr className={mobileLine} />
       </ul>
+      <div className={socialsDiv}>
+        <Socials orientation={"row"} />
+      </div>
     </div>
   );
 };
