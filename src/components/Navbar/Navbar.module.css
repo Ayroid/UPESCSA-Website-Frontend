@@ -1,0 +1,103 @@
+.navbarDiv {
+  position: relative;
+  top: 0;
+  z-index: 10;
+}
+
+.navbar {
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--navDark);
+}
+
+.hamburgerDiv {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  z-index: 11;
+  display: none;
+}
+
+.hamburger {
+  height: 2rem;
+  top: 1.5rem;
+  right: 1.5rem;
+  z-index: 11;
+  user-select: contain;
+}
+
+.navLinks {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.verticalLine {
+  height: 2rem;
+  width: 1px;
+  background-color: var(--textLight);
+  margin: 0 1rem;
+  border: none;
+}
+
+.mobileLine,
+.socialsDiv {
+  display: none;
+}
+
+@media screen and (max-width: 850px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(-100%);
+  }
+
+  .hamburgerDiv {
+    display: block;
+  }
+
+  .logoDiv {
+    margin-top: 1rem;
+  }
+
+  .navLinks {
+    flex-direction: column;
+    padding: 0;
+    gap: 0.75rem;
+  }
+
+  .verticalLine {
+    height: 1px;
+    border: none;
+    width: max(40dvw, 200px);
+    background-color: var(--scrollBar);
+    margin: 0.45rem 0;
+  }
+
+  .mobileLine {
+    display: block;
+    height: 1px;
+    border: none;
+    width: max(40dvw, 200px);
+    background-color: var(--scrollBar);
+    margin: 0.45rem 0;
+  }
+
+  .socialsDiv {
+    display: flex;
+    margin-bottom: 1rem;
+  }
+
+  .scrollUp {
+    transform: translateY(-100%);
+    transition: all 0.5s ease;
+  }
+
+  .scrollDown {
+    transform: translateY(0);
+    transition: all 0.5s ease;
+  }
+}

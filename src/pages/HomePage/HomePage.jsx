@@ -1,9 +1,13 @@
-import NavBar from "../../components/NavBar/NavBar";
+import styles from "./HomePage.module.css";
+
+import Navbar from "../../components/Navbar/Navbar";
+
+const { navbarContainer } = styles;
 
 const HomePage = () => {
   return (
-    <div>
-      <NavBar />
+    <div className={navbarContainer}>
+      <Navbar />
     </div>
   );
 };
