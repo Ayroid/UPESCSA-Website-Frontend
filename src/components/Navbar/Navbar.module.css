@@ -1,0 +1,19 @@
+.navbar {
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--navDark);
+}
+
+.navLinks {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.verticalLine {
+  height: 2rem;
+  background-color: var(--textLight);
+  margin: 0 1rem;
+}

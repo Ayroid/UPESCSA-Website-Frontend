@@ -1,10 +1,10 @@
-import styles from "./HomePage.module.css";
+import styles from "./Csr.module.css";
 
 import Navbar from "../../components/Navbar/Navbar.jsx";
 
 const { navbarContainer } = styles;
 
-const HomePage = () => {
+const Csr = () => {
   return (
     <div className={navbarContainer}>
       <Navbar />
@@ -12,4 +12,4 @@ const HomePage = () => {
   );
 };
 
-export default HomePage;
+export default Csr;
