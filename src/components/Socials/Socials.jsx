@@ -2,7 +2,7 @@ import styles from "./Socials.module.css";
 import PropTypes from "prop-types";
 
 // CSS STYLES
-const mainDiv = [styles.mainDiv].join("");
+const { socialsContainer } = styles;
 
 // LINKS & IMAGES
 const socials = [
@@ -12,14 +12,14 @@ const socials = [
     alt: "instagram",
   },
   {
-    link: "https://www.youtube.com/channel/UCOQTG59VV6-1czSs57XAFrA",
-    image: "/icons/youtube.png",
-    alt: "youtube",
-  },
-  {
     link: "https://www.linkedin.com/company/upescsa/",
     image: "/icons/linkedin.png",
     alt: "linkedin",
+  },
+  {
+    link: "https://www.youtube.com/channel/UCOQTG59VV6-1czSs57XAFrA",
+    image: "/icons/youtube.png",
+    alt: "youtube",
   },
   {
     link: "https://www.facebook.com/upescsa/",
@@ -35,7 +35,10 @@ const socials = [
 
 const Socials = ({ orientation, closeNavbar, gap }) => {
   return (
-    <div className={mainDiv} style={{ flexDirection: orientation, gap }}>
+    <div
+      className={socialsContainer}
+      style={{ flexDirection: orientation, gap }}
+    >
       {socials.map((item) => (
         <a
           key={item.alt}

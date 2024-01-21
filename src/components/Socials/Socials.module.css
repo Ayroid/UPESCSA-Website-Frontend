@@ -1,4 +1,4 @@
-.mainDiv {
+.socialsContainer {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -7,7 +7,7 @@
   gap: 0.5rem;
 }
 
-.mainDiv img {
+.socialsContainer img {
   width: 1.5rem;
   height: 1.5rem;
   filter: invert(1);

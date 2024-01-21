@@ -7,7 +7,7 @@ import Socials from "../Socials/Socials";
 
 // CSS STYLES
 const {
-  navbarDiv,
+  navbarContainer,
   navbar,
   hamburgerDiv,
   hamburger,
@@ -79,7 +79,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className={navbarDiv}>
+    <div className={navbarContainer}>
       <div className={hamburgerDiv} onClick={displayNavBar}>
         {open ? (
           <img
