@@ -1,3 +1,3 @@
 .logo {
-  height: max(8rem, 10dvw);
+  height: min(10rem, 75dvw);
 }

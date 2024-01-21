@@ -1,0 +1,10 @@
+.contactFieldsContainer {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.contactFieldLogo {
+  filter: invert(1);
+  width: 1.5rem;
+}
