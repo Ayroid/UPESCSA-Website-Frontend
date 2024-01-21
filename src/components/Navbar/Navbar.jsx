@@ -102,6 +102,7 @@ const Navbar = () => {
             size={"1.4rem"}
             action={"/"}
             separatePage={false}
+            closeNavbar={displayNavBar}
           />
         </div>
         <ul className={navLinks}>
@@ -112,10 +113,16 @@ const Navbar = () => {
               title={navlink.title}
               action={navlink.action}
               separatePage={navlink.separatePage}
+              closeNavbar={displayNavBar}
             />
           ))}
           <hr className={verticalLine} />
-          <Navlinks title={"Evortal"} action={"/evortal"} separatePage={true} />
+          <Navlinks
+            title={"Evortal"}
+            action={"/evortal"}
+            separatePage={true}
+            closeNavbar={displayNavBar}
+          />
           <hr className={mobileLine} />
         </ul>
         <div className={socialsDiv}>
