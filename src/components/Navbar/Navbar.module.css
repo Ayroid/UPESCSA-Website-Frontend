@@ -1,6 +1,4 @@
-.navbarDiv {
-  position: relative;
-  top: 0;
+.navbarContainer {
   z-index: 10;
 }
 
