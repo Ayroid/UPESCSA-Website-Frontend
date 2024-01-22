@@ -3,6 +3,9 @@ import styles from "./HomePage.module.css";
 // CSS STYLES
 const {
   homePage,
+  bgCircles,
+  outerCircle,
+  innerCircle,
   pageContent,
   verticalLine,
   pageHeading,
@@ -13,6 +16,11 @@ const {
 const HomePage = () => {
   return (
     <div className={homePage}>
+      <div className={bgCircles}>
+        <div className={outerCircle}>
+          <div className={innerCircle}></div>
+        </div>
+      </div>
       <div className={pageContent}>
         <div className={pageHeading}>UPES</div>
         <hr className={verticalLine} id={verticalLine1} />

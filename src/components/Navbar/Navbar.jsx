@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import styles from "./Navbar.module.css";
 
 // COMPONENTS
@@ -23,6 +23,8 @@ const {
 const Navbar = () => {
   // STATES
   const [open, setOpen] = useState(false);
+  const [scrollPosition, setScrollPosition] = useState(0);
+  const [screenWidth, setScreenWidth] = useState(window.innerWidth);
 
   // DATA
   const navlinks = [
@@ -65,11 +67,39 @@ const Navbar = () => {
 
   // FUNCTIONS
 
+  let navbarStyle = {};
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollPosition(window.scrollY);
+    };
+
+    const handleResize = () => {
+      setScreenWidth(window.innerWidth);
+    };
+
+    window.addEventListener("resize", handleResize);
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  if (screenWidth < 950) {
+    navbarStyle = {
+      backgroundColor: "var(--navDark)",
+    };
+  } else {
+    navbarStyle = {
+      backgroundColor: scrollPosition > 50 ? "var(--navDark)" : "transparent",
+    };
+  }
+
   const displayNavBar = () => {
     setOpen((prevOpen) => {
       const newOpen = !prevOpen;
       const navbar = document.getElementById("navbar");
-      if (screen.width > 850) {
+      if (screen.width > 950) {
         return;
       }
       if (newOpen) {
@@ -84,7 +114,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className={navbarContainer}>
+    <div className={navbarContainer} style={navbarStyle}>
       <div className={hamburgerDiv} onClick={displayNavBar}>
         {open ? (
           <img
