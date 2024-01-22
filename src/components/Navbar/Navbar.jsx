@@ -37,6 +37,11 @@ const Navbar = () => {
       separatePage: false,
     },
     {
+      title: "Alliance",
+      action: "#alliance",
+      separatePage: false,
+    },
+    {
       title: "Team",
       action: "#team",
       separatePage: false,
