@@ -27,7 +27,7 @@
   justify-content: center;
   align-items: center;
   z-index: 2;
-  animation: outerCircle 2s ease-in-out infinite alternate;
+  animation: outerCircle 1.5s ease-in-out infinite alternate;
 }
 
 @keyframes outerCircle {
@@ -80,14 +80,14 @@
   margin-top: -7rem;
   border-top-right-radius: 100px;
   border-bottom-left-radius: 100px;
-  animation: verticalLine1 2s ease-in-out infinite alternate;
+  animation: verticalLine1 1.5s ease-in-out infinite alternate;
 }
 
 #verticalLine2 {
   margin-top: 12rem;
   border-top-right-radius: 100px;
   border-bottom-left-radius: 100px;
-  animation: verticalLine2 2s ease-in-out infinite alternate;
+  animation: verticalLine2 1.5s ease-in-out infinite alternate;
 }
 
 @keyframes verticalLine1 {
@@ -162,7 +162,7 @@
 .arrowDiv img {
   height: 1.5rem;
   width: 1.5rem;
-  animation: arrow 2s ease-in-out infinite alternate;
+  animation: arrow 1.5s ease-in-out infinite alternate;
 }
 
 @keyframes arrow {
