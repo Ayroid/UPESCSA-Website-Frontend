@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import styles from "./Navbar.module.css";
 
 // COMPONENTS
+// import Logo from "../Logo/Logo";
 import Navlinks from "../Navlinks/Navlinks";
 import Socials from "../Socials/Socials";
 
@@ -139,6 +140,7 @@ const Navbar = () => {
             separatePage={false}
             closeNavbar={displayNavBar}
           />
+          {/* <Logo height="4rem" /> */}
         </div>
         <ul className={navLinks}>
           <hr className={mobileLine} />
