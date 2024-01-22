@@ -1,1 +1,63 @@
+.homePage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100dvh - 6rem);
+  box-sizing: border-box;
+  width: 100%;
+}
 
+.pageContent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pageHeading {
+  text-align: center;
+  color: var(--textLight);
+  font-weight: 500;
+  font-family: "Rajdhani", sans-serif;
+  font-size: 18rem;
+}
+
+.verticalLine {
+  height: 18rem;
+  border: none;
+  width: 1rem;
+  background-color: var(--textLight);
+  margin: 0.6rem;
+  border-radius: 4px;
+}
+
+#verticalLine1 {
+  margin-top: -7rem;
+  border-top-right-radius: 100px;
+  border-bottom-left-radius: 100px;
+}
+
+#verticalLine2 {
+  margin-top: 12rem;
+  border-top-right-radius: 100px;
+  border-bottom-left-radius: 100px;
+}
+
+@media screen and (max-width: 1200px) {
+  .pageContent {
+    scale: 0.75;
+  }
+}
+
+@media screen and (max-width: 875px) {
+  .pageContent {
+    scale: 0.5;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .pageContent {
+    scale: 0.3;
+    margin-top: -10dvh;
+  }
+}

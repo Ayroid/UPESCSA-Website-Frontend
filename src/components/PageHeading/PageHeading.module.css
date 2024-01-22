@@ -1,0 +1,7 @@
+.pageHeading {
+  text-align: center;
+  color: var(--textLight);
+  font-weight: 500;
+  font-family: "Rajdhani", sans-serif;
+  font-size: max(100px, 10dvw);
+}
