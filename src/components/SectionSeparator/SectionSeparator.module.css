@@ -1,0 +1,27 @@
+.mainDiv {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  margin-block: 2.5rem;
+}
+
+.innerDiv {
+  width: max(30dvw, 20rem);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mainDiv hr {
+  width: max(10dvw, 5rem);
+  border: none;
+  height: 2px;
+  background-color: var(--textLight);
+}
+
+.mainDiv img {
+  font-size: 1.1rem;
+  height: 1.5rem;
+}

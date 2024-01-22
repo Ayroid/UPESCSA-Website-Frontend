@@ -1,33 +1,12 @@
-import styles from "./HomePage.module.css";
-
-// CSS STYLES
-const {
-  homePage,
-  bgCircles,
-  outerCircle,
-  innerCircle,
-  pageContent,
-  verticalLine,
-  pageHeading,
-  verticalLine1,
-  verticalLine2,
-} = styles;
+import About from "../../components/About/About";
+import Home from "../../components/Home/Home";
 
 const HomePage = () => {
   return (
-    <div className={homePage}>
-      <div className={bgCircles}>
-        <div className={outerCircle}>
-          <div className={innerCircle}></div>
-        </div>
-      </div>
-      <div className={pageContent}>
-        <div className={pageHeading}>UPES</div>
-        <hr className={verticalLine} id={verticalLine1} />
-        <hr className={verticalLine} id={verticalLine2} />
-        <div className={pageHeading}>CSA</div>
-      </div>
-    </div>
+    <>
+      <Home />
+      <About />
+    </>
   );
 };
 

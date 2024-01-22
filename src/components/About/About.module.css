@@ -1,0 +1,38 @@
+.aboutContainer {
+  box-sizing: border-box;
+  padding: 10rem 0;
+  font-size: 1.1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: normal;
+}
+
+.aboutText {
+  text-align: center;
+  line-height: 1.25rem;
+  margin-inline: 20dvw;
+}
+
+.statsDiv {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-top: 5rem;
+  margin-inline: 20dvw;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+  .aboutContainer {
+    padding: 5rem 0;
+  }
+
+  .aboutText {
+    margin-inline: 10dvw;
+  }
+
+  .statsDiv {
+    margin-inline: 10dvw;
+  }
+}

@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import styles from "./Navbar.module.css";
 
 // COMPONENTS
+// import Logo from "../Logo/Logo";
 import Navlinks from "../Navlinks/Navlinks";
 import Socials from "../Socials/Socials";
 
@@ -96,12 +97,12 @@ const Navbar = () => {
   }
 
   const displayNavBar = () => {
+    if (screen.width > 950) {
+      return;
+    }
     setOpen((prevOpen) => {
       const newOpen = !prevOpen;
       const navbar = document.getElementById("navbar");
-      if (screen.width > 950) {
-        return;
-      }
       if (newOpen) {
         navbar.classList.remove(scrollUp);
         navbar.classList.add(scrollDown);
@@ -133,12 +134,13 @@ const Navbar = () => {
       <div className={navbar} id="navbar">
         <div className={logoDiv}>
           <Navlinks
-            title={"UPESCSA"}
+            title={"UPES CSA"}
             size={"1.4rem"}
             action={"/"}
             separatePage={false}
             closeNavbar={displayNavBar}
           />
+          {/* <Logo height="4rem" /> */}
         </div>
         <ul className={navLinks}>
           <hr className={mobileLine} />
