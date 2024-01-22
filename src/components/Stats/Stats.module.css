@@ -1,0 +1,16 @@
+.statsContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+}
+
+.statsNumber {
+  font-size: 2.5rem;
+  margin-bottom: -1rem;
+}
+
+.statsText {
+  text-align: center;
+}

@@ -29,7 +29,9 @@ const Home = () => {
         <Socials orientation={"column"} />
       </div>
       <div className={arrowDiv}>
-        <img src="/icons/triangleArrow.png" alt="arrow" />
+        <a href="#about">
+          <img src="/icons/triangleArrow.png" alt="arrow" />
+        </a>
       </div>
       <div className={pageContent}>
         <div className={pageHeading}>UPES</div>

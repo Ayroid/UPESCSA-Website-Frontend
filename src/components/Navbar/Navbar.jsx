@@ -97,12 +97,12 @@ const Navbar = () => {
   }
 
   const displayNavBar = () => {
+    if (screen.width > 950) {
+      return;
+    }
     setOpen((prevOpen) => {
       const newOpen = !prevOpen;
       const navbar = document.getElementById("navbar");
-      if (screen.width > 950) {
-        return;
-      }
       if (newOpen) {
         navbar.classList.remove(scrollUp);
         navbar.classList.add(scrollDown);
