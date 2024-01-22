@@ -110,11 +110,11 @@
 
 @media screen and (max-width: 1300px) {
   .pageContent {
-    scale: 0.75;
+    scale: 0.8;
   }
 }
 
-@media screen and (max-width: 1050px) {
+@media screen and (max-width: 1100px) {
   .pageContent {
     scale: 0.6;
   }

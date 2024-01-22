@@ -40,7 +40,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 45dvw;
+  width: 50dvw;
 }
 
 .contactField {
@@ -82,6 +82,7 @@
   }
 
   .socialsDiv {
+    text-align: center;
     order: 1;
   }
 }
