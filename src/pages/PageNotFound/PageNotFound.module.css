@@ -1,36 +1,25 @@
 @import url("https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap");
 .pageNotFound {
+  height: 100%;
+  min-height: 50dvh;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 5rem 2rem;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  text-align: center;
   background-color: var(--bgLight);
   color: var(--textDark);
-  font-family: "Rajdhani", sans-serif;
-  height: 70dvh;
-  width: 100%;
-}
-.heading {
-  font-size: min(15rem, 45dvw);
   font-weight: 500;
-  letter-spacing: 2.5px;
+  font-family: "Rajdhani", sans-serif;
+}
+
+.heading {
+  font-size: max(100px, 10dvw);
+  margin-bottom: -2.5dvw;
 }
 .subHeading {
-  margin-top: max(-4rem, -8dvw);
-  font-size: min(3rem, 12dvw);
-  font-weight: 500;
-  letter-spacing: 0.48px;
-}
-.homeButton {
-  margin-top: min(2rem, 5vw);
-  padding: 0.5rem 4rem;
-  border-radius: 5px;
-  font-family: "Maven Pro", sans-serif;
-  background-color: var(--buttonDark);
-  color: var(--buttonLight);
-  font-size: min(1.5rem, 5vw);
-  font-weight: 500;
-  letter-spacing: 0.48px;
-  cursor: pointer;
-  transition: all 0.2s ease-in-out;
+  font-size: max(25px, 2.5dvw);
 }
