@@ -133,7 +133,7 @@ const Navbar = () => {
       <div className={navbar} id="navbar">
         <div className={logoDiv}>
           <Navlinks
-            title={"UPESCSA"}
+            title={"UPES CSA"}
             size={"1.4rem"}
             action={"/"}
             separatePage={false}

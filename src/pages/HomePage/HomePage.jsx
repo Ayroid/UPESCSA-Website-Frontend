@@ -1,11 +1,15 @@
 import styles from "./HomePage.module.css";
 
+import Socials from "../../components/Socials/Socials";
+
 // CSS STYLES
 const {
   homePage,
   bgCircles,
   outerCircle,
   innerCircle,
+  socialsDiv,
+  arrowDiv,
   pageContent,
   verticalLine,
   pageHeading,
@@ -20,6 +24,12 @@ const HomePage = () => {
         <div className={outerCircle}>
           <div className={innerCircle}></div>
         </div>
+      </div>
+      <div className={socialsDiv}>
+        <Socials orientation={"column"} />
+      </div>
+      <div className={arrowDiv}>
+        <img src="/icons/triangleArrow.png" alt="arrow" />
       </div>
       <div className={pageContent}>
         <div className={pageHeading}>UPES</div>
