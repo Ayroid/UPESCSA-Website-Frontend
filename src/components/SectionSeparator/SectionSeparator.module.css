@@ -15,7 +15,7 @@
 }
 
 .mainDiv hr {
-  width: max(10dvw, 5rem);
+  width: max(10dvw, 4rem);
   border: none;
   height: 2px;
   background-color: var(--textLight);

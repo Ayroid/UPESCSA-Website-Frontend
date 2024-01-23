@@ -35,7 +35,8 @@ const Contact = () => {
               alt="location"
             />
             <p className={contactFieldInfo}>
-              Energy Acres, UPES, <br /> Bidholi, Dehradun.
+              SOCS, University of <br /> Petroleum & Energy <br /> Studies,
+              Dehradun
             </p>
           </div>
           <div className={contactField}>
