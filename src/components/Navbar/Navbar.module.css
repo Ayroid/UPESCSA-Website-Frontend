@@ -13,7 +13,12 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  background-color: #0000003f;
+}
+
+@media screen and (max-width: 950px) {
+  .navBarDiv {
+    background-color: #0000003f;
+  }
 }
 
 .navbar {
