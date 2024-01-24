@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import styles from "./ImageText.module.css";
 
 // CSS STYLES
-const { imageTextDiv, imageLink, allianceTitle, allianceSubTitle } = styles;
+const { imageTextDiv, imageLink, imageTitle, imageSubTitle } = styles;
 
 const imageTextContent = ({
   title,
@@ -15,11 +15,11 @@ const imageTextContent = ({
   return (
     <>
       <img src={allianceImg} className={imageLink} alt={title} />
-      <div className={allianceTitle} style={{ textAlign: titleAlign }}>
+      <div className={imageTitle} style={{ textAlign: titleAlign }}>
         {title}
       </div>
       {subTitle && (
-        <div className={allianceSubTitle} style={{ textAlign: subTitleAlign }}>
+        <div className={imageSubTitle} style={{ textAlign: subTitleAlign }}>
           {subTitle}
         </div>
       )}
