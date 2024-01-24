@@ -7,12 +7,20 @@
   z-index: 100;
 }
 
+.navBarDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
 .navbar {
+  box-sizing: border-box;
   padding: 1rem 2rem;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: transparent;
   transition: all 0.2s;
 }
 

@@ -9,6 +9,7 @@ import Socials from "../Socials/Socials";
 // CSS STYLES
 const {
   navbarContainer,
+  navBarDiv,
   navbar,
   hamburgerDiv,
   hamburger,
@@ -106,9 +107,11 @@ const Navbar = () => {
       if (newOpen) {
         navbar.classList.remove(scrollUp);
         navbar.classList.add(scrollDown);
+        document.getElementById("navbardiv").style.height = "100vh";
       } else {
         navbar.classList.remove(scrollDown);
         navbar.classList.add(scrollUp);
+        document.getElementById("navbardiv").style.height = "0vh";
       }
       return newOpen;
     });
@@ -131,39 +134,41 @@ const Navbar = () => {
           />
         )}
       </div>
-      <div className={navbar} id="navbar">
-        <div className={logoDiv}>
-          <Navlinks
-            title={"UPES CSA"}
-            size={"1.4rem"}
-            action={"/#"}
-            separatePage={false}
-            closeNavbar={displayNavBar}
-          />
-          {/* <Logo height="4rem" /> */}
-        </div>
-        <ul className={navLinks}>
-          <hr className={mobileLine} />
-          {navlinks.map((navlink) => (
+      <div className={navBarDiv} id="navbardiv" onClick={displayNavBar}>
+        <div className={navbar} id="navbar">
+          <div className={logoDiv}>
             <Navlinks
-              key={navlink.title}
-              title={navlink.title}
-              action={navlink.action}
-              separatePage={navlink.separatePage}
+              title={"UPES CSA"}
+              size={"1.4rem"}
+              action={"/#"}
+              separatePage={false}
               closeNavbar={displayNavBar}
             />
-          ))}
-          <hr className={verticalLine} />
-          <Navlinks
-            title={"Evortal"}
-            action={"/evortal"}
-            separatePage={true}
-            closeNavbar={displayNavBar}
-          />
-          <hr className={mobileLine} />
-        </ul>
-        <div className={socialsDiv}>
-          <Socials orientation={"row"} />
+            {/* <Logo height="4rem" /> */}
+          </div>
+          <ul className={navLinks}>
+            <hr className={mobileLine} />
+            {navlinks.map((navlink) => (
+              <Navlinks
+                key={navlink.title}
+                title={navlink.title}
+                action={navlink.action}
+                separatePage={navlink.separatePage}
+                closeNavbar={displayNavBar}
+              />
+            ))}
+            <hr className={verticalLine} />
+            <Navlinks
+              title={"Evortal"}
+              action={"/evortal"}
+              separatePage={true}
+              closeNavbar={displayNavBar}
+            />
+            <hr className={mobileLine} />
+          </ul>
+          <div className={socialsDiv}>
+            <Socials orientation={"row"} />
+          </div>
         </div>
       </div>
     </div>
