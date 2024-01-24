@@ -18,7 +18,7 @@ const {
 
 const Contact = () => {
   return (
-    <div className={contactContainer}>
+    <div className={contactContainer} id="contact">
       <div className={contactDiv}>
         <div className={socialsDiv}>
           <p>Follow us!</p>

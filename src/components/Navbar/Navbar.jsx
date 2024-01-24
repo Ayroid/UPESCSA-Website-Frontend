@@ -31,22 +31,22 @@ const Navbar = () => {
   const navlinks = [
     {
       title: "About",
-      action: "#about",
+      action: "/#about",
       separatePage: false,
     },
     {
       title: "Events",
-      action: "#events",
+      action: "/#events",
       separatePage: false,
     },
     {
       title: "Alliance",
-      action: "#alliance",
+      action: "/#alliance",
       separatePage: false,
     },
     {
       title: "Team",
-      action: "#team",
+      action: "/team",
       separatePage: false,
     },
     {
@@ -56,12 +56,12 @@ const Navbar = () => {
     },
     {
       title: "Blogs",
-      action: "#blogs",
+      action: "/#blogs",
       separatePage: false,
     },
     {
       title: "Contact",
-      action: "#contact",
+      action: "/#contact",
       separatePage: false,
     },
   ];
@@ -136,7 +136,7 @@ const Navbar = () => {
           <Navlinks
             title={"UPES CSA"}
             size={"1.4rem"}
-            action={"/"}
+            action={"/#"}
             separatePage={false}
             closeNavbar={displayNavBar}
           />
