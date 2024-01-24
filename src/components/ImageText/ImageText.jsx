@@ -18,7 +18,7 @@ const imageTextContent = ({
       <div className={imageTitle} style={{ textAlign: titleAlign }}>
         {title}
       </div>
-      {subTitle && (
+      {subTitle != null && (
         <div className={imageSubTitle} style={{ textAlign: subTitleAlign }}>
           {subTitle}
         </div>
@@ -35,10 +35,17 @@ const ImageText = ({
   link,
   allianceImg,
   externalLink,
+  textColor,
 }) => {
   if (externalLink) {
     return (
-      <a className={imageTextDiv} href={link} target="_blank" rel="noreferrer">
+      <a
+        className={imageTextDiv}
+        href={link}
+        target="_blank"
+        rel="noreferrer"
+        style={{ color: textColor }}
+      >
         {imageTextContent({
           title,
           titleAlign,
@@ -50,7 +57,13 @@ const ImageText = ({
     );
   } else {
     return (
-      <Link className={imageTextDiv} to={link} target="_blank" rel="noreferrer">
+      <Link
+        className={imageTextDiv}
+        to={link}
+        target="_blank"
+        rel="noreferrer"
+        style={{ color: textColor }}
+      >
         {imageTextContent({
           title,
           titleAlign,
@@ -71,6 +84,7 @@ ImageText.propTypes = {
   link: Proptypes.string.isRequired,
   allianceImg: Proptypes.string.isRequired,
   externalLink: Proptypes.bool.isRequired,
+  textColor: Proptypes.string,
 };
 
 export default ImageText;

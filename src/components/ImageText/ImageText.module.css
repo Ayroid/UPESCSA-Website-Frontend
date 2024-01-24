@@ -4,6 +4,8 @@
   align-items: center;
   justify-content: center;
   margin: 2rem;
+  height: 300px;
+  width: 200px;
 }
 
 .imageLink {

@@ -1,0 +1,21 @@
+.homeBlogsContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding: 0 10dvw;
+  height: 100%;
+  width: 100%;
+  background-color: var(--bgLight);
+  font-size: 1.1rem;
+}
+
+.blogsDiv {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-bottom: 10rem;
+}

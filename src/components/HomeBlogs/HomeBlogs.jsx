@@ -1,0 +1,68 @@
+import styles from "./HomeBlogs.module.css";
+
+import SectionHeading from "../SectionHeading/SectionHeading";
+import ImageText from "../ImageText/ImageText";
+import ShowMore from "../ShowMore/ShowMore";
+
+// CSS STYLES
+const { homeBlogsContainer, sectionHeading, blogsDiv } = styles;
+
+const HomeBlogs = () => {
+  // BLOGS DATA
+  const blogsData = [
+    {
+      img: "/img/blogs/placeholder.png",
+      title: "Navigating the Digital Landscape: A Guide to Online Privacy",
+      author: "Ayroid",
+      link: "https://codewarriors.in",
+    },
+    {
+      img: "/img/blogs/placeholder.png",
+      title: "Unlocking the Power of Mindfulness: A Journey to Inner Peace",
+      author: "Ayush",
+      link: "https://givemycertificate.com",
+    },
+    {
+      img: "/img/blogs/placeholder.png",
+      title: "The Future of Sustainable Living: Eco-Friendly Innovations",
+      author: "Devansh",
+      link: "https://www.linkedin.com/company/awsugmum/",
+    },
+    {
+      img: "/img/blogs/placeholder.png",
+      title: "Mastering the Art of Remote Work: Productivity Hacks and Tips",
+      author: "Aman",
+      link: "https://www.newtonschool.co/",
+    },
+  ];
+
+  return (
+    <div className={homeBlogsContainer} id="blogs">
+      <div className={sectionHeading}>
+        <SectionHeading
+          heading="Blogs"
+          underlineColor="#33C2FF"
+          textColor="var(--textDark)"
+        />
+      </div>
+      <div className={blogsDiv}>
+        {blogsData.map((data) => (
+          <ImageText
+            key={data.title}
+            title={data.title}
+            titleAlign="left"
+            subTitle={data.author}
+            subTitleAlign="left"
+            link={data.link}
+            allianceImg={data.img}
+            externalLink={true}
+            textColor="var(--textDark)"
+          />
+        ))}
+      </div>
+      <ShowMore link="/blogs" />
+    </div>
+  );
+};
+
+export default HomeBlogs;
