@@ -24,6 +24,8 @@ body {
   --buttonLink: #2797ff;
   --scrollBar: #aaaaaa;
   --scrollBarHover: #888888;
+  --blueUnderLine: #33c2ff;
+  --yellowUnderLine: #FFE600;
 }
 
 * {

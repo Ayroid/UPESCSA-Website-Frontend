@@ -1,0 +1,42 @@
+.homeEventsContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding: 0 10dvw;
+  height: 100%;
+  width: 100%;
+  background-color: var(--bgLight);
+  font-size: 1.1rem;
+}
+
+.homeEventGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 15dvw);
+  grid-auto-rows: 15dvw;
+  grid-auto-columns: 15dvw;
+  gap: 1rem;
+  margin-bottom: 10rem;
+}
+
+@media screen and (max-width: 1000px) {
+  .homeEventGrid {
+    grid-template-columns: repeat(1, max(40dvw, 300px));
+    grid-auto-rows: max(40dvw, 300px);
+    grid-auto-columns: max(40dvw, 300px);
+    gap: 2rem;
+  }
+}
+
+.homeEventImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.homeEventImage img {
+  height: 100%;
+  width: 100%;
+}

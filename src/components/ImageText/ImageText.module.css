@@ -1,0 +1,31 @@
+.imageTextDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 5rem 2rem 0 2rem;
+  height: 100%;
+  width: max(250px, 10dvw);
+}
+
+.imageLink {
+  width: 100%;
+  margin-bottom: 1.5rem;
+  transition: all 0.3s ease-in-out;
+  &:hover {
+    transform: scale(1.05);
+    transition: all 0.3s ease-in-out;
+  }
+}
+
+.imageTitle {
+  font-size: 1.1rem;
+  font-weight: 600;
+  width: 100%;
+}
+
+.imageSubTitle {
+  font-size: 0.9rem;
+  font-weight: 500;
+  width: 100%;
+}

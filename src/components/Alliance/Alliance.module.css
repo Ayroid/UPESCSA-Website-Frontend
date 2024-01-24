@@ -38,23 +38,3 @@
   width: 100%;
   margin-bottom: 10rem;
 }
-
-.alliance {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.1rem;
-  font-weight: 600;
-  margin: 2rem;
-}
-
-.allianceImg {
-  height: 200px;
-  margin-bottom: 1.5rem;
-  transition: all 0.3s ease-in-out;
-  &:hover {
-    transform: scale(1.05);
-    transition: all 0.3s ease-in-out;
-  }
-}
