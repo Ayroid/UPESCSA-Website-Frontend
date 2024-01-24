@@ -16,6 +16,7 @@
 
 .sectionHeading {
   position: relative;
+  margin-top: 2rem;
 }
 
 .allianceContainer::before {
