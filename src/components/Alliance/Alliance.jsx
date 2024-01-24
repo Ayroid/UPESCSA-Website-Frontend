@@ -1,16 +1,10 @@
 import styles from "./Alliance.module.css";
 
 import SectionHeading from "../SectionHeading/SectionHeading";
+import ImageText from "../ImageText/ImageText";
 
 // CSS STYLES
-const {
-  allianceContainer,
-  sectionHeading,
-  allianceDiv,
-  alliance,
-  allianceImg,
-  allianceText,
-} = styles;
+const { allianceContainer, sectionHeading, allianceDiv } = styles;
 
 const Alliance = () => {
   // ALLIANCE DATA
@@ -44,16 +38,14 @@ const Alliance = () => {
       </div>
       <div className={allianceDiv}>
         {allianceData.map((data) => (
-          <a
+          <ImageText
             key={data.title}
-            className={alliance}
-            href={data.link}
-            target="_blank"
-            rel="noreferrer"
-          >
-            <img src={data.img} className={allianceImg} alt={data.title} />
-            <div className={allianceText}>{data.title}</div>
-          </a>
+            title={data.title}
+            titleAlign="center"
+            link={data.link}
+            allianceImg={data.img}
+            externalLink={true}
+          />
         ))}
       </div>
     </div>
