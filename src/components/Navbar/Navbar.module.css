@@ -9,9 +9,16 @@
 
 .navBarDiv {
   display: flex;
+  height: 0;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+}
+
+@media screen and (max-width: 950px) {
+  .navBarDiv {
+    background-color: #0000003f;
+  }
 }
 
 .navbar {
