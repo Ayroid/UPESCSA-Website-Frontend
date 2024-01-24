@@ -5,7 +5,7 @@ import ImageText from "../ImageText/ImageText";
 import ShowMore from "../ShowMore/ShowMore";
 
 // CSS STYLES
-const { homeBlogsContainer, sectionHeading, blogsDiv } = styles;
+const { homeBlogsContainer, blogsDiv } = styles;
 
 const HomeBlogs = () => {
   // BLOGS DATA
@@ -38,13 +38,11 @@ const HomeBlogs = () => {
 
   return (
     <div className={homeBlogsContainer} id="blogs">
-      <div className={sectionHeading}>
-        <SectionHeading
-          heading="Blogs"
-          underlineColor="#33C2FF"
-          textColor="var(--textDark)"
-        />
-      </div>
+      <SectionHeading
+        heading="Blogs"
+        underlineColor="var(--blueUnderLine)"
+        textColor="var(--textDark)"
+      />
       <div className={blogsDiv}>
         {blogsData.map((data) => (
           <ImageText

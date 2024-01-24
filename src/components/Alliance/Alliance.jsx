@@ -34,7 +34,10 @@ const Alliance = () => {
   return (
     <div className={allianceContainer} id="alliance">
       <div className={sectionHeading}>
-        <SectionHeading heading="Alliance" underlineColor="#FFE600" />
+        <SectionHeading
+          heading="Alliance"
+          underlineColor="var(--yellowUnderLine)"
+        />
       </div>
       <div className={allianceDiv}>
         {allianceData.map((data) => (
