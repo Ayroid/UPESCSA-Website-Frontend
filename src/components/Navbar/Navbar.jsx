@@ -108,12 +108,10 @@ const Navbar = () => {
         navbar.classList.remove(scrollUp);
         navbar.classList.add(scrollDown);
         document.getElementById("navbardiv").style.height = "100vh";
-        document.body.style.overflow = "hidden";
       } else {
         navbar.classList.remove(scrollDown);
         navbar.classList.add(scrollUp);
         document.getElementById("navbardiv").style.height = "0vh";
-        document.body.style.overflow = "auto";
       }
       return newOpen;
     });
