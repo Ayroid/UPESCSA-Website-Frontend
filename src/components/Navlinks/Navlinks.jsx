@@ -8,7 +8,11 @@ const { navLinks } = styles;
 
 const Navlinks = ({ title, action, separatePage, size, closeNavbar }) => {
   return (
-    <li className={navLinks} style={{ fontSize: size }} onClick={closeNavbar}>
+    <li
+      className={navLinks}
+      style={{ fontSize: size }}
+      onClick={() => closeNavbar}
+    >
       {separatePage ? (
         <Link to={action}>{title}</Link>
       ) : (
