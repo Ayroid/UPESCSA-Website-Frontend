@@ -48,7 +48,7 @@ const Navbar = () => {
     {
       title: "Team",
       action: "/team",
-      separatePage: false,
+      separatePage: true,
     },
     {
       title: "CSR",
