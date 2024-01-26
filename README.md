@@ -35,7 +35,7 @@ Before you begin, ensure you have met the following requirements:
 2. Navigate to the project directory:
 
    ```
-   cd upes-cloud-security-alliance-frontend
+   cd UPESCSA-Website-Frontend
    ```
 
 3. Install the project dependencies:
