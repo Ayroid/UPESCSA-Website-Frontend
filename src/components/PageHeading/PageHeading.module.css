@@ -1,7 +1,61 @@
-.pageHeading {
+.pageHeadingDiv {
   text-align: center;
   color: var(--textLight);
   font-weight: 500;
   font-family: "Rajdhani", sans-serif;
-  font-size: max(100px, 10dvw);
+  font-size: 12rem;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100dvw;
+  height: 25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+@media screen and (max-width: 768px) {
+  .pageHeadingDiv {
+    font-size: 25dvw;
+    height: 20rem;
+  }
+}
+
+.pageHeadingDiv::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: var(--bgDark);
+  width: 100%;
+  height: 100%;
+  opacity: 0.85;
+}
+
+.pageHeading {
+  position: relative;
+  margin: 1rem;
+}
+
+.arrowDiv {
+  position: absolute;
+  bottom: 1rem;
+  z-index: 5;
+  cursor: pointer;
+}
+
+.arrowDiv img {
+  height: 1.5rem;
+  width: 1.5rem;
+  animation: arrow 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes arrow {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(0.5rem);
+  }
 }
