@@ -13,6 +13,8 @@ const { homepageContainer } = styles;
 
 const HomePage = () => {
   // STATES
+  // OPEN THIS TO ENABLE THE POPUP
+  const eventActive = false;
   const [popupOpen, setPopupOpen] = useState(false);
 
   // USE EFFECTS
@@ -29,10 +31,13 @@ const HomePage = () => {
   }, []);
 
   useEffect(() => {
+    if (!eventActive) {
+      return;
+    }
     setTimeout(() => {
       setPopupOpen(true);
     }, 500);
-  }, []);
+  }, [eventActive]);
 
   // FUNCTIONS
   const togglePopup = () => {
@@ -50,7 +55,7 @@ const HomePage = () => {
           closePopup={togglePopup}
         />
       )}
-      <Home showTrigger={!popupOpen} openPopup={togglePopup} />
+      <Home showTrigger={eventActive && !popupOpen} openPopup={togglePopup} />
       <About />
       <HomeEvents />
       <Alliance />
