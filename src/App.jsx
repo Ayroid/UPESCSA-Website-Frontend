@@ -3,11 +3,11 @@ import "./App.css";
 import { Routes, Route } from "react-router-dom";
 
 import HomePage from "./pages/HomePage/HomePage";
-import Csr from "./pages/Csr/Csr";
-import Team from "./pages/Team/Team";
-import Events from "./pages/Events/Events";
-import Blogs from "./pages/Blogs/Blogs";
-import Evortal from "./pages/Evortal/Evortal";
+import CsrPage from "./pages/CsrPage/CsrPage";
+import TeamPage from "./pages/TeamPage/TeamPage";
+import EventsPage from "./pages/EventsPage/EventsPage";
+import BlogsPage from "./pages/BlogsPage/BlogsPage";
+import Evortal from "./pages/EvortalPage/EvortalPage";
 import PageNotFound from "./pages/PageNotFound/PageNotFound";
 
 import Contact from "./components/Contact/Contact";
@@ -19,10 +19,10 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/csr" element={<Csr />} />
-        <Route path="/team" element={<Team />} />
-        <Route path="/events" element={<Events />} />
-        <Route path="/blogs" element={<Blogs />} />
+        <Route path="/csr" element={<CsrPage />} />
+        <Route path="/team" element={<TeamPage />} />
+        <Route path="/events" element={<EventsPage />} />
+        <Route path="/blogs" element={<BlogsPage />} />
         <Route path="/evortal" element={<Evortal />} />
         <Route path="*" element={<PageNotFound />} />
       </Routes>

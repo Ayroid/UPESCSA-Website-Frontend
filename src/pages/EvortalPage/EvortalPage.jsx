@@ -1,4 +1,4 @@
-import styles from "./Evortal.module.css";
+import styles from "./EvortalPage.module.css";
 
 import EvortalEvents from "../../components/EvortalEvents/EvortalEvents";
 import PageHeading from "../../components/PageHeading/PageHeading";
@@ -7,7 +7,7 @@ import EvortalSeparator from "../../components/EvortalSeparator/EvortalSeparator
 // CSS STYLES
 const { evortalContainer, evortalDiv } = styles;
 
-const Evortal = () => {
+const EvortalPage = () => {
   // EVENTS DATA
 
   const activeEvents = [
@@ -97,4 +97,4 @@ const Evortal = () => {
   );
 };
 
-export default Evortal;
+export default EvortalPage;

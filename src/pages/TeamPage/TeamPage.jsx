@@ -1,6 +1,6 @@
 import PageHeading from "../../components/PageHeading/PageHeading";
 
-const Team = () => {
+const TeamPage = () => {
   return (
     <div>
       <PageHeading imgURL="/img/pageheaders/team.png" text="TEAM" />
@@ -8,4 +8,4 @@ const Team = () => {
   );
 };
 
-export default Team;
+export default TeamPage;

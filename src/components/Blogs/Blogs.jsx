@@ -1,0 +1,48 @@
+import Proptypes from "prop-types";
+import styles from "./Blogs.module.css";
+
+// CSS STYLES
+const {
+  blogsContainer,
+  blogsImage,
+  blogsDescripton,
+  blogsHeading,
+  blogsSummary,
+  blogsDetails,
+  blogsRedirectButton,
+} = styles;
+
+const Blogs = ({ blogImageURL, blogHeading, blogSummary, blogURL }) => {
+  return (
+    <div className={blogsContainer}>
+      <div className={blogsImage}>
+        <img src={blogImageURL} alt="blogPoster" />
+      </div>
+      <div className={blogsDescripton}>
+        <h4 className={blogsHeading}>{blogHeading}</h4>
+        <p className={blogsSummary}>{blogSummary}</p>
+        <div className={blogsDetails}>
+          <a
+            href={blogURL}
+            className={blogsRedirectButton}
+            target="_blank"
+            rel="noreferrer"
+            style={{
+              backgroundColor: "var(--buttonLink)",
+            }}
+          >
+            Complete Blog
+          </a>
+        </div>
+      </div>
+    </div>
+  );
+};
+Blogs.propTypes = {
+  blogImageURL: Proptypes.string.isRequired,
+  blogHeading: Proptypes.string.isRequired,
+  blogSummary: Proptypes.string.isRequired,
+  blogURL: Proptypes.string.isRequired,
+};
+
+export default Blogs;

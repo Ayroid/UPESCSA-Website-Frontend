@@ -1,12 +1,12 @@
 import { useState, useEffect } from "react";
-import styles from "./Csr.module.css";
+import styles from "./CsrPage.module.css";
 
 import PageHeading from "../../components/PageHeading/PageHeading";
 
 // CSS STYLES
 const { csrContainer, csrHeader, eventGrid, eventImage } = styles;
 
-const Csr = () => {
+const CsrPage = () => {
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
 
   useEffect(() => {
@@ -103,4 +103,4 @@ const Csr = () => {
   );
 };
 
-export default Csr;
+export default CsrPage;
