@@ -7,6 +7,10 @@
   margin-inline: 5dvw;
 }
 
+.managementPageContainer h2 {
+  margin-block: 5rem -2rem;
+}
+
 .managementDiv {
   display: flex;
   justify-content: center;

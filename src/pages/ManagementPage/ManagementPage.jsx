@@ -330,6 +330,10 @@ const ManagementPage = () => {
     .filter((member) => member.memberCategory === "President")
     .sort((a, b) => a.order - b.order);
 
+  const management = managementMembersData
+    .filter((member) => member.memberCategory === "Management")
+    .sort((a, b) => a.order - b.order);
+
   const heads = managementMembersData
     .filter((member) => member.memberCategory === "Head")
     .sort((a, b) => a.order - b.order);
@@ -360,6 +364,23 @@ const ManagementPage = () => {
       <h2>Presidents</h2>
       <div className={managementDiv}>
         {presidents.map((member) => (
+          <ImageText
+            key={member.memberName}
+            title={member.memberName}
+            titleAlign="center"
+            subTitle={member.memberPosition}
+            subTitleAlign="center"
+            link={member.memberLinkedInURL}
+            mainImg={member.memberImageURL}
+            textColor={"var(--textDark)"}
+            externalLink={true}
+          />
+        ))}
+      </div>
+
+      <h2>Management</h2>
+      <div className={managementDiv}>
+        {management.map((member) => (
           <ImageText
             key={member.memberName}
             title={member.memberName}
