@@ -1,0 +1,14 @@
+.evortalContainer {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.evortalDiv {
+  background-color: var(--bgLight);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 5rem;
+}

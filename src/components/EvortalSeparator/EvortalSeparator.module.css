@@ -1,0 +1,31 @@
+.evortalSeparatorContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--textDark);
+  width: max(40dvw, 850px);
+  margin-top: 2rem;
+}
+
+.separatorText {
+  font-size: 1.25rem;
+  padding-right: 1rem;
+  min-width: 12rem;
+}
+
+.separatorHr {
+  width: 100%;
+  height: 2px;
+  border: none;
+  background-color: var(--separatorHr);
+}
+
+@media screen and (max-width: 1000px) {
+  .evortalSeparatorContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--textDark);
+    width: 90dvw;
+  }
+}
