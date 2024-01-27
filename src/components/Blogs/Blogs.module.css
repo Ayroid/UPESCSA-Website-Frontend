@@ -28,6 +28,13 @@
 .blogsHeading {
   font-size: 1.5rem;
   font-weight: 600;
+  margin: 0;
+}
+
+.blogsAuthor {
+  font-size: 0.9rem;
+  font-style: italic;
+  font-weight: 400;
   margin: 0 0 -0.75rem 0;
 }
 

@@ -7,12 +7,19 @@ const {
   blogsImage,
   blogsDescripton,
   blogsHeading,
+  blogsAuthor,
   blogsSummary,
   blogsDetails,
   blogsRedirectButton,
 } = styles;
 
-const Blogs = ({ blogImageURL, blogHeading, blogSummary, blogURL }) => {
+const Blogs = ({
+  blogImageURL,
+  blogHeading,
+  blogAuthor,
+  blogSummary,
+  blogURL,
+}) => {
   return (
     <div className={blogsContainer}>
       <div className={blogsImage}>
@@ -20,6 +27,7 @@ const Blogs = ({ blogImageURL, blogHeading, blogSummary, blogURL }) => {
       </div>
       <div className={blogsDescripton}>
         <h4 className={blogsHeading}>{blogHeading}</h4>
+        <h6 className={blogsAuthor}>{blogAuthor}</h6>
         <p className={blogsSummary}>{blogSummary}</p>
         <div className={blogsDetails}>
           <a
@@ -41,6 +49,7 @@ const Blogs = ({ blogImageURL, blogHeading, blogSummary, blogURL }) => {
 Blogs.propTypes = {
   blogImageURL: Proptypes.string.isRequired,
   blogHeading: Proptypes.string.isRequired,
+  blogAuthor: Proptypes.string.isRequired,
   blogSummary: Proptypes.string.isRequired,
   blogURL: Proptypes.string.isRequired,
 };

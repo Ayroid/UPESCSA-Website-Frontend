@@ -12,6 +12,7 @@ const BlogsPage = () => {
     {
       blogsImageURL: "/img/events/live/valo.png",
       blogsHeading: "Blog 1",
+      blogsAuthor: "Author",
       blogsText:
         "ipsum consequat nisl vel pretium lectus quam id leo in vitae turpis massa sed elementum tempus egestas sed sed risus pretium quam vulputate dignissim suspendisse in est ante in nibh mauris cursus mattis molestie a iaculis at erat pellentesque adipiscing commodo elit at imperdiet dui accumsan sit amet ipsum consequat nisl vel pretium lectus quam id leo in vitae turpis massa sed elementum tempus egestas sed sed ipsum consequat nisl vel pretium lectus quam id leo in vitae turpis massa sed elementum tempus egestas sed sed risus pretium quam vulputate dignissim suspendisse in est ante in nibh mauris cursus mattis molestie a iaculis at erat pellentesque adipiscing commodo elit at imperdiet dui accumsan sit amet ipsum consequat nisl vel pretium lectus quam id leo ipsum consequat nisl vel pretium lectus quam id leo in vitae turpis massa sed elementum tempus egestas sed sed",
       blogURL: "https://www.blogger.com/about/?bpli=1",
@@ -20,6 +21,7 @@ const BlogsPage = () => {
     {
       blogsImageURL: "/img/events/live/valo.png",
       blogsHeading: "Blog 2",
+      blogsAuthor: "Author",
       blogsText:
         "ipsum consequat nisl vel pretium lectus quam id leo in vitae turpis massa sed elementum tempus egestas sed sed risus pretium quam vulputate dignissim suspendisse in est ante in nibh mauris cursus mattis molestie a iaculis at erat pellentesque adipiscing commodo elit at imperdiet dui accumsan sit amet ipsum consequat nisl vel pretium lectus quam id leo in vitae turpis massa sed elementum tempus egestas sed sed ipsum consequat nisl vel pretium lectus quam id leo in vitae turpis massa sed elementum tempus egestas sed sed risus pretium quam vulputate dignissim suspendisse in est ante in nibh mauris cursus mattis molestie a iaculis at erat pellentesque adipiscing commodo elit at imperdiet dui accumsan sit amet ipsum consequat nisl vel pretium lectus quam id leo ipsum consequat nisl vel pretium lectus quam id leo in vitae turpis massa sed elementum tempus egestas sed sed",
       blogURL: "https://www.blogger.com/about/?bpli=1",
@@ -31,13 +33,14 @@ const BlogsPage = () => {
     <div className={blogsContainer}>
       <PageHeading imgURL="/img/pageheaders/blogs.png" text="BLOGS" />
       <div className={blogsDiv}>
-        {blogsData.map((blogs) => (
+        {blogsData.map((blog) => (
           <Blogs
-            key={blogs.blogsHeading}
-            blogImageURL={blogs.blogsImageURL}
-            blogHeading={blogs.blogsHeading}
-            blogSummary={blogs.blogsText}
-            blogURL={blogs.blogURL}
+            key={blog.blogsHeading}
+            blogImageURL={blog.blogsImageURL}
+            blogHeading={blog.blogsHeading}
+            blogAuthor={blog.blogsAuthor}
+            blogSummary={blog.blogsText}
+            blogURL={blog.blogURL}
           />
         ))}
       </div>
