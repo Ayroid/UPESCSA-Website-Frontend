@@ -1,0 +1,26 @@
+.pageSwitcher {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin: 1rem 0;
+  width: fit-content;
+  font-size: 1.5rem;
+}
+.pageSwitcher hr {
+  width: 2px;
+  height: 2.5rem;
+  border: none;
+  background-color: var(--separatorHr);
+  margin-inline: 2rem;
+}
+
+.pageSwitcherButton {
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .pageSwitcher hr {
+    margin-inline: 0.5rem;
+  }
+}

@@ -46,7 +46,7 @@ const Alliance = () => {
             title={data.title}
             titleAlign="center"
             link={data.link}
-            allianceImg={data.img}
+            mainImg={data.img}
             externalLink={true}
           />
         ))}

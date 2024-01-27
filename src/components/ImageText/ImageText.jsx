@@ -10,11 +10,11 @@ const imageTextContent = ({
   titleAlign,
   subTitle,
   subTitleAlign,
-  allianceImg,
+  mainImg,
 }) => {
   return (
     <>
-      <img src={allianceImg} className={imageLink} alt={title} />
+      <img src={mainImg} className={imageLink} alt={title} />
       <div className={imageTitle} style={{ textAlign: titleAlign }}>
         {title}
       </div>
@@ -33,7 +33,7 @@ const ImageText = ({
   subTitle,
   subTitleAlign,
   link,
-  allianceImg,
+  mainImg,
   externalLink,
   textColor,
 }) => {
@@ -51,7 +51,7 @@ const ImageText = ({
           titleAlign,
           subTitle,
           subTitleAlign,
-          allianceImg,
+          mainImg,
         })}
       </a>
     );
@@ -69,7 +69,7 @@ const ImageText = ({
           titleAlign,
           subTitle,
           subTitleAlign,
-          allianceImg,
+          mainImg,
         })}
       </Link>
     );
@@ -82,7 +82,7 @@ ImageText.propTypes = {
   subTitle: Proptypes.string,
   subTitleAlign: Proptypes.string,
   link: Proptypes.string.isRequired,
-  allianceImg: Proptypes.string.isRequired,
+  mainImg: Proptypes.string.isRequired,
   externalLink: Proptypes.bool.isRequired,
   textColor: Proptypes.string,
 };

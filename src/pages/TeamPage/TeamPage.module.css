@@ -1,0 +1,16 @@
+.teamPageContainer {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  background-color: var(--bgLight);
+  color: var(--textDark);
+}
+
+.teamPageDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-inline: 20dvw;
+  padding-bottom: 10rem;
+}
