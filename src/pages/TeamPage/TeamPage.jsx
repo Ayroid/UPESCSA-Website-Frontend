@@ -4,6 +4,7 @@ import styles from "./TeamPage.module.css";
 import PageHeading from "../../components/PageHeading/PageHeading";
 import TeamPageSwitch from "../../components/TeamPageSwitch/TeamPageSwitch";
 import CommitteePage from "../CommitteePage/CommitteePage";
+import ManagementPage from "../ManagementPage/ManagementPage";
 
 // CSS STYLES
 const { teamPageContainer, teamPageDiv } = styles;
@@ -24,7 +25,7 @@ const TeamPage = () => {
       <PageHeading imgURL="/img/pageheaders/team.png" text="TEAM" />
       <div className={teamPageDiv}>
         <TeamPageSwitch activeTab={activeTab} changeActiveTab={switchPage} />
-        {!activeTab && <CommitteePage />}
+        {activeTab ? <ManagementPage /> : <CommitteePage />}
       </div>
     </div>
   );
