@@ -25,7 +25,7 @@ body {
   --scrollBar: #aaaaaa;
   --scrollBarHover: #888888;
   --blueUnderLine: #33c2ff;
-  --yellowUnderLine: #FFE600;
+  --yellowUnderLine: #ffe600;
 }
 
 * {
@@ -35,7 +35,7 @@ body {
 
 /* Chrome, Edge, and Safari */
 *::-webkit-scrollbar {
-  width: 8px;
+  width: 4px;
   cursor: pointer;
 }
 
