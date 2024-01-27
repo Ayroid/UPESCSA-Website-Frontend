@@ -1,0 +1,57 @@
+.committeePageIndividualContainer {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  background-color: var(--bgLight);
+  color: var(--textDark);
+}
+
+.committeePageIndividualdDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20dvw 10rem 20dvw;
+}
+
+.committeeDescription {
+  font-size: 1.1rem;
+  font-weight: 500;
+  text-align: center;
+  margin-top: 5rem;
+}
+
+.committeeMemberTitle {
+  font-size: 1.5rem;
+  font-weight: 500;
+  text-align: center;
+  margin-top: 5rem;
+  margin-bottom: 3rem;
+}
+
+.committeeHeadsContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: -4rem;
+}
+
+.committeeMembersContainer {
+  display: grid;
+  grid-template-columns: repeat(2, 15rem);
+  grid-template-rows: auto;
+  gap: 1rem;
+  font-size: 1.1rem;
+}
+
+@media screen and (max-width: 768px) {
+  .committeeMembersContainer {
+    grid-template-columns: repeat(1, 15rem);
+  }
+}
+
+.committeeMemberName {
+  text-align: center;
+}

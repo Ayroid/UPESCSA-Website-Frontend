@@ -57,13 +57,7 @@ const ImageText = ({
     );
   } else {
     return (
-      <Link
-        className={imageTextDiv}
-        to={link}
-        target="_blank"
-        rel="noreferrer"
-        style={{ color: textColor }}
-      >
+      <Link className={imageTextDiv} to={link} style={{ color: textColor }}>
         {imageTextContent({
           title,
           titleAlign,

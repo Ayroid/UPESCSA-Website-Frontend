@@ -35,7 +35,7 @@ const CommitteePage = () => {
     {
       committeeName: "Public Relations",
       committeeImageURL: "/img/blogs/placeholder.png",
-      committeePageURL: "/team/pr",
+      committeePageURL: "/team/publicrelations",
     },
     {
       committeeName: "Registrations",

@@ -2,9 +2,9 @@ import Proptypes from "prop-types";
 import styles from "./PageHeading.module.css";
 
 // CSS STYLES
-const { pageHeadingDiv, pageHeading, arrowDiv } = styles;
+const { pageHeadingDiv, pageHeading } = styles;
 
-const PageHeading = ({ imgURL, text, arrowGoTo }) => {
+const PageHeading = ({ imgURL, text }) => {
   return (
     <div
       className={pageHeadingDiv}
@@ -13,11 +13,6 @@ const PageHeading = ({ imgURL, text, arrowGoTo }) => {
       }}
     >
       <div className={pageHeading}>{text}</div>
-      <div className={arrowDiv}>
-        <a href= {`#${arrowGoTo}`}>
-          <img src="/icons/triangleArrow.png" alt="arrow" />
-        </a>
-      </div>
     </div>
   );
 };
@@ -25,7 +20,6 @@ const PageHeading = ({ imgURL, text, arrowGoTo }) => {
 PageHeading.propTypes = {
   imgURL: Proptypes.string.isRequired,
   text: Proptypes.string.isRequired,
-  arrowGoTo: Proptypes.string.isRequired,
 };
 
 export default PageHeading;

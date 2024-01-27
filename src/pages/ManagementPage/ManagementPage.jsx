@@ -347,7 +347,7 @@ const ManagementPage = () => {
             key={member.memberName}
             title={member.memberName}
             titleAlign="center"
-            subTitle={member.memberCategory}
+            subTitle={member.memberPosition}
             subTitleAlign="center"
             link={member.memberLinkedInURL}
             mainImg={member.memberImageURL}
@@ -364,7 +364,7 @@ const ManagementPage = () => {
             key={member.memberName}
             title={member.memberName}
             titleAlign="center"
-            subTitle={member.memberCategory}
+            subTitle={member.memberPosition}
             subTitleAlign="center"
             link={member.memberLinkedInURL}
             mainImg={member.memberImageURL}
@@ -381,7 +381,7 @@ const ManagementPage = () => {
             key={member.memberName}
             title={member.memberName}
             titleAlign="center"
-            subTitle={member.memberCategory}
+            subTitle={member.memberPosition}
             subTitleAlign="center"
             link={member.memberLinkedInURL}
             mainImg={member.memberImageURL}
@@ -398,7 +398,7 @@ const ManagementPage = () => {
             key={member.memberName}
             title={member.memberName}
             titleAlign="center"
-            subTitle={member.memberCategory}
+            subTitle={member.memberPosition}
             subTitleAlign="center"
             link={member.memberLinkedInURL}
             mainImg={member.memberImageURL}
