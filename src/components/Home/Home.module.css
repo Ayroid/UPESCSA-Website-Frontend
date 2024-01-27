@@ -172,3 +172,24 @@
     transform: translateY(0.5rem);
   }
 }
+
+.popupTrigger {
+  position: absolute;
+  z-index: 100;
+  bottom: 15rem;
+  animation: popupTrigger 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes popupTrigger {
+  0% {
+    transform: rotate3d(0, 0, 0, 0deg);
+  }
+  100% {
+    transform: rotate3d(0, 0, 1, 10deg);
+    filter: drop-shadow(0px 0px 10px rgb(255, 225, 0));
+  }
+}
+
+.popupTrigger img {
+  height: 3rem;
+}
