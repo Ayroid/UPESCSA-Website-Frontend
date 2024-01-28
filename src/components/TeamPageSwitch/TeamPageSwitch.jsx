@@ -2,11 +2,11 @@ import Proptypes from "prop-types";
 import styles from "./TeamPageSwitch.module.css";
 
 // CSS STYLES
-const { pageSwitcher, pageSwitcherButton } = styles;
+const { pageSwitcherContainer, pageSwitcherButton } = styles;
 
 const TeamPageSwitch = ({ activeTab, changeActiveTab }) => {
   return (
-    <div className={pageSwitcher}>
+    <div className={pageSwitcherContainer}>
       <div
         className={pageSwitcherButton}
         style={{

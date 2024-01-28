@@ -1,13 +1,13 @@
-.pageSwitcher {
+.pageSwitcherContainer {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 1rem;
-  margin: 1rem 0;
-  width: fit-content;
+  padding: 2.5rem 0;
+  background-color: var(--switchBg);
   font-size: 1.5rem;
+  width: 100dvw;
 }
-.pageSwitcher hr {
+.pageSwitcherContainer hr {
   width: 2px;
   height: 2.5rem;
   border: none;
@@ -17,10 +17,12 @@
 
 .pageSwitcherButton {
   cursor: pointer;
+  margin: 0rem 1rem;
+  height: 2rem;
 }
 
 @media screen and (max-width: 768px) {
-  .pageSwitcher hr {
+  .pageSwitcherContainer hr {
     margin-inline: 0.5rem;
   }
 }

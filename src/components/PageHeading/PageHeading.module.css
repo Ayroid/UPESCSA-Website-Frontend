@@ -19,6 +19,7 @@
   .pageHeadingDiv {
     font-size: 25dvw;
     height: 20rem;
+    line-height: normal;
   }
 }
 
