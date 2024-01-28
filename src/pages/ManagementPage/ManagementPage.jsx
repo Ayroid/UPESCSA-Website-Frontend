@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import ImageText from "../../components/ImageText/ImageText";
 import styles from "./ManagementPage.module.css";
 
@@ -5,6 +6,10 @@ import styles from "./ManagementPage.module.css";
 const { managementPageContainer, managementDiv } = styles;
 
 const ManagementPage = () => {
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "instant" });
+  }, []);
+
   // COMMITTEE DATA
   const managementMembersData = [
     {

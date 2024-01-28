@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import styles from "./CsrPage.module.css";
 
 import PageHeading from "../../components/PageHeading/PageHeading";
@@ -7,6 +8,10 @@ import EventGrid from "../../components/EventGrid/EventGrid";
 const { csrContainer, csrHeader } = styles;
 
 const CsrPage = () => {
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "instant" });
+  }, []);
+
   // EVENTS DATA
   const csrData = [
     {

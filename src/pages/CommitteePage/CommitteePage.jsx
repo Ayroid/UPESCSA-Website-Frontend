@@ -1,10 +1,16 @@
-import ImageText from "../../components/ImageText/ImageText";
+import { useEffect } from "react";
 import styles from "./CommitteePage.module.css";
+
+import ImageText from "../../components/ImageText/ImageText";
 
 // CSS STYLES
 const { committeePageContainer } = styles;
 
 const CommitteePage = () => {
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "instant" });
+  }, []);
+
   // COMMITTEE DATA
   const committeeData = [
     {

@@ -17,6 +17,10 @@ const {
 } = styles;
 
 const CommitteePageIndividual = () => {
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "instant" });
+  }, []);
+
   const teamId = useParams();
   const navigate = useNavigate();
 

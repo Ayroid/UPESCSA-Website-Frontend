@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import styles from "./EventsPage.module.css";
 
 import PageHeading from "../../components/PageHeading/PageHeading";
@@ -66,6 +66,10 @@ const eventsData = [
 ];
 
 const EventsPage = () => {
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "instant" });
+  }, []);
+
   const [activeYear, setActiveYear] = useState(2024);
   const yearData = [2024, 2023, 2022, 2021, 2020, 2019, 2018];
 

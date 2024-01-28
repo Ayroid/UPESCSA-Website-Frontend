@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import styles from "./EvortalPage.module.css";
 
 import EvortalEvents from "../../components/EvortalEvents/EvortalEvents";
@@ -8,8 +9,11 @@ import EvortalSeparator from "../../components/EvortalSeparator/EvortalSeparator
 const { evortalContainer, evortalDiv } = styles;
 
 const EvortalPage = () => {
-  // EVENTS DATA
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "instant" });
+  }, []);
 
+  // EVENTS DATA
   const activeEvents = [
     {
       eventImageURL: "/img/events/live/valo.png",

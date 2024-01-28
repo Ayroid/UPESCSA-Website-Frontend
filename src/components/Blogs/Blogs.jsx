@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import Proptypes from "prop-types";
 import styles from "./Blogs.module.css";
 
@@ -21,10 +20,6 @@ const Blogs = ({
   blogSummary,
   blogURL,
 }) => {
-  useEffect(() => {
-    window.scrollTo({ top: 0, behavior: "instant" });
-  }, []);
-
   return (
     <div className={blogsContainer}>
       <div className={blogsImage}>

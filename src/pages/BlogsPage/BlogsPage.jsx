@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import styles from "./BlogsPage.module.css";
 
 import useFetch from "../../hooks/useFetch";
@@ -10,6 +11,10 @@ import Loading from "../../components/Loading/Loading";
 const { blogsContainer, blogsDiv } = styles;
 
 const BlogsPage = () => {
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "instant" });
+  }, []);
+
   const { data, loading } = useFetch({
     url: "http://192.168.1.9:3000/api/blogs/",
   });
