@@ -1,13 +1,10 @@
-import { useState } from "react";
+import Proptypes from "prop-types";
 import styles from "./EventYearSwitch.module.css";
 
 // CSS STYLES
 const { eventYearSwitchContainer, eventYearSwitchButton } = styles;
 
-const EventYearSwitch = () => {
-  const [activeYear, setActiveYear] = useState(2024);
-  const yearData = [2024, 2023, 2022, 2021, 2020, 2019, 2018];
-
+const EventYearSwitch = ({ yearData, activeYear, changeYear }) => {
   return (
     <div className={eventYearSwitchContainer}>
       {yearData.map((year) =>
@@ -27,7 +24,7 @@ const EventYearSwitch = () => {
           <button
             key={year}
             className={eventYearSwitchButton}
-            onClick={() => setActiveYear(year)}
+            onClick={() => changeYear(year)}
             style={{ color: "var(--textDisabled)" }}
           >
             {year}
@@ -36,6 +33,12 @@ const EventYearSwitch = () => {
       )}
     </div>
   );
+};
+
+EventYearSwitch.propTypes = {
+  yearData: Proptypes.arrayOf(Proptypes.number),
+  activeYear: Proptypes.number.isRequired,
+  changeYear: Proptypes.func.isRequired,
 };
 
 export default EventYearSwitch;
