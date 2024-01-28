@@ -24,7 +24,7 @@ const useFetch = ({ url }) => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  return { data, loading, refetchMessages: fetch };
+  return { data, loading, refetchData: fetch };
 };
 
 export default useFetch;
