@@ -11,12 +11,18 @@ import Loading from "../Loading/Loading";
 const { homeBlogsContainer, blogsDiv } = styles;
 
 const HomeBlogs = () => {
-  const { data, loading } = useFetch({
+  const { data, error, loading } = useFetch({
     url: "http://192.168.1.9:3000/api/blogs/",
   });
 
   if (loading) {
     return <Loading />;
+  }
+
+  // REPLACE WITH ERROR COMPONENT
+
+  if (error) {
+    return <h6>Something went wrong...</h6>;
   }
 
   return (
