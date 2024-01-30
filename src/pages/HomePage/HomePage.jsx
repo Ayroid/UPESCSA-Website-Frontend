@@ -1,12 +1,14 @@
+import { useEffect, useState, lazy } from "react";
 import styles from "./HomePage.module.css";
 
 import Home from "../../components/Home/Home";
 import About from "../../components/About/About";
-import HomeEvents from "../../components/HomeEvents/HomeEvents";
-import Alliance from "../../components/Alliance/Alliance";
-import HomeBlogs from "../../components/HomeBlogs/HomeBlogs";
-import { useEffect, useState } from "react";
-import Popup from "../../components/Popup/Popup";
+
+// LAZY LOAD COMPONENTS
+const HomeEvents = lazy(() => import("../../components/HomeEvents/HomeEvents"));
+const Alliance = lazy(() => import("../../components/Alliance/Alliance"));
+const HomeBlogs = lazy(() => import("../../components/HomeBlogs/HomeBlogs"));
+const Popup = lazy(() => import("../../components/Popup/Popup"));
 
 // CSS STYLES
 const { homepageContainer } = styles;
