@@ -1,14 +1,16 @@
-import { useEffect, useState, lazy } from "react";
+import { useEffect, useState, lazy, Suspense } from "react";
 import styles from "./HomePage.module.css";
 
 import Home from "../../components/Home/Home";
 import About from "../../components/About/About";
+import Popup from "../../components/Popup/Popup";
+
+import Loading from "../../components/Loading/Loading";
 
 // LAZY LOAD COMPONENTS
 const HomeEvents = lazy(() => import("../../components/HomeEvents/HomeEvents"));
 const Alliance = lazy(() => import("../../components/Alliance/Alliance"));
 const HomeBlogs = lazy(() => import("../../components/HomeBlogs/HomeBlogs"));
-const Popup = lazy(() => import("../../components/Popup/Popup"));
 
 // CSS STYLES
 const { homepageContainer } = styles;
@@ -59,9 +61,11 @@ const HomePage = () => {
       )}
       <Home showTrigger={eventActive && !popupOpen} openPopup={togglePopup} />
       <About />
-      <HomeEvents />
-      <Alliance />
-      <HomeBlogs />
+      <Suspense fallback={<Loading />}>
+        <HomeEvents />
+        <Alliance />
+        <HomeBlogs />
+      </Suspense>
     </div>
   );
 };
