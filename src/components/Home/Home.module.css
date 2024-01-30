@@ -7,6 +7,7 @@
   box-sizing: border-box;
   width: 100%;
   position: relative;
+  padding-top: 15dvh;
 }
 
 .bgCircles {
