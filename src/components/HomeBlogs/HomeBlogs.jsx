@@ -33,7 +33,7 @@ const HomeBlogs = () => {
         textColor="var(--textDark)"
       />
       <div className={blogsDiv}>
-        {data.map((data) => (
+        {data.slice(0, 4).map((data) => (
           <ImageText
             key={data._id}
             title={data.blogTitle}
