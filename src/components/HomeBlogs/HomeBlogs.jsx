@@ -12,7 +12,7 @@ const { homeBlogsContainer, blogsDiv } = styles;
 
 const HomeBlogs = () => {
   const { data, error, loading } = useFetch({
-    url: "http://192.168.1.9:3000/api/blogs/",
+    url: "http://192.168.1.9:3000/api/blogQ/",
   });
 
   if (loading) {
@@ -22,6 +22,7 @@ const HomeBlogs = () => {
   // REPLACE WITH ERROR COMPONENT
 
   if (error) {
+    console.log(error);
     return <h6>Something went wrong...</h6>;
   }
 

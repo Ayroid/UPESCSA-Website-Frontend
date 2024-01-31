@@ -16,7 +16,7 @@ const BlogsPage = () => {
   }, []);
 
   const { data, loading } = useFetch({
-    url: "http://192.168.1.9:3000/api/blogs/",
+    url: "http://192.168.1.9:3000/api/blog/",
   });
 
   if (loading) {
