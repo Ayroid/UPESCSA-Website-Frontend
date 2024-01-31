@@ -1,0 +1,18 @@
+.eventsPageContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  background-color: var(--bgLight);
+}
+
+.eventsPageDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}

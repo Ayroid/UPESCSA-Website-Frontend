@@ -19,23 +19,29 @@ body {
   --navDark: #010101;
   --textLight: #ffffff;
   --textDark: #000000;
+  --textDisabled: #464646;
   --buttonDark: #000000;
   --buttonLight: #ffffff;
   --buttonLink: #2797ff;
+  --buttonDisabled: #a5a5a5;
   --scrollBar: #aaaaaa;
   --scrollBarHover: #888888;
+  --separatorHr: #a5a5a5;
   --blueUnderLine: #33c2ff;
-  --yellowUnderLine: #FFE600;
+  --yellowUnderLine: #ffe600;
+  --eventDescBg: #d9d9d9;
+  --switchBg: #eeeeee;
 }
 
 * {
   scrollbar-width: thin;
   scrollbar-color: transparent;
+  box-sizing: border-box;
 }
 
 /* Chrome, Edge, and Safari */
 *::-webkit-scrollbar {
-  width: 8px;
+  width: 4px;
   cursor: pointer;
 }
 

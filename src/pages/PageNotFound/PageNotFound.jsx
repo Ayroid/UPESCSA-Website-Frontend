@@ -6,9 +6,8 @@ const { pageNotFound, subHeading, heading } = styles;
 
 const PageNotFound = () => {
   useEffect(() => {
-    window.scrollTo(0, 0);
+    window.scrollTo({ top: 0, behavior: "instant" });
   }, []);
-
   return (
     <div className={pageNotFound}>
       <div className={heading}>404</div>

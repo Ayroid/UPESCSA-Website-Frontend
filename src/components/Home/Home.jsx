@@ -1,3 +1,4 @@
+import Proptypes from "prop-types";
 import styles from "./Home.module.css";
 
 import Socials from "../Socials/Socials";
@@ -15,9 +16,10 @@ const {
   pageHeading,
   verticalLine1,
   verticalLine2,
+  popupTrigger,
 } = styles;
 
-const Home = () => {
+const Home = ({ showTrigger, openPopup }) => {
   return (
     <div className={homePage}>
       <div className={bgCircles}>
@@ -39,8 +41,18 @@ const Home = () => {
         <hr className={verticalLine} id={verticalLine2} />
         <div className={pageHeading}>CSA</div>
       </div>
+      {showTrigger && (
+        <div className={popupTrigger} onClick={openPopup}>
+          <img src="/icons/annoucement.png" alt="annoucement" />
+        </div>
+      )}
     </div>
   );
+};
+
+Home.propTypes = {
+  showTrigger: Proptypes.bool.isRequired,
+  openPopup: Proptypes.func.isRequired,
 };
 
 export default Home;

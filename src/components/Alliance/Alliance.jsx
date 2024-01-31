@@ -1,35 +1,26 @@
 import styles from "./Alliance.module.css";
 
+import useFetch from "../../hooks/useFetch";
+
 import SectionHeading from "../SectionHeading/SectionHeading";
 import ImageText from "../ImageText/ImageText";
+import Loading from "../Loading/Loading";
 
 // CSS STYLES
 const { allianceContainer, sectionHeading, allianceDiv } = styles;
 
 const Alliance = () => {
-  // ALLIANCE DATA
-  const allianceData = [
-    {
-      img: "/img/alliance/codewar.avif",
-      title: "Code Warriors",
-      link: "https://codewarriors.in",
-    },
-    {
-      img: "/img/alliance/gmc.avif",
-      title: "Give My Certificate",
-      link: "https://givemycertificate.com",
-    },
-    {
-      img: "/img/alliance/awsugmum.png",
-      title: "AWS UG MUM",
-      link: "https://www.linkedin.com/company/awsugmum/",
-    },
-    {
-      img: "/img/alliance/newtonschool.avif",
-      title: "Newton School",
-      link: "https://www.newtonschool.co/",
-    },
-  ];
+  const { data, error, loading } = useFetch({
+    url: "http://192.168.1.9:3000/api/alliance/",
+  });
+
+  if (loading) {
+    return <Loading />;
+  }
+
+  if (error) {
+    return <h6>Something went wrong...</h6>;
+  }
 
   return (
     <div className={allianceContainer} id="alliance">
@@ -40,13 +31,14 @@ const Alliance = () => {
         />
       </div>
       <div className={allianceDiv}>
-        {allianceData.map((data) => (
+        {data.map((data) => (
           <ImageText
-            key={data.title}
-            title={data.title}
+            key={data._id}
+            id={data._id}
+            title={data.allianceName}
             titleAlign="center"
-            link={data.link}
-            allianceImg={data.img}
+            link={data.allianceWebsiteURL}
+            mainImg={data.allianceImageURL}
             externalLink={true}
           />
         ))}
