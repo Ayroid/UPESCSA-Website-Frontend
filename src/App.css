@@ -34,7 +34,6 @@ body {
 }
 
 * {
-  scrollbar-width: thin;
   scrollbar-color: transparent;
   box-sizing: border-box;
 }
