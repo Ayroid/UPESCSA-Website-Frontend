@@ -1,7 +1,10 @@
 import { useEffect } from "react";
 import styles from "./CommitteePage.module.css";
 
+import useFetch from "../../hooks/useFetch";
+
 import ImageText from "../../components/ImageText/ImageText";
+import Loading from "../../components/Loading/Loading";
 
 // CSS STYLES
 const { committeePageContainer } = styles;
@@ -11,63 +14,29 @@ const CommitteePage = () => {
     window.scrollTo({ top: 0, behavior: "instant" });
   }, []);
 
-  // COMMITTEE DATA
-  const committeeData = [
-    {
-      committeeName: "Design",
-      committeeImageURL: "/img/blogs/placeholder.png",
-      committeePageURL: "/team/design",
-    },
-    {
-      committeeName: "Editorial",
-      committeeImageURL: "/img/blogs/placeholder.png",
-      committeePageURL: "/team/editorial",
-    },
-    {
-      committeeName: "Events",
-      committeeImageURL: "/img/blogs/placeholder.png",
-      committeePageURL: "/team/events",
-    },
-    {
-      committeeName: "Logistics",
-      committeeImageURL: "/img/blogs/placeholder.png",
-      committeePageURL: "/team/logistics",
-    },
-    {
-      committeeName: "Photography",
-      committeeImageURL: "/img/blogs/placeholder.png",
-      committeePageURL: "/team/photography",
-    },
-    {
-      committeeName: "Public Relations",
-      committeeImageURL: "/img/blogs/placeholder.png",
-      committeePageURL: "/team/publicrelations",
-    },
-    {
-      committeeName: "Registrations",
-      committeeImageURL: "/img/blogs/placeholder.png",
-      committeePageURL: "/team/registrations",
-    },
-    {
-      committeeName: "Social Media",
-      committeeImageURL: "/img/blogs/placeholder.png",
-      committeePageURL: "/team/socialmedia",
-    },
-    {
-      committeeName: "Technical",
-      committeeImageURL: "/img/blogs/placeholder.png",
-      committeePageURL: "/team/technical",
-    },
-  ];
+  const { data, error, loading } = useFetch({
+    url: "http://192.168.1.9:3000/api/committee/",
+  });
+
+  if (loading) {
+    return <Loading />;
+  }
+
+  // REPLACE WITH ERROR COMPONENT
+
+  if (error) {
+    return <h6>Something went wrong...</h6>;
+  }
 
   return (
     <div className={committeePageContainer}>
-      {committeeData.map((committee) => (
+      {data.map((committee) => (
         <ImageText
-          key={committee.committeeName}
+          key={committee._id}
           title={committee.committeeName}
           titleAlign="center"
           link={committee.committeePageURL}
+          externalLink={false}
           mainImg={committee.committeeImageURL}
           textColor={"var(--textDark)"}
         />
