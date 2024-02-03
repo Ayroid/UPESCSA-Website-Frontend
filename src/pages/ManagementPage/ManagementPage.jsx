@@ -65,6 +65,8 @@ const ManagementPage = () => {
     return <h6>Something went wrong...</h6>;
   }
 
+  const textColor = "var(--textDark)";
+
   return (
     <div className={managementPageContainer}>
       <h2>Faculty</h2>
@@ -78,7 +80,7 @@ const ManagementPage = () => {
             subTitleAlign="center"
             link={member.linkedInURL}
             mainImg={member.headImgURL}
-            textColor={"var(--textDark)"}
+            textColor={textColor}
             externalLink={true}
           />
         ))}
@@ -95,7 +97,7 @@ const ManagementPage = () => {
             subTitleAlign="center"
             link={member.linkedInURL}
             mainImg={member.headImgURL}
-            textColor={"var(--textDark)"}
+            textColor={textColor}
             externalLink={true}
           />
         ))}
@@ -111,7 +113,7 @@ const ManagementPage = () => {
             subTitleAlign="center"
             link={member.linkedInURL}
             mainImg={member.headImgURL}
-            textColor={"var(--textDark)"}
+            textColor={textColor}
             externalLink={true}
           />
         ))}
@@ -128,7 +130,7 @@ const ManagementPage = () => {
             subTitleAlign="center"
             link={member.linkedInURL}
             mainImg={member.headImgURL}
-            textColor={"var(--textDark)"}
+            textColor={textColor}
             externalLink={true}
           />
         ))}
@@ -145,7 +147,7 @@ const ManagementPage = () => {
             subTitleAlign="center"
             link={member.linkedInURL}
             mainImg={member.headImgURL}
-            textColor={"var(--textDark)"}
+            textColor={textColor}
             externalLink={true}
           />
         ))}
