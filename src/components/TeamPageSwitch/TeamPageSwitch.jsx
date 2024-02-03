@@ -1,38 +1,40 @@
 import Proptypes from "prop-types";
+import { Link } from "react-router-dom";
 import styles from "./TeamPageSwitch.module.css";
 
 // CSS STYLES
 const { pageSwitcherContainer, pageSwitcherButton } = styles;
 
-const TeamPageSwitch = ({ activeTab, changeActiveTab }) => {
+const TeamPageSwitch = ({ activeTab }) => {
   return (
     <div className={pageSwitcherContainer}>
-      <div
-        className={pageSwitcherButton}
-        style={{
-          color: activeTab ? "var(--textDark)" : "var(--textDisabled)",
-        }}
-        onClick={() => changeActiveTab(true)}
-      >
-        Management
-      </div>
+      <Link to={"/team"}>
+        <div
+          className={pageSwitcherButton}
+          style={{
+            color: activeTab ? "var(--textDark)" : "var(--textDisabled)",
+          }}
+        >
+          Management
+        </div>
+      </Link>
       <hr />
-      <div
-        className={pageSwitcherButton}
-        style={{
-          color: !activeTab ? "var(--textDark)" : "var(--buttonDisabled)",
-        }}
-        onClick={() => changeActiveTab(false)}
-      >
-        Committees
-      </div>
+      <Link to={"/committee"}>
+        <div
+          className={pageSwitcherButton}
+          style={{
+            color: !activeTab ? "var(--textDark)" : "var(--buttonDisabled)",
+          }}
+        >
+          Committees
+        </div>
+      </Link>
     </div>
   );
 };
 
 TeamPageSwitch.propTypes = {
   activeTab: Proptypes.bool.isRequired,
-  changeActiveTab: Proptypes.func.isRequired,
 };
 
 export default TeamPageSwitch;
