@@ -3,7 +3,7 @@
   color: var(--textLight);
   font-weight: 500;
   font-family: "Rajdhani", sans-serif;
-  font-size: 12rem;
+  font-size: 10rem;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -13,14 +13,21 @@
   justify-content: center;
   align-items: center;
   position: relative;
+  padding: 1rem;
 }
 
 @media screen and (max-width: 768px) {
   .pageHeadingDiv {
-    font-size: 25dvw;
+    font-size: 5rem;
     margin-top: 5rem;
     height: 20rem;
     line-height: normal;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .pageHeadingDiv {
+    font-size: 4rem;
   }
 }
 
@@ -38,26 +45,4 @@
 .pageHeading {
   position: relative;
   margin: 1rem;
-}
-
-.arrowDiv {
-  position: absolute;
-  bottom: 1rem;
-  z-index: 5;
-  cursor: pointer;
-}
-
-.arrowDiv img {
-  height: 1.5rem;
-  width: 1.5rem;
-  animation: arrow 1.5s ease-in-out infinite alternate;
-}
-
-@keyframes arrow {
-  0% {
-    transform: translateY(0);
-  }
-  100% {
-    transform: translateY(0.5rem);
-  }
 }
