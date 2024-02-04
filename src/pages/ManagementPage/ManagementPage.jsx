@@ -1,6 +1,6 @@
 import styles from "./ManagementPage.module.css";
 
-import { useEffect } from "react";
+import { useEffect, useMemo } from "react";
 
 import useFetch from "../../hooks/useFetch";
 
@@ -19,6 +19,42 @@ const ManagementPage = () => {
     url: "http://192.168.1.9:3000/api/head/",
   });
 
+  const faculties = useMemo(
+    () =>
+      data
+        ?.filter((member) => member.category === "Faculty")
+        .sort((a, b) => a.order - b.order),
+    [data]
+  );
+  const presidents = useMemo(
+    () =>
+      data
+        ?.filter((member) => member.category === "President")
+        .sort((a, b) => a.order - b.order),
+    [data]
+  );
+  const management = useMemo(
+    () =>
+      data
+        ?.filter((member) => member.category === "Management")
+        .sort((a, b) => a.order - b.order),
+    [data]
+  );
+  const heads = useMemo(
+    () =>
+      data
+        ?.filter((member) => member.category === "Heads")
+        .sort((a, b) => a.order - b.order),
+    [data]
+  );
+  const associates = useMemo(
+    () =>
+      data
+        ?.filter((member) => member.category === "Associate Heads")
+        .sort((a, b) => a.order - b.order),
+    [data]
+  );
+
   if (loading) {
     return <Loading />;
   }
@@ -29,25 +65,7 @@ const ManagementPage = () => {
     return <h6>Something went wrong...</h6>;
   }
 
-  const faculties = data
-    .filter((member) => member.category === "Faculty")
-    .sort((a, b) => a.order - b.order);
-
-  const presidents = data
-    .filter((member) => member.category === "President")
-    .sort((a, b) => a.order - b.order);
-
-  const management = data
-    .filter((member) => member.category === "Management")
-    .sort((a, b) => a.order - b.order);
-
-  const heads = data
-    .filter((member) => member.category === "Heads")
-    .sort((a, b) => a.order - b.order);
-
-  const associates = data
-    .filter((member) => member.category === "Associate Heads")
-    .sort((a, b) => a.order - b.order);
+  const textColor = "var(--textDark)";
 
   return (
     <div className={managementPageContainer}>
@@ -62,7 +80,7 @@ const ManagementPage = () => {
             subTitleAlign="center"
             link={member.linkedInURL}
             mainImg={member.headImgURL}
-            textColor={"var(--textDark)"}
+            textColor={textColor}
             externalLink={true}
           />
         ))}
@@ -79,7 +97,7 @@ const ManagementPage = () => {
             subTitleAlign="center"
             link={member.linkedInURL}
             mainImg={member.headImgURL}
-            textColor={"var(--textDark)"}
+            textColor={textColor}
             externalLink={true}
           />
         ))}
@@ -95,7 +113,7 @@ const ManagementPage = () => {
             subTitleAlign="center"
             link={member.linkedInURL}
             mainImg={member.headImgURL}
-            textColor={"var(--textDark)"}
+            textColor={textColor}
             externalLink={true}
           />
         ))}
@@ -112,7 +130,7 @@ const ManagementPage = () => {
             subTitleAlign="center"
             link={member.linkedInURL}
             mainImg={member.headImgURL}
-            textColor={"var(--textDark)"}
+            textColor={textColor}
             externalLink={true}
           />
         ))}
@@ -129,7 +147,7 @@ const ManagementPage = () => {
             subTitleAlign="center"
             link={member.linkedInURL}
             mainImg={member.headImgURL}
-            textColor={"var(--textDark)"}
+            textColor={textColor}
             externalLink={true}
           />
         ))}

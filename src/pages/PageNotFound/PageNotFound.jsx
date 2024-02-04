@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import styles from "./PageNotFound.module.css";
 
 // CSS STYLES
-const { pageNotFound, subHeading, heading } = styles;
+const { pageNotFound, innerContent, subHeading, heading } = styles;
 
 const PageNotFound = () => {
   useEffect(() => {
@@ -10,8 +10,10 @@ const PageNotFound = () => {
   }, []);
   return (
     <div className={pageNotFound}>
-      <div className={heading}>404</div>
-      <div className={subHeading}>Page Not Found</div>
+      <div className={innerContent}>
+        <div className={heading}>404</div>
+        <div className={subHeading}>Page Not Found</div>
+      </div>
     </div>
   );
 };

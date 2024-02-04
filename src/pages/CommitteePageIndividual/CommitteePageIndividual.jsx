@@ -1,9 +1,12 @@
-import { useState, useEffect } from "react";
-import { useParams, useNavigate } from "react-router-dom";
+import { useEffect } from "react";
+import { useParams } from "react-router-dom";
 import styles from "./CommitteePageIndividual.module.css";
+
+import useFetch from "../../hooks/useFetch";
 
 import PageHeading from "../../components/PageHeading/PageHeading";
 import ImageText from "../../components/ImageText/ImageText";
+import Loading from "../../components/Loading/Loading";
 
 // CSS STYLES
 const {
@@ -22,68 +25,43 @@ const CommitteePageIndividual = () => {
   }, []);
 
   const teamId = useParams();
-  const navigate = useNavigate();
 
-  const [teamValue, setTeamValue] = useState(null);
+  let teamValue = "";
 
-  useEffect(() => {
-    const committeeNames = [
-      "design",
-      "editorial",
-      "events",
-      "logistics",
-      "photography",
-      "publicrelations",
-      "registrations",
-      "socialmedia",
-      "technical",
-    ];
-    const currentTeamValue = teamId ? Object.values(teamId)[0] : null;
-    if (!committeeNames.includes(currentTeamValue)) {
-      navigate("/404");
-    }
-    setTeamValue(currentTeamValue);
-  }, [teamId, navigate, teamValue]);
+  const committeeNames = {
+    design: "Design",
+    editorial: "Editorial",
+    events: "Events",
+    logistics: "Logistics",
+    photography: "Photography",
+    publicrelations: "Public Relations",
+    registrations: "Registrations",
+    socialmedia: "Social Media",
+    technical: "Technical",
+  };
+  const currentTeamValue = teamId ? Object.values(teamId)[0] : null;
+  teamValue = committeeNames[currentTeamValue];
+
+  const { data, error, loading } = useFetch({
+    url: `http://192.168.1.9:3000/api/committee/name/?committeeName=${teamValue}`,
+  });
+
+  if (loading) {
+    return <Loading />;
+  }
+
+  // REPLACE WITH ERROR COMPONENT
+
+  if (error) {
+    return <h6>Something went wrong...</h6>;
+  }
 
   // COMMITTEE DATA
   const committeeData = {
-    committeeName: "Public Relations",
-    committeeDescription:
-      "ipsum consequat nisl vel pretium lectus quam id leo in vitae turpis massa sed elementum tempus egestas sed sed risus pretium quam vulputate dignissim suspendisse in est ante in nibh mauris cursus mattis molestie a iaculis at erat pellentesque adipiscing commodo elit at imperdiet dui accumsan sit amet ipsum consequat nisl vel pretium lectus quam id leo in vitae turpis massa sed elementum tempus egestas sed sed ipsum consequat nisl vel pretium lectus quam id leo in vitae turpis massa sed elementum tempus egestas sed sed risus pretium quam vulputate dignissim suspendisse in est ante in nibh mauris cursus mattis molestie a iaculis at erat pellentesque adipiscing commodo elit at imperdiet dui accumsan sit amet ipsum consequat nisl vel pretium lectus quam id leo ipsum consequat nisl vel pretium lectus quam id leo in vitae turpis massa sed elementum tempus egestas sed sed",
-    headsInfo: [
-      {
-        headName: "Head 1",
-        headImageURL: "/img/blogs/placeholder.png",
-        headPosition: "Head Position",
-        headLinkedInURL: "https://www.linkedin.com/",
-      },
-      {
-        headName: "Head 2",
-        headImageURL: "/img/blogs/placeholder.png",
-        headPosition: "Head Position",
-        headLinkedInURL: "https://www.linkedin.com/",
-      },
-      {
-        headName: "Head 3",
-        headImageURL: "/img/blogs/placeholder.png",
-        headPosition: "Head Position",
-        headLinkedInURL: "https://www.linkedin.com/",
-      },
-    ],
-    committeeMemberNames: [
-      "Member Name",
-      "Member Name",
-      "Member Name",
-      "Member Name",
-      "Member Name",
-      "Member Name",
-      "Member Name",
-      "Member Name",
-      "Member Name",
-      "Member Name",
-      "Member Name",
-      "Member Name",
-    ],
+    committeeName: teamValue,
+    committeeDescription: data[0].committeeDescription,
+    committeeHeads: data[0].committeeHeads,
+    committeeMembers: data[0].committeeMembers,
   };
 
   return (
@@ -98,15 +76,15 @@ const CommitteePageIndividual = () => {
         </p>
         <h4 className={committeeMemberTitle}>Heads & Associate Heads</h4>
         <div className={committeeHeadsContainer}>
-          {committeeData.headsInfo.map((head) => (
+          {committeeData.committeeHeads.map((head) => (
             <ImageText
-              key={head.headName}
-              title={head.headName}
+              key={head._id}
+              title={head.name}
               titleAlign="center"
-              subTitle={head.headPosition}
+              subTitle={head.position}
               subTitleAlign="center"
-              link={head.headLinkedInURL}
-              mainImg={head.headImageURL}
+              link={head.linkedInURL}
+              mainImg={head.headImgURL}
               externalLink={false}
               textColor={"var(--textDark)"}
             />
@@ -114,9 +92,9 @@ const CommitteePageIndividual = () => {
         </div>
         <h4 className={committeeMemberTitle}>Members</h4>
         <div className={committeeMembersContainer}>
-          {committeeData.committeeMemberNames.map((memberName, index) => (
-            <div key={index} className={committeeMemberName}>
-              {memberName}
+          {committeeData.committeeMembers.map((member) => (
+            <div key={member._id} className={committeeMemberName}>
+              {member.name}
             </div>
           ))}
         </div>

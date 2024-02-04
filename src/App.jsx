@@ -21,7 +21,11 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/csr" element={<CsrPage />} />
-        <Route path="/team" element={<TeamPage />} />
+        <Route path="/team" element={<TeamPage activeTab={"team"} />} />
+        <Route
+          path="/committee"
+          element={<TeamPage activeTab={"committee"} />}
+        />
         <Route path="/team/*" element={<CommitteePageIndividual />} />
         <Route path="/events" element={<EventsPage />} />
         <Route path="/blogs" element={<BlogsPage />} />
