@@ -15,7 +15,7 @@ const CommitteePage = () => {
   }, []);
 
   const { data, error, loading } = useFetch({
-    url: "http://192.168.1.9:3000/api/committee/",
+    url: "http://localhost:3000/api/committee/",
   });
 
   if (loading) {

@@ -11,7 +11,7 @@ const { allianceContainer, sectionHeading, allianceDiv } = styles;
 
 const Alliance = () => {
   const { data, error, loading } = useFetch({
-    url: "http://192.168.1.9:3000/api/alliance/",
+    url: "http://localhost:3000/api/alliance/",
   });
 
   if (loading) {
