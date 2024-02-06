@@ -27,22 +27,12 @@ const CsrPage = () => {
     {
       img: "/img/blogs/placeholder.png",
       spanx: "span 2",
-      spany: "span 1",
+      spany: "span 2",
     },
     {
       img: "/img/blogs/placeholder.png",
       spanx: "span 2",
       spany: "span 2",
-    },
-    {
-      img: "/img/blogs/placeholder.png",
-      spanx: "span 1",
-      spany: "span 1",
-    },
-    {
-      img: "/img/blogs/placeholder.png",
-      spanx: "span 1",
-      spany: "span 1",
     },
     {
       img: "/img/blogs/placeholder.png",
