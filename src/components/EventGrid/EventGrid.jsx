@@ -31,7 +31,7 @@ const EventGrid = ({ data, year }) => {
             className={eventImage}
             style={{ gridColumn: event.spanx, gridRow: event.spany }}
           >
-            <img src={event.img} alt="event" />
+            <img src={event.imageURL} alt="event" />
           </div>
         ) : (
           <div
@@ -39,7 +39,7 @@ const EventGrid = ({ data, year }) => {
             className={eventImage}
             style={{ gridColumn: "span 1", gridRow: "span 1" }}
           >
-            <img src={event.img} alt="event" />
+            <img src={event.imageURL} alt="event" />
           </div>
         )
       )}
