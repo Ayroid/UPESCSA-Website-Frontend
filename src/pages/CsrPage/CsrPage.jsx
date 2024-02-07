@@ -1,8 +1,11 @@
 import { useEffect } from "react";
 import styles from "./CsrPage.module.css";
 
+import useFetch from "../../hooks/useFetch";
+
 import PageHeading from "../../components/PageHeading/PageHeading";
 import EventGrid from "../../components/EventGrid/EventGrid";
+import Loading from "../../components/Loading/Loading";
 
 // CSS STYLES
 const { csrContainer, csrHeader } = styles;
@@ -12,56 +15,26 @@ const CsrPage = () => {
     window.scrollTo({ top: 0, behavior: "instant" });
   }, []);
 
-  // EVENTS DATA
-  const csrData = [
-    {
-      img: "/img/blogs/placeholder.png",
-      spanx: "span 1",
-      spany: "span 1",
-    },
-    {
-      img: "/img/blogs/placeholder.png",
-      spanx: "span 1",
-      spany: "span 1",
-    },
-    {
-      img: "/img/blogs/placeholder.png",
-      spanx: "span 2",
-      spany: "span 2",
-    },
-    {
-      img: "/img/blogs/placeholder.png",
-      spanx: "span 2",
-      spany: "span 2",
-    },
-    {
-      img: "/img/blogs/placeholder.png",
-      spanx: "span 2",
-      spany: "span 1",
-    },
-    {
-      img: "/img/blogs/placeholder.png",
-      spanx: "span 1",
-      spany: "span 1",
-    },
-    {
-      img: "/img/blogs/placeholder.png",
-      spanx: "span 2",
-      spany: "span 1",
-    },
-    {
-      img: "/img/blogs/placeholder.png",
-      spanx: "span 1",
-      spany: "span 1",
-    },
-  ];
+  const { data, error, loading } = useFetch({
+    url: `http://localhost:3000/api/csr/`,
+  });
+
+  if (loading) {
+    return <Loading />;
+  }
+
+  // REPLACE WITH ERROR COMPONENT
+
+  if (error) {
+    return <h6>Something went wrong...</h6>;
+  }
 
   return (
     <div className={csrContainer}>
       <div className={csrHeader}>
         <PageHeading imgURL="/img/pageheaders/csr.png" text="CSR" />
       </div>
-      <EventGrid data={csrData} />
+      <EventGrid data={data} />
     </div>
   );
 };
