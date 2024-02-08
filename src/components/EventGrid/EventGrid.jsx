@@ -2,10 +2,12 @@ import Proptypes from "prop-types";
 import { useState, useEffect } from "react";
 import styles from "./EventGrid.module.css";
 
+import Loading from "../../components/Loading/Loading";
+
 // CSS STYLES
 const { eventGrid, eventImage } = styles;
 
-const EventGrid = ({ data, year }) => {
+const EventGrid = ({ data, loading, error }) => {
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
 
   useEffect(() => {
@@ -18,8 +20,12 @@ const EventGrid = ({ data, year }) => {
     };
   }, []);
 
-  if (year) {
-    // FETCH THAT YEAR'S EVENT DATA & SET IT TO data
+  if (loading) {
+    return <Loading />;
+  }
+
+  if (error) {
+    return <h6>Something went wrong...</h6>;
   }
 
   return (
@@ -55,7 +61,8 @@ EventGrid.propTypes = {
       spany: Proptypes.string,
     })
   ),
-  year: Proptypes.number,
+  loading: Proptypes.bool,
+  error: Proptypes.bool,
 };
 
 export default EventGrid;
