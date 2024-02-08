@@ -37,7 +37,7 @@ const CommitteePage = () => {
           titleAlign="center"
           link={committee.committeePageURL}
           externalLink={false}
-          mainImg={committee.committeeImageURL}
+          mainImg={"/logo/upescsa_nobg_low.png"}
           textColor={"var(--textDark)"}
         />
       ))}
