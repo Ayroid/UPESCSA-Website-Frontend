@@ -1,16 +1,16 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, lazy, Suspense } from "react";
 import styles from "./HomePage.module.css";
 
 import Home from "../../components/Home/Home";
 import About from "../../components/About/About";
 import Popup from "../../components/Popup/Popup";
 
-// import Loading from "../../components/Loading/Loading";
+import Loading from "../../components/Loading/Loading";
 
 // LAZY LOAD COMPONENTS
-import HomeEvents from "../../components/HomeEvents/HomeEvents";
-import Alliance from "../../components/Alliance/Alliance";
-import HomeBlogs from "../../components/HomeBlogs/HomeBlogs";
+const HomeEvents = lazy(() => import("../../components/HomeEvents/HomeEvents"));
+const Alliance = lazy(() => import("../../components/Alliance/Alliance"));
+const HomeBlogs = lazy(() => import("../../components/HomeBlogs/HomeBlogs"));
 
 // CSS STYLES
 const { homepageContainer } = styles;
@@ -61,11 +61,15 @@ const HomePage = () => {
       )}
       <Home showTrigger={eventActive && !popupOpen} openPopup={togglePopup} />
       <About />
-      {/* <Suspense fallback={<Loading />}> */}
-      <HomeEvents />
-      <Alliance />
-      <HomeBlogs />
-      {/* </Suspense> */}
+      <Suspense fallback={<Loading />}>
+        <HomeEvents />
+      </Suspense>
+      <Suspense fallback={<Loading />}>
+        <Alliance />
+      </Suspense>
+      <Suspense fallback={<Loading />}>
+        <HomeBlogs />
+      </Suspense>
     </div>
   );
 };

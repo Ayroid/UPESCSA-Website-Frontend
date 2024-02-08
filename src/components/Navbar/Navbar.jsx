@@ -31,6 +31,11 @@ const Navbar = () => {
   // DATA
   const navlinks = [
     {
+      title: "Home",
+      action: "/#",
+      separatePage: false,
+    },
+    {
       title: "About",
       action: "/#about",
       separatePage: false,
@@ -51,19 +56,19 @@ const Navbar = () => {
       separatePage: true,
     },
     {
+      title: "Committees",
+      action: "/committees",
+      separatePage: true,
+    },
+    {
       title: "CSR",
       action: "/csr",
       separatePage: true,
     },
     {
       title: "Blogs",
-      action: "/#blogs",
-      separatePage: false,
-    },
-    {
-      title: "Contact",
-      action: "/#contact",
-      separatePage: false,
+      action: "/blogs",
+      separatePage: true,
     },
   ];
 
