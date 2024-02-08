@@ -31,11 +31,6 @@ const Navbar = () => {
   // DATA
   const navlinks = [
     {
-      title: "Home",
-      action: "/#",
-      separatePage: false,
-    },
-    {
       title: "About",
       action: "/#about",
       separatePage: false,
