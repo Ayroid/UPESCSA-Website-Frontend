@@ -29,7 +29,6 @@ const EventsPage = () => {
   };
 
   useEffect(() => {
-    console.log(activeYear);
     setUrl(`http://localhost:3000/api/previousevent/?year=${activeYear}`);
   }, [activeYear]);
 
