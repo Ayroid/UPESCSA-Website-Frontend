@@ -1,0 +1,260 @@
+.mainDiv {
+  display: flex;
+  padding: 100px;
+}
+
+body{
+  background: #000;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+.heading {
+  font-size: min(2.5rem, 8dvw);
+  color: var(--text);
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+  width: 100%;
+  text-align: left;
+}
+
+.formDiv {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.label {
+  position: absolute;
+  font-size: 1rem;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: transparent;
+  color: black;
+  font-weight: 600;
+  transition: 0.1s ease-out;
+  transform-origin: left top;
+  pointer-events: none;
+}
+
+.formContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2.5rem;
+  min-width: 40vw;
+  flex-direction: column;
+  background-color: white;
+  padding-inline: 72px;
+  padding-block: 20px;
+  border-radius: 2px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.heading {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: black;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.subtitle {
+  margin-top: 0px;
+  font-size: 14px;
+  color: black;
+}
+
+.divider{
+  height: 2px;
+  margin-bottom: 2rem;
+  width: 80%;
+  display: block;
+  background-color: #000000;
+}
+
+.backButton {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  color: black;
+}
+
+.evortalEventsContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 10dvw;
+  color: var(--textDark);
+}
+
+.evortalEventImage img {
+  margin: auto;
+  width: max(20dvw, 350px);
+  height: max(20dvw, 350px);
+}
+
+.evortalEventDescripton {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  box-sizing: border-box;
+  width: max(20dvw, 350px);
+  height: max(20dvw, 350px);
+  color: var(--textDark);
+  background-color: var(--eventDescBg);
+  padding: 1.5rem 0rem 1rem 1rem;
+}
+
+.evortalEventHeading {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0 0 -0.75rem 0;
+}
+
+.evortalEventText {
+  font-size: 1.1rem;
+  font-weight: 400;
+  overflow-y: scroll;
+  padding-right: 1rem;
+}
+
+.evortalEventDetails {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  width: 100%;
+  padding-right: 1rem;
+}
+
+.evortalEventDetailsDiv {
+  display: flex;
+  width: max(20dvw, 350px);
+  align-items: center;
+  justify-content: space-between;
+  margin-block: 10px;
+  box-sizing: border-box;
+  width: 100%;
+  gap: 0.5rem;
+}
+
+.evortalEventDetail {
+  background-color: var(--bgLight);
+  padding: 0 0.75rem;
+  height: 2.5rem;
+  border-radius: 5px;
+  gap: 0.25rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.evortalEventDetail img {
+  height: 1.5rem;
+}
+
+.evortalEventRegisterButton {
+  color: var(--textLight);
+  border-radius: 5px;
+  padding: 0 0.75rem;
+  height: 2.5rem;
+  width: 13rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button {
+  background-color: black;
+  color: white;
+  margin-top: 1rem;
+  border: none;
+  justify-content: center;
+  width: 15rem;
+  border-radius: 0;
+  padding: 10px 20px;
+  display: flex;
+  margin-inline: auto;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.button:hover {
+  opacity: 0.8;
+}
+
+@media screen and (max-width: 1000px) {
+  .mainDiv{
+    flex-direction: column;
+  }
+
+  .evortalEventsContainer {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .evortalEventImage img {
+    height: max(30dvw, 350px);
+    width: max(30dvw, 350px);
+  }
+
+  .evortalEventDescripton {
+    height: max(30dvw, 350px);
+    width: max(30dvw, 350px);
+    padding-left: 1rem;
+  }
+
+  .evortalEventHeading {
+    font-size: 1.25rem;
+  }
+
+  .evortalEventText {
+    font-size: 1rem;
+  }
+
+  .evortalEventDetails {
+    padding-right: 1rem;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .evortalEventDetailsDiv {
+    align-items: center;
+    width: max(30dvw, 350px);
+    gap: 0.5rem;
+  }
+
+  .evortalEventDetail img {
+    height: 1rem;
+  }
+
+  .evortalEventRegisterButton {
+    width: 100%;
+    margin-inline: 1rem;
+    justify-content: center;
+  }
+}
