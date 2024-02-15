@@ -23,7 +23,7 @@ const EvortalPage = () => {
       eventMode: "Offline",
       eventTeamSize: "5",
       eventDate: "12 Sept",
-      eventFormURL: "/events/valorant",
+      eventFormURL: "/events/register",
       activeEvent: true,
     },
     {
@@ -34,7 +34,7 @@ const EvortalPage = () => {
       eventMode: "Offline",
       eventTeamSize: "5",
       eventDate: "12 Sept",
-      eventFormURL: "/events/valorant",
+      eventFormURL: "/events/register",
       activeEvent: true,
     },
   ];
@@ -48,7 +48,7 @@ const EvortalPage = () => {
       eventMode: "Offline",
       eventTeamSize: "5",
       eventDate: "12 Sept",
-      eventFormURL: "/events/valorant",
+      eventFormURL: "/events/register",
       activeEvents: false,
     },
     {
@@ -59,7 +59,7 @@ const EvortalPage = () => {
       eventMode: "Offline",
       eventTeamSize: "5",
       eventDate: "12 Sept",
-      eventFormURL: "/events/valorant",
+      eventFormURL: "/events/register",
       activeEvents: false,
     },
   ];

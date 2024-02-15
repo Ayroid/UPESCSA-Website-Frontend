@@ -14,6 +14,7 @@ import Contact from "./components/Contact/Contact";
 import Navbar from "./components/Navbar/Navbar";
 import ManagementPage from "./pages/TeamPage/TeamPage";
 import CommitteePage from "./pages/CommitteePage/CommitteePage";
+import FormPage from "./pages/EventsPage/FormPage/FormPage";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
         <Route path="/committees" element={<CommitteePage />} />
         <Route path="/committees/*" element={<CommitteePageIndividual />} />
         <Route path="/events" element={<EventsPage />} />
+        <Route path="/events/register" element={<FormPage />} />
         <Route path="/blogs" element={<BlogsPage />} />
         <Route path="/evortal" element={<Evortal />} />
         <Route path="*" element={<PageNotFound />} />
