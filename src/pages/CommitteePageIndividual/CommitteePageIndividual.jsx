@@ -43,7 +43,7 @@ const CommitteePageIndividual = () => {
   teamValue = committeeNames[currentTeamValue];
 
   const { data, error, loading } = useFetch({
-    url: `http://localhost:3000/api/committee/name/?committeeName=${teamValue}`,
+    url: `${import.meta.env.VITE_SERVER_URL}/api/committee/name/?committeeName=${teamValue}`,
   });
 
   if (loading) {

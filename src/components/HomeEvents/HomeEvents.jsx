@@ -25,7 +25,7 @@ const HomeEvents = () => {
   }, []);
 
   const { data, error, loading } = useFetch({
-    url: "http://localhost:3000/api/previousevent/?home=true",
+    url: `${import.meta.env.VITE_SERVER_URL}/api/previousevent/?home=true`,
   });
 
   if (loading) {

@@ -15,7 +15,7 @@ const CsrPage = () => {
   }, []);
 
   const { data, error, loading } = useFetch({
-    url: `http://localhost:3000/api/csr/`,
+    url: `${import.meta.env.VITE_SERVER_URL}/api/csr/`,
   });
 
   return (

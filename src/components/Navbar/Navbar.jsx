@@ -31,18 +31,8 @@ const Navbar = () => {
   // DATA
   const navlinks = [
     {
-      title: "About",
-      action: "/#about",
-      separatePage: false,
-    },
-    {
       title: "Events",
-      action: "/#events",
-      separatePage: false,
-    },
-    {
-      title: "Alliance",
-      action: "/#alliance",
+      action: "/events",
       separatePage: false,
     },
     {

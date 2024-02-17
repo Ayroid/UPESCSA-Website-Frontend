@@ -16,7 +16,7 @@ const CommitteePage = () => {
   }, []);
 
   const { data, error, loading } = useFetch({
-    url: "http://localhost:3000/api/committee/",
+    url: `${import.meta.env.VITE_SERVER_URL}/api/committee/`,
   });
 
   if (loading) {

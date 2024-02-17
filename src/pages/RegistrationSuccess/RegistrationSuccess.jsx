@@ -1,0 +1,86 @@
+import { useEffect } from "react";
+import { Link } from "react-router-dom";
+import styles from "./RegistrationSuccess.module.css";
+
+const {
+  mainDiv,
+  successAnimation,
+  fadeinAnimation,
+  checkmark,
+  checkmarkCheck,
+  checkmarkCircle,
+  csalogo,
+  csaheading,
+  csatextBox,
+  csabackToHome,
+} = styles;
+
+const RegistrationSuccess = () => {
+  useEffect(() => {
+    const mainBoxHeading = document.getElementById("mainBoxHeading");
+    const mainBoxText = document.getElementById("mainBoxText");
+    const backToHome = document.getElementById("backToHome");
+    setTimeout(() => {
+      document.getElementById("successAnimation").style.display = "none";
+      document.getElementById("csalogobox").style.display = "block";
+    }, 2000);
+    setTimeout(() => {
+      mainBoxHeading.classList.add(fadeinAnimation);
+      mainBoxText.classList.add(fadeinAnimation);
+      backToHome.classList.add(fadeinAnimation);
+    }, 2000);
+    setTimeout(() => {
+      mainBoxHeading.classList.remove(fadeinAnimation);
+      mainBoxText.classList.remove(fadeinAnimation);
+      backToHome.classList.remove(fadeinAnimation);
+      mainBoxHeading.style.opacity = "1";
+      mainBoxText.style.opacity = "1";
+      backToHome.style.opacity = "1";
+    }, 3500);
+  }, []);
+  return (
+    <div className={mainDiv}>
+      <div className={successAnimation} id="successAnimation">
+        <svg
+          className={checkmark}
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 52 52"
+        >
+          <circle
+            className={checkmarkCircle}
+            cx="26"
+            cy="26"
+            r="25"
+            fill="none"
+          />
+          <path
+            className={checkmarkCheck}
+            fill="none"
+            d="M14.1 27.2l7.1 7.2 16.7-16.8"
+          />
+        </svg>
+      </div>
+      <div className={csalogo} id="csalogobox">
+        <Link to="/">
+          <img id="csalogo" src="/logo/upescsa_nobg_high.png" alt="CSA Logo" />
+        </Link>
+        <div className={csaheading} id="mainBoxHeading">
+          <h1>Thank you for Registering!</h1>
+        </div>
+        <div className={csatextBox} id="mainBoxText">
+          <p>Please join our Whatsapp Group for further updates!</p>
+          <br />
+          <a
+            href="https://chat.whatsapp.com/FGnyUW0jLyx0W9pbDpJE05"
+            className={csabackToHome}
+            id="backToHome"
+          >
+            Join Whatsapp
+          </a>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default RegistrationSuccess;

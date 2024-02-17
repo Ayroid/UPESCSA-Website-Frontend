@@ -21,6 +21,7 @@ const EvortalEvents = ({
   eventText,
   eventMode,
   eventTeamSize,
+  eventRegistrationFee,
   eventDate,
   eventFormURL,
   activeEvent,
@@ -45,7 +46,11 @@ const EvortalEvents = ({
               <p>{eventTeamSize}</p>
             </div>
             <div className={evortalEventDetail}>
-              <img src="/icons/date.png" alt="" />
+              <img src="/icons/registrationFee.png" alt="" />
+              <p>{eventRegistrationFee}</p>
+            </div>
+            <div className={evortalEventDetail}>
+              {/* <img src="/icons/date.png" alt="" /> */}
               <p>{eventDate}</p>
             </div>
           </div>
@@ -80,9 +85,10 @@ EvortalEvents.propTypes = {
   eventImageURL: Proptypes.string.isRequired,
   eventHeading: Proptypes.string.isRequired,
   eventText: Proptypes.string.isRequired,
-  eventFormURL: Proptypes.string.isRequired,
+  eventFormURL: Proptypes.string,
   eventMode: Proptypes.string.isRequired,
   eventTeamSize: Proptypes.string.isRequired,
+  eventRegistrationFee: Proptypes.string.isRequired,
   eventDate: Proptypes.string.isRequired,
   activeEvent: Proptypes.bool.isRequired,
 };

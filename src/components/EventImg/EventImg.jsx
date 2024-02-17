@@ -4,21 +4,18 @@ import styles from "./EventImg.module.css";
 // CSS STYLES
 const { eventImage } = styles;
 
-const EventImg = ({ key, imageURL }) => {
+const EventImg = ({ imageURL, gridColumn = "span 1", gridRow = "span 1" }) => {
   return (
-    <div
-      key={key}
-      className={eventImage}
-      style={{ gridColumn: "span 1", gridRow: "span 1" }}
-    >
+    <div className={eventImage} style={{ gridColumn, gridRow }}>
       <img src={imageURL} alt="event" />
     </div>
   );
 };
 
 EventImg.propTypes = {
-  key: Proptypes.number.isRequired,
   imageURL: Proptypes.string.isRequired,
+  gridColumn: Proptypes.string,
+  gridRow: Proptypes.string,
 };
 
 export default EventImg;
