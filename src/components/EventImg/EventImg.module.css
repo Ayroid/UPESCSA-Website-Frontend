@@ -12,3 +12,12 @@
     transition: transform 0.25s ease-in-out;
   }
 }
+
+@media screen and (max-width: 1000px) {
+  .eventImage img {
+    width: max(40dvw, 300px);
+    height: max(40dvw, 300px);
+    grid-column: span 1;
+    grid-row: span 1;
+  }
+}
