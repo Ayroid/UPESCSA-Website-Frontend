@@ -9,7 +9,7 @@ const ShowMore = ({ link }) => {
   return (
     <Link to={link} className={showMore}>
       <p>Show More</p>
-      <img src="/icons/rightArrow.png" alt="arrow" />
+      <img loading="lazy" src="/icons/rightArrow.png" alt="arrow" />
     </Link>
   );
 };

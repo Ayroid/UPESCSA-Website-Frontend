@@ -31,39 +31,24 @@ const Navbar = () => {
   // DATA
   const navlinks = [
     {
-      title: "About",
-      action: "/#about",
-      separatePage: false,
-    },
-    {
       title: "Events",
-      action: "/#events",
-      separatePage: false,
-    },
-    {
-      title: "Alliance",
-      action: "/#alliance",
-      separatePage: false,
+      action: "/events",
     },
     {
       title: "Team",
       action: "/team",
-      separatePage: true,
     },
     {
       title: "Committees",
       action: "/committees",
-      separatePage: true,
     },
     {
       title: "CSR",
       action: "/csr",
-      separatePage: true,
     },
     {
       title: "Blogs",
       action: "/blogs",
-      separatePage: true,
     },
   ];
 
@@ -122,12 +107,14 @@ const Navbar = () => {
       <div className={hamburgerDiv} onClick={displayNavBar}>
         {open ? (
           <img
+            loading="lazy"
             className={hamburger}
             src="/icons/hamburgercross.png"
             alt="hamburger"
           />
         ) : (
           <img
+            loading="lazy"
             className={hamburger}
             src="/icons/hamburger.png"
             alt="hamburger"
@@ -141,7 +128,6 @@ const Navbar = () => {
               title={"UPES CSA"}
               size={"1.4rem"}
               action={"/#"}
-              separatePage={false}
               closeNavbar={displayNavBar}
             />
             {/* <Logo height="4rem" /> */}

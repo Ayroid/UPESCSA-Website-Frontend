@@ -19,7 +19,7 @@ const EventsPage = () => {
 
   const [activeYear, setActiveYear] = useState(2024);
   const [url, setUrl] = useState(
-    `http://localhost:3000/api/previousevent/?year=${activeYear}`
+    `${import.meta.env.VITE_SERVER_URL}/api/previousevent/?year=${activeYear}`
   );
 
   const yearData = [2024, 2023, 2022, 2021, 2020, 2019, 2018];
@@ -29,7 +29,9 @@ const EventsPage = () => {
   };
 
   useEffect(() => {
-    setUrl(`http://localhost:3000/api/previousevent/?year=${activeYear}`);
+    setUrl(
+      `${import.meta.env.VITE_SERVER_URL}/api/previousevent/?year=${activeYear}`
+    );
   }, [activeYear]);
 
   const { data, error, loading } = useFetch({

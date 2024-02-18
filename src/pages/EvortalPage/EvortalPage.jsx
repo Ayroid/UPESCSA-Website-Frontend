@@ -16,25 +16,15 @@ const EvortalPage = () => {
   // EVENTS DATA
   const activeEvents = [
     {
-      eventImageURL: "/img/events/live/valo.png",
-      eventHeading: "Event Heading",
+      eventImageURL: "/img/events/live/Hackersummit.jpg",
+      eventHeading: "Hacker Summit",
       eventText:
         "ipsum consequat nisl vel pretium lectus quam id leo in vitae turpis massa sed elementum tempus egestas sed sed risus pretium quam vulputate dignissim suspendisse in est ante in nibh mauris cursus mattis molestie a iaculis at erat pellentesque adipiscing commodo elit at imperdiet dui accumsan sit amet ipsum consequat nisl vel pretium lectus quam id leo in vitae turpis massa sed elementum tempus egestas sed sed ipsum consequat nisl vel pretium lectus quam id leo in vitae turpis massa sed elementum tempus egestas sed sed risus pretium quam vulputate dignissim suspendisse in est ante in nibh mauris cursus mattis molestie a iaculis at erat pellentesque adipiscing commodo elit at imperdiet dui accumsan sit amet ipsum consequat nisl vel pretium lectus quam id leo ipsum consequat nisl vel pretium lectus quam id leo in vitae turpis massa sed elementum tempus egestas sed sed",
-      eventMode: "Offline",
-      eventTeamSize: "5",
-      eventDate: "12 Sept",
-      eventFormURL: "/events/register",
-      activeEvent: true,
-    },
-    {
-      eventImageURL: "/img/events/live/valo.png",
-      eventHeading: "Event Heading",
-      eventText:
-        "ipsum consequat nisl vel pretium lectus quam id leo in vitae turpis massa sed elementum tempus egestas sed sed risus pretium quam vulputate dignissim suspendisse in est ante in nibh mauris cursus mattis molestie a iaculis at erat pellentesque adipiscing commodo elit at imperdiet dui accumsan sit amet ipsum consequat nisl vel pretium lectus quam id leo in vitae turpis massa sed elementum tempus egestas sed sed ipsum consequat nisl vel pretium lectus quam id leo in vitae turpis massa sed elementum tempus egestas sed sed risus pretium quam vulputate dignissim suspendisse in est ante in nibh mauris cursus mattis molestie a iaculis at erat pellentesque adipiscing commodo elit at imperdiet dui accumsan sit amet ipsum consequat nisl vel pretium lectus quam id leo ipsum consequat nisl vel pretium lectus quam id leo in vitae turpis massa sed elementum tempus egestas sed sed",
-      eventMode: "Offline",
-      eventTeamSize: "5",
-      eventDate: "12 Sept",
-      eventFormURL: "/events/register",
+      eventMode: "Online",
+      eventTeamSize: "1",
+      eventRegistrationFee: "Free",
+      eventDate: "25 Feb",
+      eventFormURL: "/evortal/hackersummit",
       activeEvent: true,
     },
   ];
@@ -42,25 +32,13 @@ const EvortalPage = () => {
   const upcomingEvents = [
     {
       eventImageURL: "/img/events/live/valo.png",
-      eventHeading: "Event Heading",
-      eventText:
-        "ipsum consequat nisl vel pretium lectus quam id leo in vitae turpis massa sed elementum tempus egestas sed sed risus pretium quam vulputate dignissim suspendisse in est ante in nibh mauris cursus mattis molestie a iaculis at erat pellentesque adipiscing commodo elit at imperdiet dui accumsan sit amet ipsum consequat nisl vel pretium lectus quam id leo in vitae turpis massa sed elementum tempus egestas sed sed ipsum consequat nisl vel pretium lectus quam id leo in vitae turpis massa sed elementum tempus egestas sed sed risus pretium quam vulputate dignissim suspendisse in est ante in nibh mauris cursus mattis molestie a iaculis at erat pellentesque adipiscing commodo elit at imperdiet dui accumsan sit amet ipsum consequat nisl vel pretium lectus quam id leo ipsum consequat nisl vel pretium lectus quam id leo in vitae turpis massa sed elementum tempus egestas sed sed",
-      eventMode: "Offline",
-      eventTeamSize: "5",
-      eventDate: "12 Sept",
-      eventFormURL: "/events/register",
-      activeEvents: false,
-    },
-    {
-      eventImageURL: "/img/events/live/valo.png",
-      eventHeading: "Event Heading",
-      eventText:
-        "ipsum consequat nisl vel pretium lectus quam id leo in vitae turpis massa sed elementum tempus egestas sed sed risus pretium quam vulputate dignissim suspendisse in est ante in nibh mauris cursus mattis molestie a iaculis at erat pellentesque adipiscing commodo elit at imperdiet dui accumsan sit amet ipsum consequat nisl vel pretium lectus quam id leo in vitae turpis massa sed elementum tempus egestas sed sed ipsum consequat nisl vel pretium lectus quam id leo in vitae turpis massa sed elementum tempus egestas sed sed risus pretium quam vulputate dignissim suspendisse in est ante in nibh mauris cursus mattis molestie a iaculis at erat pellentesque adipiscing commodo elit at imperdiet dui accumsan sit amet ipsum consequat nisl vel pretium lectus quam id leo ipsum consequat nisl vel pretium lectus quam id leo in vitae turpis massa sed elementum tempus egestas sed sed",
-      eventMode: "Offline",
-      eventTeamSize: "5",
-      eventDate: "12 Sept",
-      eventFormURL: "/events/register",
-      activeEvents: false,
+      eventHeading: "Coming Soon",
+      eventText: "Description will be revealed soon",
+      eventMode: "???",
+      eventTeamSize: "???",
+      eventDate: "???",
+      eventRegistrationFee: "???",
+      activeEvent: false,
     },
   ];
 
@@ -77,6 +55,7 @@ const EvortalPage = () => {
             eventText={event.eventText}
             eventMode={event.eventMode}
             eventTeamSize={event.eventTeamSize}
+            eventRegistrationFee={event.eventRegistrationFee}
             eventDate={event.eventDate}
             eventFormURL={event.eventFormURL}
             activeEvent={event.activeEvent}
@@ -91,8 +70,8 @@ const EvortalPage = () => {
             eventText={event.eventText}
             eventMode={event.eventMode}
             eventTeamSize={event.eventTeamSize}
+            eventRegistrationFee={event.eventRegistrationFee}
             eventDate={event.eventDate}
-            eventFormURL={event.eventFormURL}
             activeEvent={event.activeEvent}
           />
         ))}

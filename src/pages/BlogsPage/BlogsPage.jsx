@@ -16,7 +16,7 @@ const BlogsPage = () => {
   }, []);
 
   const { data, loading } = useFetch({
-    url: "http://localhost:3000/api/blog/",
+    url: `${import.meta.env.VITE_SERVER_URL}/api/blog/`,
   });
 
   if (loading) {

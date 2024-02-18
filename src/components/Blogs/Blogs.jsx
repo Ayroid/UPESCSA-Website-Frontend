@@ -23,7 +23,7 @@ const Blogs = ({
   return (
     <div className={blogsContainer}>
       <div className={blogsImage}>
-        <img src={blogImageURL} alt="blogPoster" />
+        <img loading="lazy" src={blogImageURL} alt="blogPoster" />
       </div>
       <div className={blogsDescripton}>
         <h4 className={blogsHeading}>{blogHeading}</h4>

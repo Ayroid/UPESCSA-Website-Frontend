@@ -17,7 +17,12 @@ const EventGrid = ({ data, loading, error }) => {
   return (
     <div className={eventGrid}>
       {data.map((event, index) => (
-        <EventImg key={index} imageURL={event.imageURL} />
+        <EventImg
+          key={index}
+          imageURL={event.imageURL}
+          gridColumn={event.spanx}
+          gridRow={event.spany}
+        />
       ))}
     </div>
   );

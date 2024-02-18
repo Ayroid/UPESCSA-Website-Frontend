@@ -32,7 +32,7 @@ const Home = ({ showTrigger, openPopup }) => {
       </div>
       <div className={arrowDiv}>
         <a href="#about">
-          <img src="/icons/triangleArrow.png" alt="arrow" />
+          <img loading="lazy" src="/icons/triangleArrow.png" alt="arrow" />
         </a>
       </div>
       <div className={pageContent}>
@@ -43,7 +43,7 @@ const Home = ({ showTrigger, openPopup }) => {
       </div>
       {showTrigger && (
         <div className={popupTrigger} onClick={openPopup}>
-          <img src="/icons/annoucement.png" alt="annoucement" />
+          <img loading="lazy" src="/icons/annoucement.png" alt="annoucement" />
         </div>
       )}
     </div>

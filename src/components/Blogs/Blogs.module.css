@@ -9,7 +9,7 @@
 
 .blogsImage img {
   width: max(20dvw, 350px);
-  height: max(20dvw, 350px);
+  height: 100%;
 }
 
 .blogsDescripton {
@@ -74,7 +74,6 @@
   }
 
   .blogsImage img {
-    height: max(30dvw, 350px);
     width: max(30dvw, 350px);
   }
 
@@ -93,7 +92,6 @@
   }
 
   .blogsDetails {
-    padding-right: 1rem;
     flex-direction: column;
     gap: 0.5rem;
   }

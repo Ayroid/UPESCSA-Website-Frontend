@@ -7,6 +7,7 @@ const { logo } = styles;
 const Logo = ({ height }) => {
   return (
     <img
+      loading="lazy"
       className={logo}
       src="/logo/upescsa_nobg_high.png"
       alt="UPESCSA Logo"

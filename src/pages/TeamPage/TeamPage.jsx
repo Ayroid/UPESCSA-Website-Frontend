@@ -17,7 +17,7 @@ const TeamPage = () => {
   }, []);
 
   const { data, error, loading } = useFetch({
-    url: "http://localhost:3000/api/head/",
+    url: `${import.meta.env.VITE_SERVER_URL}/api/head/`,
   });
 
   const faculties = useMemo(

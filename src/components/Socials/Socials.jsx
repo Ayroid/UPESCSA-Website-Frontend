@@ -47,7 +47,7 @@ const Socials = ({ orientation, closeNavbar, gap }) => {
           rel="noreferrer"
           onClick={closeNavbar}
         >
-          <img src={item.image} alt={item.alt} />
+          <img loading="lazy" src={item.image} alt={item.alt} />
         </a>
       ))}
     </div>

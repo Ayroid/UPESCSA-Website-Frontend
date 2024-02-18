@@ -30,6 +30,7 @@ const Contact = () => {
         <div className={contactInfoDiv}>
           <div className={contactField}>
             <img
+              loading="lazy"
               className={contactFieldLogo}
               src="/icons/location.png"
               alt="location"
@@ -41,6 +42,7 @@ const Contact = () => {
           </div>
           <div className={contactField}>
             <img
+              loading="lazy"
               className={contactFieldLogo}
               src="/icons/phone.png"
               alt="phone"
@@ -51,6 +53,7 @@ const Contact = () => {
           </div>
           <div className={contactField}>
             <img
+              loading="lazy"
               className={contactFieldLogo}
               src="/icons/email.png"
               alt="email"

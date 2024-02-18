@@ -3,9 +3,7 @@ import PropTypes from "prop-types";
 import styles from "./InputField.module.css";
 
 // CSS STYLES
-const formInputDiv = [styles.formInputDiv].join("");
-const formInput = [styles.formInput].join("");
-const label = [styles.label].join("");
+const { formInputDiv, formInput, label } = styles;
 
 // COMPONENT
 const InputField = ({
@@ -13,7 +11,6 @@ const InputField = ({
   type,
   value,
   valueUpdater,
-  placeholder,
   inputLabel,
   required,
 }) => {
@@ -25,7 +22,7 @@ const InputField = ({
         type={type}
         value={value}
         onChange={valueUpdater}
-        placeholder={placeholder}
+        placeholder=""
         required={required}
       />
       <label htmlFor={id} className={label}>
@@ -40,7 +37,6 @@ InputField.propTypes = {
   type: PropTypes.string.isRequired,
   value: PropTypes.string.isRequired,
   valueUpdater: PropTypes.func.isRequired,
-  placeholder: PropTypes.string.isRequired,
   inputLabel: PropTypes.string.isRequired,
   required: PropTypes.bool.isRequired,
 };

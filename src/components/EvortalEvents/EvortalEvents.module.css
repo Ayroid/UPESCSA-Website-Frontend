@@ -7,9 +7,18 @@
   color: var(--textDark);
 }
 
-.evortalEventImage img {
+.evortalEventImage {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  box-sizing: border-box;
   width: max(20dvw, 350px);
   height: max(20dvw, 350px);
+}
+
+.evortalEventImage img {
+  width: max(20dvw, 350px);
+  height: auto;
 }
 
 .evortalEventDescripton {
@@ -41,8 +50,9 @@
 .evortalEventDetails {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   box-sizing: border-box;
+  flex-direction: column;
   width: 100%;
   padding-right: 1rem;
 }
@@ -53,6 +63,7 @@
   justify-content: flex-start;
   box-sizing: border-box;
   width: 100%;
+  margin-bottom: 0.5rem;
   gap: 0.5rem;
 }
 
@@ -76,7 +87,7 @@
   border-radius: 5px;
   padding: 0 0.75rem;
   height: 2.5rem;
-  width: 13rem;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -88,9 +99,14 @@
     gap: 0.5rem;
   }
 
-  .evortalEventImage img {
-    height: max(30dvw, 350px);
+  .evortalEventImage {
     width: max(30dvw, 350px);
+    height: 100%;
+  }
+
+  .evortalEventImage img {
+    width: max(30dvw, 350px);
+    height: auto;
   }
 
   .evortalEventDescripton {
