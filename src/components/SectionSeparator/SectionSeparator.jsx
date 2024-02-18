@@ -9,7 +9,7 @@ const SectionSeparator = () => {
     <div className={mainDiv}>
       <div className={innerDiv}>
         <hr />
-        <img src="/icons/hamburgercross.png" alt="cross" />
+        <img loading="lazy" src="/icons/hamburgercross.png" alt="cross" />
         <hr />
       </div>
     </div>

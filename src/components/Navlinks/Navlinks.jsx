@@ -6,18 +6,14 @@ import { Link } from "react-router-dom";
 // CSS STYLES
 const { navLinks } = styles;
 
-const Navlinks = ({ title, action, separatePage, size, closeNavbar }) => {
+const Navlinks = ({ title, action, size, closeNavbar }) => {
   return (
     <li
       className={navLinks}
       style={{ fontSize: size }}
       onClick={() => closeNavbar}
     >
-      {separatePage ? (
-        <Link to={action}>{title}</Link>
-      ) : (
-        <a href={action}>{title}</a>
-      )}
+      <Link to={action}>{title}</Link>
     </li>
   );
 };
@@ -25,7 +21,6 @@ const Navlinks = ({ title, action, separatePage, size, closeNavbar }) => {
 Navlinks.propTypes = {
   title: Proptypes.string.isRequired,
   action: Proptypes.string.isRequired,
-  separatePage: Proptypes.bool.isRequired,
   size: Proptypes.string,
   closeNavbar: Proptypes.func.isRequired,
 };

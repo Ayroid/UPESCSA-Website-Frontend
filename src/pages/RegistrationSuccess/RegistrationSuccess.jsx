@@ -62,7 +62,12 @@ const RegistrationSuccess = () => {
       </div>
       <div className={csalogo} id="csalogobox">
         <Link to="/">
-          <img id="csalogo" src="/logo/upescsa_nobg_high.png" alt="CSA Logo" />
+          <img
+            loading="lazy"
+            id="csalogo"
+            src="/logo/upescsa_nobg_high.png"
+            alt="CSA Logo"
+          />
         </Link>
         <div className={csaheading} id="mainBoxHeading">
           <h1>Thank you for Registering!</h1>

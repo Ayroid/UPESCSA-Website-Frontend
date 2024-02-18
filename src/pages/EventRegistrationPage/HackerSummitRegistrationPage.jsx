@@ -158,6 +158,7 @@ const HackerSummitRegistrationPage = () => {
       )}
       <Link to={"/evortal"}>
         <img
+          loading="lazy"
           src="/icons/rightArrow.png"
           alt="backArrow"
           className={backArrow}
@@ -165,12 +166,17 @@ const HackerSummitRegistrationPage = () => {
       </Link>
       <div className={eventsContainer}>
         <div className={eventImage}>
-          <img src={eventDetails.eventImageURL} alt="eventPoster" />
+          <img
+            loading="lazy"
+            src={eventDetails.eventImageURL}
+            alt="eventPoster"
+          />
         </div>
         <div className={eventDetailsDiv}>
           <div className={eventDetail}>{eventDetails.eventMode}</div>
           <div className={eventDetail}>
             <img
+              loading="lazy"
               src="/icons/teamSize.png"
               alt=""
               style={{ marginTop: "-0.25rem" }}
@@ -178,11 +184,11 @@ const HackerSummitRegistrationPage = () => {
             <p>{eventDetails.eventTeamSize}</p>
           </div>
           <div className={eventDetail}>
-            <img src="/icons/registrationFee.png" alt="" />
+            <img loading="lazy" src="/icons/registrationFee.png" alt="" />
             <p>{eventDetails.eventRegistrationFee}</p>
           </div>
           <div className={eventDetail}>
-            <img src="/icons/date.png" alt="" />
+            <img loading="lazy" src="/icons/date.png" alt="" />
             <p>{eventDetails.eventDate}</p>
           </div>
         </div>

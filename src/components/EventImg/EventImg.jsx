@@ -7,7 +7,7 @@ const { eventImage } = styles;
 const EventImg = ({ imageURL, gridColumn = "span 1", gridRow = "span 1" }) => {
   return (
     <div className={eventImage} style={{ gridColumn, gridRow }}>
-      <img src={imageURL} alt="event" />
+      <img loading="lazy" src={imageURL} alt="event" />
     </div>
   );
 };

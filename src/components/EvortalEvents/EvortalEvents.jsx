@@ -29,7 +29,7 @@ const EvortalEvents = ({
   return (
     <div className={evortalEventsContainer}>
       <div className={evortalEventImage}>
-        <img src={eventImageURL} alt="eventPoster" />
+        <img loading="lazy" src={eventImageURL} alt="eventPoster" />
       </div>
       <div className={evortalEventDescripton}>
         <h4 className={evortalEventHeading}>{eventHeading}</h4>
@@ -39,6 +39,7 @@ const EvortalEvents = ({
             <div className={evortalEventDetail}>{eventMode}</div>
             <div className={evortalEventDetail}>
               <img
+                loading="lazy"
                 src="/icons/teamSize.png"
                 alt=""
                 style={{ marginTop: "-0.25rem" }}
@@ -46,11 +47,11 @@ const EvortalEvents = ({
               <p>{eventTeamSize}</p>
             </div>
             <div className={evortalEventDetail}>
-              <img src="/icons/registrationFee.png" alt="" />
+              <img loading="lazy" src="/icons/registrationFee.png" alt="" />
               <p>{eventRegistrationFee}</p>
             </div>
             <div className={evortalEventDetail}>
-              {/* <img src="/icons/date.png" alt="" /> */}
+              {/* <img loading="lazy" src="/icons/date.png" alt="" /> */}
               <p>{eventDate}</p>
             </div>
           </div>

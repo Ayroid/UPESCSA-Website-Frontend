@@ -14,7 +14,7 @@ const imageTextContent = ({
 }) => {
   return (
     <>
-      <img src={mainImg} className={imageLink} alt={title} />
+      <img loading="lazy" src={mainImg} className={imageLink} alt={title} />
       <div className={imageTitle} style={{ textAlign: titleAlign }}>
         {title}
       </div>

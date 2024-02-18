@@ -25,12 +25,12 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/csr" element={<CsrPage />} />
         <Route path="/team" element={<ManagementPage />} />
-        <Route path="/committees" element={<CommitteePage />} />
-        <Route path="/committees/*" element={<CommitteePageIndividual />} />
         <Route path="/events" element={<EventsPage />} />
         <Route path="/blogs" element={<BlogsPage />} />
         <Route path="/evortal" element={<Evortal />} />
         <Route path="/registrationSuccess" element={<RegistrationSuccess />} />
+        <Route path="/committees" element={<CommitteePage />} />
+        <Route path="/committees/*" element={<CommitteePageIndividual />} />
         <Route path="*" element={<PageNotFound />} />
 
         {/* EVENT ROUTES */}

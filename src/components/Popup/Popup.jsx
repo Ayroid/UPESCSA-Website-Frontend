@@ -25,18 +25,18 @@ const Popup = ({
     <div className={popupContainer}>
       <div className={popupDiv}>
         <div className={popupImage}>
-          <img src={eventPosterURL} alt="eventPoster" />
+          <img loading="lazy" src={eventPosterURL} alt="eventPoster" />
         </div>
         <div className={popupTextDiv}>
           <h4 className={popupHeading}>{eventHeading}</h4>
           <p className={popupText}>{eventText}</p>
           <Link to={eventFormURL} className={popupRegisterButton}>
             <p>REGISTER NOW</p>
-            <img src="/icons/rightArrow.png" alt="arrow" />
+            <img loading="lazy" src="/icons/rightArrow.png" alt="arrow" />
           </Link>
         </div>
         <div className={popupCloseButton} onClick={closePopup}>
-          <img src="/icons/hamburgercross.png" alt="cross" />
+          <img loading="lazy" src="/icons/hamburgercross.png" alt="cross" />
         </div>
       </div>
     </div>

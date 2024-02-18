@@ -11,6 +11,7 @@
   padding-block: 10rem;
   position: relative;
   font-family: "Maven Pro", sans-serif;
+  min-height: 100dvh;
 }
 
 .loadingDiv {
