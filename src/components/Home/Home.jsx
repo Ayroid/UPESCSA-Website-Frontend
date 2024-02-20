@@ -10,7 +10,6 @@ const {
   outerCircle,
   innerCircle,
   socialsDiv,
-  arrowDiv,
   pageContent,
   verticalLine,
   pageHeading,
@@ -29,11 +28,6 @@ const Home = ({ showTrigger, openPopup }) => {
       </div>
       <div className={socialsDiv}>
         <Socials orientation={"column"} />
-      </div>
-      <div className={arrowDiv}>
-        <a href="#about">
-          <img loading="lazy" src="/icons/triangleArrow.png" alt="arrow" />
-        </a>
       </div>
       <div className={pageContent}>
         <div className={pageHeading}>UPES</div>
