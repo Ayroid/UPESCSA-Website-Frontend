@@ -12,3 +12,4 @@ WORKDIR /usr/share/nginx/html
 RUN rm -rf ./*
 COPY --from=0 /app/dist .
 ENTRYPOINT ["nginx", "-g", "daemon off;"]
+

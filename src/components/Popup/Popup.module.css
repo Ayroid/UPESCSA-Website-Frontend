@@ -1,6 +1,6 @@
 .popupContainer {
   position: absolute;
-  top: 10dvh;
+  top: 20dvh;
   z-index: 9999;
   animation: popupAnimation 0.75s ease;
 }
@@ -25,8 +25,8 @@
 }
 
 .popupImage img {
-  height: max(30dvw, 30rem);
-  width: max(30dvw, 30rem);
+  height: max(25dvw, 25rem);
+  width: max(25dvw, 25rem);
   object-fit: cover;
 }
 
@@ -36,8 +36,8 @@
   justify-content: center;
   align-items: flex-start;
   box-sizing: border-box;
-  height: max(30dvw, 30rem);
-  width: max(30dvw, 30rem);
+  height: max(25dvw, 25rem);
+  width: max(25dvw, 25rem);
   background-color: #0101017e;
   backdrop-filter: blur(20px);
   padding-left: 3rem;

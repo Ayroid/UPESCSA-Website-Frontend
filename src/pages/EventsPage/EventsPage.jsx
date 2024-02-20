@@ -6,6 +6,7 @@ import useFetch from "../../hooks/useFetch";
 import PageHeading from "../../components/PageHeading/PageHeading";
 import EventYearSwitch from "../../components/EventYearSwitch/EventYearSwitch";
 import EventGrid from "../../components/EventGrid/EventGrid";
+import Loading from "../../components/Loading/Loading";
 
 // CSS STYLES
 const { eventsPageContainer, eventsPageDiv } = styles;
@@ -38,16 +39,24 @@ const EventsPage = () => {
     url,
   });
 
+  if (loading) {
+    return <Loading />;
+  }
+
+  if (error) {
+    return <h6>Something went wrong...</h6>;
+  }
+
   return (
     <div className={eventsPageContainer}>
-      <PageHeading imgURL="/img/pageheaders/events.png" text="EVENTS" />
+      <PageHeading imgURL="/img/pageheaders/events.jpg" text="EVENTS" />
       <div className={eventsPageDiv}>
         <EventYearSwitch
           yearData={yearData}
           activeYear={activeYear}
           changeYear={changeYear}
         />
-        <EventGrid data={data} loading={loading} error={error} />
+        <EventGrid data={data} />
       </div>
     </div>
   );

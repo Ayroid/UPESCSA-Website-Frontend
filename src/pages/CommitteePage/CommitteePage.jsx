@@ -31,7 +31,7 @@ const CommitteePage = () => {
 
   return (
     <div className={teamPageContainer}>
-      <PageHeading imgURL="/img/pageheaders/team.png" text="Committees" />
+      <PageHeading imgURL="/img/pageheaders/team.jpg" text="Committees" />
       <div className={committeePageContainer}>
         {data.map((committee) => (
           <ImageText

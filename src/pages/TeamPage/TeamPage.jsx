@@ -70,7 +70,7 @@ const TeamPage = () => {
 
   return (
     <div className={teamPageContainer}>
-      <PageHeading imgURL="/img/pageheaders/team.png" text="TEAM" />
+      <PageHeading imgURL="/img/pageheaders/team.jpg" text="TEAM" />
       <div className={managementPageContainer}>
         <h2>Faculties</h2>
         <div className={managementDiv}>

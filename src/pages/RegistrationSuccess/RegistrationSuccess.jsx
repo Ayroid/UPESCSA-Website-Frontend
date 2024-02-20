@@ -17,6 +17,10 @@ const {
 
 const RegistrationSuccess = () => {
   useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "instant" });
+  }, []);
+
+  useEffect(() => {
     const mainBoxHeading = document.getElementById("mainBoxHeading");
     const mainBoxText = document.getElementById("mainBoxText");
     const backToHome = document.getElementById("backToHome");

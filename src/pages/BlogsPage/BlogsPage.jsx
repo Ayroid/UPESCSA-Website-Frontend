@@ -25,7 +25,7 @@ const BlogsPage = () => {
 
   return (
     <div className={blogsContainer}>
-      <PageHeading imgURL="/img/pageheaders/blogs.png" text="BLOGS" />
+      <PageHeading imgURL="/img/pageheaders/blogs.jpg" text="BLOGS" />
       <div className={blogsDiv}>
         {data.map((blog) => (
           <Blogs
