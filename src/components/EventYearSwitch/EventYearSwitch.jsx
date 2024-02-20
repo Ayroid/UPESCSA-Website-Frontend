@@ -15,7 +15,7 @@ const EventYearSwitch = ({ yearData, activeYear, changeYear }) => {
             style={{
               fontSize: "1.25rem",
               color: "var(--textDark)",
-              fontWeight: "600",
+              fontWeight: "900",
             }}
           >
             {year}

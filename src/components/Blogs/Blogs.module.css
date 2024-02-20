@@ -7,9 +7,18 @@
   color: var(--textDark);
 }
 
+.blogsImage {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  width: max(20dvw, 350px);
+  height: max(20dvw, 350px);
+}
+
 .blogsImage img {
   width: max(20dvw, 350px);
-  height: 100%;
+  height: auto;
 }
 
 .blogsDescripton {
