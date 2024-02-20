@@ -157,19 +157,6 @@
   z-index: 5;
 }
 
-.arrowDiv {
-  position: absolute;
-  bottom: 10rem;
-  z-index: 5;
-  cursor: pointer;
-}
-
-.arrowDiv img {
-  height: 1.5rem;
-  width: 1.5rem;
-  animation: arrow 1.5s ease-in-out infinite alternate;
-}
-
 @keyframes arrow {
   0% {
     transform: translateY(0);
@@ -182,7 +169,7 @@
 .popupTrigger {
   position: absolute;
   z-index: 100;
-  bottom: 15rem;
+  bottom: 10rem;
   animation: popupTrigger 1.5s ease-in-out infinite alternate;
 }
 
