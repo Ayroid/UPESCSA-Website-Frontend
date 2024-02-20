@@ -5,6 +5,7 @@ import useFetch from "../../hooks/useFetch";
 
 import PageHeading from "../../components/PageHeading/PageHeading";
 import EventGrid from "../../components/EventGrid/EventGrid";
+import Loading from "../../components/Loading/Loading";
 
 // CSS STYLES
 const { csrContainer, csrHeader } = styles;
@@ -18,12 +19,20 @@ const CsrPage = () => {
     url: `${import.meta.env.VITE_SERVER_URL}/api/csr/`,
   });
 
+  if (loading) {
+    return <Loading />;
+  }
+
+  if (error) {
+    return <h6>Something went wrong...</h6>;
+  }
+
   return (
     <div className={csrContainer}>
       <div className={csrHeader}>
         <PageHeading imgURL="/img/pageheaders/csr.jpg" text="CSR" />
       </div>
-      <EventGrid data={data} loading={loading} error={error} />
+      <EventGrid data={data} />
     </div>
   );
 };
