@@ -138,6 +138,10 @@
   .socialsDiv {
     display: none;
   }
+
+  .popupTrigger img {
+    height: 2rem;
+  }
 }
 
 @media screen and (max-width: 600px) {
