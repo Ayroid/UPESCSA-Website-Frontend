@@ -40,7 +40,7 @@ const EventsPage = () => {
 
   return (
     <div className={eventsPageContainer}>
-      <PageHeading imgURL="/img/pageheaders/events.png" text="EVENTS" />
+      <PageHeading imgURL="/img/pageheaders/events.jpg" text="EVENTS" />
       <div className={eventsPageDiv}>
         <EventYearSwitch
           yearData={yearData}

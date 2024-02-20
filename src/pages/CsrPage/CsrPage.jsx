@@ -21,7 +21,7 @@ const CsrPage = () => {
   return (
     <div className={csrContainer}>
       <div className={csrHeader}>
-        <PageHeading imgURL="/img/pageheaders/csr.png" text="CSR" />
+        <PageHeading imgURL="/img/pageheaders/csr.jpg" text="CSR" />
       </div>
       <EventGrid data={data} loading={loading} error={error} />
     </div>

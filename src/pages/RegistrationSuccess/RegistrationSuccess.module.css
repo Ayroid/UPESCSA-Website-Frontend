@@ -5,6 +5,7 @@
   align-items: center;
   justify-content: center;
   color: var(--textDark);
+  margin-inline: 1rem;
 }
 
 .successAnimation {

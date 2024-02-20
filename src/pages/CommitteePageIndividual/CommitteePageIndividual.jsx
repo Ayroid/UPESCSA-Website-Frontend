@@ -67,7 +67,7 @@ const CommitteePageIndividual = () => {
   return (
     <div className={committeePageIndividualContainer}>
       <PageHeading
-        imgURL="/img/pageheaders/team.png"
+        imgURL="/img/pageheaders/team.jpg"
         text={committeeData.committeeName}
       />
       <div className={committeePageIndividualdDiv}>

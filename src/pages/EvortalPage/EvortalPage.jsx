@@ -31,20 +31,20 @@ const EvortalPage = () => {
 
   const upcomingEvents = [
     {
-      eventImageURL: "/img/events/live/valo.png",
-      eventHeading: "Coming Soon",
-      eventText: "Description will be revealed soon",
-      eventMode: "???",
-      eventTeamSize: "???",
-      eventDate: "???",
-      eventRegistrationFee: "???",
+      eventImageURL: "/img/placeholder.png",
+      eventHeading: "Coming Soon...",
+      eventText: "",
+      eventMode: "?",
+      eventTeamSize: "?",
+      eventDate: "?",
+      eventRegistrationFee: "?",
       activeEvent: false,
     },
   ];
 
   return (
     <div className={evortalContainer}>
-      <PageHeading imgURL="/img/pageheaders/evortal.png" text="EVORTAL" />
+      <PageHeading imgURL="/img/pageheaders/evortal.jpg" text="EVORTAL" />
       <div className={evortalDiv}>
         <EvortalSeparator text="Active Events" />
         {activeEvents.map((event) => (
