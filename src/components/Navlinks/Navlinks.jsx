@@ -6,14 +6,16 @@ import { Link } from "react-router-dom";
 // CSS STYLES
 const { navLinks } = styles;
 
-const Navlinks = ({ title, action, size, closeNavbar }) => {
+const Navlinks = ({ title, action, size, textStyle, closeNavbar }) => {
   return (
     <li
       className={navLinks}
       style={{ fontSize: size }}
       onClick={() => closeNavbar}
     >
-      <Link to={action}>{title}</Link>
+      <Link to={action} style={textStyle}>
+        {title}
+      </Link>
     </li>
   );
 };
@@ -22,6 +24,7 @@ Navlinks.propTypes = {
   title: Proptypes.string.isRequired,
   action: Proptypes.string.isRequired,
   size: Proptypes.string,
+  textStyle: Proptypes.string,
   closeNavbar: Proptypes.func.isRequired,
 };
 
