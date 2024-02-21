@@ -72,7 +72,7 @@ const Navbar = () => {
     };
   }, []);
 
-  if (screenWidth < 950) {
+  if (screenWidth < 1100) {
     navbarStyle = {
       backgroundColor: "var(--navDark)",
     };
@@ -83,7 +83,7 @@ const Navbar = () => {
   }
 
   const displayNavBar = () => {
-    if (screen.width > 950) {
+    if (window.innerWidth > 1100) {
       return;
     }
     setOpen((prevOpen) => {

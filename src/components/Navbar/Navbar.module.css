@@ -39,6 +39,7 @@
   right: 1.5rem;
   z-index: 11;
   user-select: contain;
+  cursor: pointer;
 }
 
 .navLinks {
