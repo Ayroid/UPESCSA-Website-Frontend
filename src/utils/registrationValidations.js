@@ -44,7 +44,7 @@ const validateCourse = (value, validatorFunction) => {
 };
 
 const validateUpesStudent = (value, validatorFunction) => {
-  if (value !== null && value !== "" && value !== "choose") {
+  if (value === "yes" || value === "no") {
     validatorFunction(true);
     return true;
   } else {

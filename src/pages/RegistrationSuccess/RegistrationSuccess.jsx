@@ -80,7 +80,7 @@ const RegistrationSuccess = () => {
           <p>Please join our Whatsapp Group for further updates!</p>
           <br />
           <a
-            href="https://chat.whatsapp.com/FGnyUW0jLyx0W9pbDpJE05"
+            href="https://chat.whatsapp.com/BWyCztv6eKvHKBAhdL66hM"
             className={csabackToHome}
             id="backToHome"
           >

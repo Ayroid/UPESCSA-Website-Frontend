@@ -24,7 +24,7 @@ Navlinks.propTypes = {
   title: Proptypes.string.isRequired,
   action: Proptypes.string.isRequired,
   size: Proptypes.string,
-  textStyle: Proptypes.string,
+  textStyle: Proptypes.object,
   closeNavbar: Proptypes.func.isRequired,
 };
 
