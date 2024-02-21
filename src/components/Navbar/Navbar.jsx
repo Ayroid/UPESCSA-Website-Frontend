@@ -147,10 +147,6 @@ const Navbar = () => {
             <Navlinks
               title={"Evortal"}
               action={"/evortal"}
-              textStyle={{
-                color: "gold",
-                filter: "drop-shadow(0 0 0.5rem gold)",
-              }}
               separatePage={true}
               closeNavbar={displayNavBar}
             />
