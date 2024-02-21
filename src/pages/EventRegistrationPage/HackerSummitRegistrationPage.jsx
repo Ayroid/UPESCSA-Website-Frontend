@@ -90,8 +90,6 @@ const HackerSummitRegistrationPage = () => {
   const submitForm = (e) => {
     e.preventDefault();
 
-    setLoading(true);
-
     // VALIDATION
 
     const nameValid = VALIDATENAME(studentName, setIsNameValid);
@@ -108,45 +106,48 @@ const HackerSummitRegistrationPage = () => {
     );
 
     if (
-      (nameValid &&
-        emailValid &&
-        phoneValid &&
-        courseValid &&
-        yearOfStudyValid &&
-        upesStudentValid &&
-        upesStudent === "yes" &&
-        !VALIDATESAPID(sapID, setIsSapIDValid)) ||
-      (upesStudent === "no" &&
-        !VALIDATENAME(collegeName, setIsCollegeNameValid))
+      nameValid &&
+      emailValid &&
+      phoneValid &&
+      courseValid &&
+      yearOfStudyValid &&
+      upesStudentValid
     ) {
-      return;
+      if (
+        (upesStudent === "yes" && !VALIDATESAPID(sapID, setIsSapIDValid)) ||
+        (upesStudent === "no" &&
+          !VALIDATENAME(collegeName, setIsCollegeNameValid))
+      ) {
+        return;
+      } else {
+        setLoading(true);
+        const data = {
+          studentName,
+          email,
+          phone,
+          course,
+          yearOfStudy,
+          upesStudent,
+          collegeName,
+          sapID,
+        };
+
+        axios
+          .post(eventDetails.eventRegistrationURL, data)
+          .then((response) => {
+            console.log(response);
+            navigate("/registrationSuccess");
+          })
+          .catch((error) => {
+            console.error(error);
+          })
+          .finally(() => {
+            setLoading(false);
+          });
+
+        console.log("Form submitted!");
+      }
     }
-
-    const data = {
-      studentName,
-      email,
-      phone,
-      course,
-      yearOfStudy,
-      upesStudent,
-      collegeName,
-      sapID,
-    };
-
-    axios
-      .post(eventDetails.eventRegistrationURL, data)
-      .then((response) => {
-        console.log(response);
-        navigate("/registrationSuccess");
-      })
-      .catch((error) => {
-        console.error(error);
-      })
-      .finally(() => {
-        setLoading(false);
-      });
-
-    console.log("Form submitted!");
   };
 
   return (
