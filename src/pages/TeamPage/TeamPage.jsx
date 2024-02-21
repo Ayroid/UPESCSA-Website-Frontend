@@ -72,7 +72,7 @@ const TeamPage = () => {
     <div className={teamPageContainer}>
       <PageHeading imgURL="/img/pageheaders/team.jpg" text="TEAM" />
       <div className={managementPageContainer}>
-        <h2>Faculties</h2>
+        <h2>Faculty Coordinator</h2>
         <div className={managementDiv}>
           {faculties.map((member) => (
             <ImageText
