@@ -9,7 +9,7 @@ const Logo = ({ height }) => {
     <img
       loading="lazy"
       className={logo}
-      src="/logo/upescsa_nobg_high.png"
+      src="/logo/upescsa_nobg_low.png"
       alt="UPESCSA Logo"
       style={{ height }}
     />
