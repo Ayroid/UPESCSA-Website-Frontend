@@ -181,7 +181,7 @@
 .popupTrigger {
   position: absolute;
   z-index: 100;
-  bottom: 10rem;
+  bottom: 10dvh;
   animation: popupTrigger 1.5s ease-in-out infinite alternate;
 }
 
