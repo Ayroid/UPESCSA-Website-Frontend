@@ -14,7 +14,7 @@ import Contact from "./components/Contact/Contact";
 import Navbar from "./components/Navbar/Navbar";
 import ManagementPage from "./pages/TeamPage/TeamPage";
 import CommitteePage from "./pages/CommitteePage/CommitteePage";
-import HackerSummitRegistrationPage from "./pages/EventRegistrationPage/HackerSummitRegistrationPage";
+// import HackerSummitRegistrationPage from "./pages/EventRegistrationPage/HackerSummitRegistrationPage";
 import RegistrationSuccess from "./pages/RegistrationSuccess/RegistrationSuccess";
 
 function App() {
@@ -34,10 +34,10 @@ function App() {
         <Route path="*" element={<PageNotFound />} />
 
         {/* EVENT ROUTES */}
-        <Route
+        {/* <Route
           path="/evortal/hackersummit"
           element={<HackerSummitRegistrationPage />}
-        />
+        /> */}
       </Routes>
       <Contact />
     </div>
