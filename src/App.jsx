@@ -15,6 +15,7 @@ import Navbar from "./components/Navbar/Navbar";
 import ManagementPage from "./pages/TeamPage/TeamPage";
 import CommitteePage from "./pages/CommitteePage/CommitteePage";
 // import HackerSummitRegistrationPage from "./pages/EventRegistrationPage/HackerSummitRegistrationPage";
+import FrenzyPitchRegistrationPage from "./pages/EventRegistrationPage/FrenzyPitchRegistrationPage";
 import RegistrationSuccess from "./pages/RegistrationSuccess/RegistrationSuccess";
 
 function App() {
@@ -37,6 +38,18 @@ function App() {
         {/* <Route
           path="/evortal/hackersummit"
           element={<HackerSummitRegistrationPage />}
+        /> */}
+        <Route
+          path="/evortal/frenzypitch"
+          element={<FrenzyPitchRegistrationPage />}
+        />
+        {/* <Route
+          path="/evortal/virtualescaperoom"
+          element={<VirtualEscapeRoomRegistrationPage />}
+        />
+        <Route
+          path="/evortal/theultimateshowdown"
+          element={<UltimateShowdownRegistrationPage />}
         /> */}
       </Routes>
       <Contact />

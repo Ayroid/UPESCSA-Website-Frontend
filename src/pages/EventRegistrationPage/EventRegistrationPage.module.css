@@ -12,6 +12,7 @@
   position: relative;
   font-family: "Maven Pro", sans-serif;
   min-height: 100dvh;
+  color: var(--textDark);
 }
 
 .loadingDiv {
@@ -23,18 +24,20 @@
 }
 
 .backArrow {
-  filter: invert(1);
   rotate: 180deg;
   position: absolute;
-  top: 7.5rem;
-  left: 7.5rem;
+  top: 2rem;
+  left: -5rem;
+  cursor: pointer;
 }
 
 .heading {
   font-size: 2.5rem;
-  color: var(--textDark);
+  color: var(--textLight);
+  background-color: rgb(0, 0, 0);
+  margin-top: 0;
   margin-bottom: 1rem;
-  padding-bottom: 0px;
+  padding-block: 1.5rem;
   width: 100%;
   text-align: center;
   flex-direction: column;
@@ -46,6 +49,7 @@
   justify-content: center;
   align-items: flex-start;
   flex-direction: column;
+  position: relative;
 }
 
 .formContainer {
@@ -106,20 +110,22 @@
   display: flex;
   width: max(20dvw, 350px);
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: center;
   margin-block: 10px;
   box-sizing: border-box;
   gap: 0.5rem;
+  flex-wrap: wrap;
 }
 
 .eventDetail {
   background-color: var(--bgLight);
   padding: 0 0.75rem;
   height: 2.5rem;
+  width: 31.7%;
   border-radius: 5px;
   gap: 0.25rem;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 }
 
@@ -148,7 +154,34 @@
 .errorMessage {
   color: #ff0000;
   font-size: 0.8rem;
+  text-align: left;
+  width: 100%;
   margin-block: -1rem 1.25rem;
+}
+
+.memberSection {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+}
+
+.paymentQRDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  width: 100%;
+  margin-top: -1rem;
+  margin-bottom: 2rem;
+}
+
+.paymentQRDiv img {
+  min-width: 16rem;
+  width: max(20dvw, 10rem);
+  height: auto;
 }
 
 @media screen and (max-width: 1000px) {
@@ -160,13 +193,10 @@
     gap: 1rem;
   }
 
-  .backArrow {
-    display: none;
-  }
-
   .eventsContainer {
     flex-direction: column;
     gap: 0.5rem;
+    /* display: none; */
   }
 
   .eventImage img {
@@ -210,5 +240,10 @@
     width: 100%;
     margin-inline: 1rem;
     justify-content: center;
+  }
+
+  .backArrow {
+    top: -5rem;
+    left: -2rem;
   }
 }

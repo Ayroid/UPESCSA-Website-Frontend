@@ -14,20 +14,57 @@ const EvortalPage = () => {
   }, []);
 
   // EVENTS DATA
-  // const activeEvents = [
-  //   {
-  //     eventImageURL: "/img/events/live/Hackersummit.jpg",
-  //     eventHeading: "Hacker Summit",
-  //     eventText:
-  //       "UPES Cloud Security Alliance, in collaboration with DEF CON Delhi Group, with great enthusiasm extends an invitation to join on a significant venture – Hackers Summit 1.0. We aim to extend valuable prospects to young minds, aiding them in learning within the paramount realm of the Cyber World - encompassing “the Holy Grail” of the Cyber World i.e.  Protect, detect, and respond.A one-day with the core objective of providing a comprehensive educational platform for students, Hackers Summit is an initiative to bring these minds under one umbrella through engaging activities and proffer networking opportunities. From foundational principles to intermediate-level concepts, we've got you covered!  This one day venture will span from foundational principles to intermediate-level concepts, ensuring a comprehensive learning experience. Hands-on demonstrations will allow participants to apply their knowledge in practical scenarios, enhancing their skills in the dynamic field of cybersecurity.So, are you ready to embark on an exhilarating journey into the realm of cybersecurity? Mark your calendars and make a date with knowledge and innovation at Hackers Summit!",
-  //     eventMode: "Online",
-  //     eventTeamSize: "1",
-  //     eventRegistrationFee: "Free",
-  //     eventDate: "25 Feb",
-  //     eventFormURL: "/evortal/hackersummit",
-  //     activeEvent: true,
-  //   },
-  // ];
+  const activeEvents = [
+    // {
+    //   eventImageURL: "/img/events/live/Hackersummit.jpg",
+    //   eventHeading: "Hacker Summit",
+    //   eventText:
+    //     "UPES Cloud Security Alliance, in collaboration with DEF CON Delhi Group, with great enthusiasm extends an invitation to join on a significant venture – Hackers Summit 1.0. We aim to extend valuable prospects to young minds, aiding them in learning within the paramount realm of the Cyber World - encompassing “the Holy Grail” of the Cyber World i.e.  Protect, detect, and respond.A one-day with the core objective of providing a comprehensive educational platform for students, Hackers Summit is an initiative to bring these minds under one umbrella through engaging activities and proffer networking opportunities. From foundational principles to intermediate-level concepts, we've got you covered!  This one day venture will span from foundational principles to intermediate-level concepts, ensuring a comprehensive learning experience. Hands-on demonstrations will allow participants to apply their knowledge in practical scenarios, enhancing their skills in the dynamic field of cybersecurity.So, are you ready to embark on an exhilarating journey into the realm of cybersecurity? Mark your calendars and make a date with knowledge and innovation at Hackers Summit!",
+    //   eventMode: "Online",
+    //   eventTeamSize: "1",
+    //   eventRegistrationFee: "Free",
+    //   eventDate: "25 Feb",
+    //   eventFormURL: "/evortal/hackersummit",
+    //   activeEvent: true,
+    // },
+    {
+      eventImageURL: "/img/events/live/Hackersummit.jpg",
+      eventHeading: "Frenzy Pitch",
+      eventText:
+        "UPES Cloud Security Alliance, in collaboration with DEF CON Delhi Group, with great enthusiasm extends an invitation to join on a significant venture – Hackers Summit 1.0. We aim to extend valuable prospects to young minds, aiding them in learning within the paramount realm of the Cyber World - encompassing “the Holy Grail” of the Cyber World i.e.  Protect, detect, and respond.A one-day with the core objective of providing a comprehensive educational platform for students, Hackers Summit is an initiative to bring these minds under one umbrella through engaging activities and proffer networking opportunities. From foundational principles to intermediate-level concepts, we've got you covered!  This one day venture will span from foundational principles to intermediate-level concepts, ensuring a comprehensive learning experience. Hands-on demonstrations will allow participants to apply their knowledge in practical scenarios, enhancing their skills in the dynamic field of cybersecurity.So, are you ready to embark on an exhilarating journey into the realm of cybersecurity? Mark your calendars and make a date with knowledge and innovation at Hackers Summit!",
+      eventMode: "Offline",
+      eventTeamSize: "2-4",
+      eventRegistrationFee: "Paid",
+      eventRegistrationType: "Mixed",
+      eventDate: "16 Mar",
+      eventFormURL: "/evortal/frenzypitch",
+      activeEvent: true,
+    },
+    {
+      eventImageURL: "/img/events/live/Hackersummit.jpg",
+      eventHeading: "Virtual Escape Room",
+      eventText: "?",
+      eventMode: "Offline",
+      eventTeamSize: "1-2",
+      eventRegistrationFee: "Paid",
+      eventRegistrationType: "Mixed",
+      eventDate: "16 Mar",
+      eventFormURL: "/evortal/virtualescaperoom",
+      activeEvent: true,
+    },
+    {
+      eventImageURL: "/img/events/live/Hackersummit.jpg",
+      eventHeading: "The Ultimate Showdown",
+      eventText: "?",
+      eventMode: "Offline",
+      eventTeamSize: "1",
+      eventRegistrationFee: "Paid",
+      eventRegistrationType: "Mixed",
+      eventDate: "16 Mar",
+      eventFormURL: "/evortal/theultimateshowdown",
+      activeEvent: true,
+    },
+  ];
 
   const upcomingEvents = [
     {
@@ -46,7 +83,7 @@ const EvortalPage = () => {
     <div className={evortalContainer}>
       <PageHeading imgURL="/img/pageheaders/evortal.jpg" text="EVORTAL" />
       <div className={evortalDiv}>
-        {/* <EvortalSeparator text="Active Events" />
+        <EvortalSeparator text="Active Events" />
         {activeEvents.map((event) => (
           <EvortalEvents
             key={event.eventHeading}
@@ -56,11 +93,12 @@ const EvortalPage = () => {
             eventMode={event.eventMode}
             eventTeamSize={event.eventTeamSize}
             eventRegistrationFee={event.eventRegistrationFee}
+            eventRegistrationType={event.eventRegistrationType}
             eventDate={event.eventDate}
             eventFormURL={event.eventFormURL}
             activeEvent={event.activeEvent}
           />
-        ))} */}
+        ))}
         <EvortalSeparator text="Upcoming Events" />
         {upcomingEvents.map((event) => (
           <EvortalEvents
@@ -71,6 +109,7 @@ const EvortalPage = () => {
             eventMode={event.eventMode}
             eventTeamSize={event.eventTeamSize}
             eventRegistrationFee={event.eventRegistrationFee}
+            eventRegistrationType={event.eventRegistrationType}
             eventDate={event.eventDate}
             activeEvent={event.activeEvent}
           />
