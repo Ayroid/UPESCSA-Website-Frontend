@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useSearchParams } from "react-router-dom";
 import styles from "./RegistrationSuccess.module.css";
 
 const {
@@ -19,6 +19,10 @@ const RegistrationSuccess = () => {
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "instant" });
   }, []);
+
+  const [searchParams] = useSearchParams();
+
+  const wgLink = "https://chat.whatsapp.com/" + searchParams.get("wg");
 
   useEffect(() => {
     const mainBoxHeading = document.getElementById("mainBoxHeading");
@@ -79,11 +83,7 @@ const RegistrationSuccess = () => {
         <div className={csatextBox} id="mainBoxText">
           <p>Please join our Whatsapp Group for further updates!</p>
           <br />
-          <a
-            href="https://chat.whatsapp.com/F2AltBij6hP6YHKCAI1B9p"
-            className={csabackToHome}
-            id="backToHome"
-          >
+          <a href={wgLink} className={csabackToHome} id="backToHome">
             Join Whatsapp
           </a>
         </div>

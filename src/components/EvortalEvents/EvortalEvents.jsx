@@ -47,7 +47,7 @@ const EvortalEvents = ({
               <p>{eventTeamSize}</p>
             </div>
             <div className={evortalEventDetail}>
-              <img loading="lazy" src="/icons/registrationFee.png" alt="" />
+              {/* <img loading="lazy" src="/icons/registrationFee.png" alt="" /> */}
               <p>{eventRegistrationFee}</p>
             </div>
             <div className={evortalEventDetail}>
