@@ -66,7 +66,7 @@ const VirtualEscapeRoomRegistrationPage = () => {
 
   const [paymentPage, setPaymentPage] = useState(false);
   const [transactionID, setTransactionID] = useState("");
-  const [virtualEscapeTransactionSS, setvirtualEscapeTransactionSS] =
+  const [virtualEscapeTransactionSS, setVirtualEscapeTransactionSS] =
     useState(null);
 
   const [teamName, setTeamName] = useState("");
@@ -96,7 +96,7 @@ const VirtualEscapeRoomRegistrationPage = () => {
     setTransactionID(e.target.value);
   };
   const updateTransactionSS = (e) => {
-    setvirtualEscapeTransactionSS(e.target.files[0]);
+    setVirtualEscapeTransactionSS(e.target.files[0]);
   };
 
   const updateTeamName = (e) => {
@@ -435,7 +435,7 @@ const VirtualEscapeRoomRegistrationPage = () => {
               {/* TEAM LEAD SECTION START */}
 
               <div className={memberSection}>
-                <h3 className={sectionHeading}>Team Lead</h3>
+                <h3 className={sectionHeading}>Member One</h3>
 
                 <InputField
                   id="memberOneName"
@@ -500,7 +500,7 @@ const VirtualEscapeRoomRegistrationPage = () => {
                     inputLabel="CSA ID"
                     value={memberOneCSAID}
                     valueUpdater={updateTeamLeadCSAID}
-                    required={teamLeadCSAMember === "yes"}
+                    required={memberOneCSAMember === "yes"}
                   />
                 )}
                 {!isMemberOneCSAIDValid && (

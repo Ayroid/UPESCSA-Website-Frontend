@@ -66,8 +66,8 @@ const UltimateShowdownRegistrationPage = () => {
 
   const [paymentPage, setPaymentPage] = useState(false);
   const [transactionID, setTransactionID] = useState("");
-  const [ultimateShowdownTransactionSS, setultimateShowdownTransactionSS] = useState(null);
-
+  const [ultimateShowdownTransactionSS, setUltimateShowdownTransactionSS] =
+    useState(null);
 
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -75,9 +75,8 @@ const UltimateShowdownRegistrationPage = () => {
   const [course, setCourse] = useState("");
   const [yearOfStudy, setYearOfStudy] = useState("");
   const [sapID, setSapID] = useState("");
-  const [CSAMember, setCSAMember] = useState("");
-  const [CSAID, setCSAID] = useState("");
-
+  const [csaMember, setCSAMember] = useState("");
+  const [csaID, setCSAID] = useState("");
 
   // UPDATE FUNCTIONS
 
@@ -85,7 +84,7 @@ const UltimateShowdownRegistrationPage = () => {
     setTransactionID(e.target.value);
   };
   const updateTransactionSS = (e) => {
-    setultimateShowdownTransactionSS(e.target.files[0]);
+    setUltimateShowdownTransactionSS(e.target.files[0]);
   };
 
   const updateName = (e) => {
@@ -113,52 +112,30 @@ const UltimateShowdownRegistrationPage = () => {
     setCSAID(e.target.value);
   };
 
-
   // VALIDATION STATES
 
   const [isNameValid, setIsNameValid] = useState(true);
   const [isEmailValid, setIsEmailValid] = useState(true);
   const [isPhoneValid, setIsPhoneValid] = useState(true);
   const [isCourseValid, setIsCourseValid] = useState(true);
-  const [isYearOfStudyValid, setIsYearOfStudyValid] =
-    useState(true);
+  const [isYearOfStudyValid, setIsYearOfStudyValid] = useState(true);
   const [isSapIDValid, setIsSapIDValid] = useState(true);
-  const [isCSAMemberValid, setIsCSAMemberValid] =
-    useState(true);
+  const [isCSAMemberValid, setIsCSAMemberValid] = useState(true);
   const [isCSAIDValid, setIsCSAIDValid] = useState(true);
 
- 
   // VALIDATION FUNCTIONS
 
   const validate = () => {
-    const NameValid = VALIDATENAME(
-      name,
-      setIsNameValid
-    );
-    const EmailValid = VALIDATEEMAIL(
-      email,
-      setIsEmailValid
-    );
-    const PhoneValid = VALIDATEPHONE(
-      phone,
-      setIsPhoneValid
-    );
-    const CourseValid = VALIDATECOURSE(
-      course,
-      setIsCourseValid
-    );
+    const NameValid = VALIDATENAME(name, setIsNameValid);
+    const EmailValid = VALIDATEEMAIL(email, setIsEmailValid);
+    const PhoneValid = VALIDATEPHONE(phone, setIsPhoneValid);
+    const CourseValid = VALIDATECOURSE(course, setIsCourseValid);
     const YearOfStudyValid = VALIDATEYEAROFSTUDY(
       yearOfStudy,
       setIsYearOfStudyValid
     );
-    const SapIDValid = VALIDATESAPID(
-      sapID,
-      setIsSapIDValid
-    );
-    const CSAMemberValid = VALIDATECSAMEMBER(
-      CSAMember,
-      setIsCSAMemberValid
-    );
+    const SapIDValid = VALIDATESAPID(sapID, setIsSapIDValid);
+    const CSAMemberValid = VALIDATECSAMEMBER(csaMember, setIsCSAMemberValid);
 
     if (
       NameValid &&
@@ -169,19 +146,19 @@ const UltimateShowdownRegistrationPage = () => {
       SapIDValid &&
       CSAMemberValid
     ) {
-      window.scrollTo({ top: 0, behavior: "instant" });
-      return CSAMember === "yes"
-        ? VALIDATECSAID(CSAID, setIsCSAIDValid)
-        : true;
+      if (csaMember === "yes") {
+        return VALIDATECSAID(csaID, setIsCSAIDValid);
+      } else {
+        window.scrollTo({ top: 0, behavior: "instant" });
+        return true;
+      }
     }
   };
-
-
 
   const submitFormOne = (e) => {
     e.preventDefault();
     if (validate()) {
-        setPaymentPage(true);
+      setPaymentPage(true);
     }
   };
 
@@ -191,7 +168,6 @@ const UltimateShowdownRegistrationPage = () => {
     // VALIDATION
 
     if (validate()) {
-
       setLoading(true);
 
       const data = {
@@ -201,8 +177,8 @@ const UltimateShowdownRegistrationPage = () => {
         course,
         yearOfStudy,
         sapID,
-        CSAMember,
-        CSAID,
+        csaMember,
+        csaID,
         transactionID,
       };
 
@@ -212,7 +188,10 @@ const UltimateShowdownRegistrationPage = () => {
         finalData.append(key, data[key]);
       }
 
-      finalData.append("ultimateShowdownTransactionSS", ultimateShowdownTransactionSS);
+      finalData.append(
+        "ultimateShowdownTransactionSS",
+        ultimateShowdownTransactionSS
+      );
 
       axios
         .post(eventDetails.eventRegistrationURL, finalData, {
@@ -287,14 +266,11 @@ const UltimateShowdownRegistrationPage = () => {
             <div className={formDiv}>
               <h3 className={sectionHeading}>Participant Details</h3>
 
-             
-
               {/* USER SECTION START */}
 
               <div className={memberSection}>
-
                 <InputField
-                  id="teamLeadName"
+                  id="participantName"
                   type="text"
                   inputLabel="Name"
                   value={name}
@@ -305,7 +281,7 @@ const UltimateShowdownRegistrationPage = () => {
                   <span className={errorMessage}>Invalid Name</span>
                 )}
                 <InputField
-                  id="teamLeadEmail"
+                  id="participantEmail"
                   type="email"
                   inputLabel="Email"
                   value={email}
@@ -316,7 +292,7 @@ const UltimateShowdownRegistrationPage = () => {
                   <span className={errorMessage}>Invalid Email</span>
                 )}
                 <InputField
-                  id="teamLeadPhone"
+                  id="participantPhone"
                   type="text"
                   inputLabel="Phone Number"
                   value={phone}
@@ -327,7 +303,7 @@ const UltimateShowdownRegistrationPage = () => {
                   <span className={errorMessage}>Invalid Phone</span>
                 )}
                 <InputField
-                  id="teamLeadSapID"
+                  id="participantSapID"
                   type="text"
                   inputLabel="SAP ID"
                   value={sapID}
@@ -338,8 +314,8 @@ const UltimateShowdownRegistrationPage = () => {
                   <span className={errorMessage}>Invalid SAP ID</span>
                 )}
                 <DropDownSelectField
-                  id="teamLeadCSAMember"
-                  value={CSAMember}
+                  id="participantCSAMember"
+                  value={csaMember}
                   valueUpdater={updateCSAMember}
                   inputLabel="Are you a CSA Member?"
                   required={true}
@@ -349,21 +325,21 @@ const UltimateShowdownRegistrationPage = () => {
                 {!isCSAMemberValid && (
                   <span className={errorMessage}>Invalid Option</span>
                 )}
-                {CSAMember === "yes" && (
+                {csaMember === "yes" && (
                   <InputField
-                    id="teamLeadCSAID"
+                    id="participantCSAID"
                     type="text"
                     inputLabel="CSA ID"
-                    value={CSAID}
+                    value={csaID}
                     valueUpdater={updateCSAID}
-                    required={teamLeadCSAMember === "yes"}
+                    required={csaMember === "yes"}
                   />
                 )}
                 {!isCSAIDValid && (
                   <span className={errorMessage}>Invalid CSA ID</span>
                 )}
                 <InputField
-                  id="teamLeadCourse"
+                  id="participantCourse"
                   type="text"
                   inputLabel="Course"
                   value={course}
@@ -374,7 +350,7 @@ const UltimateShowdownRegistrationPage = () => {
                   <span className={errorMessage}>Invalid Course</span>
                 )}
                 <InputField
-                  id="teamLeadYearOfStudy"
+                  id="participantYearOfStudy"
                   type="text"
                   inputLabel="Year of Study"
                   value={yearOfStudy}
@@ -387,7 +363,6 @@ const UltimateShowdownRegistrationPage = () => {
               </div>
 
               {/* USER SECTION END */}
-
 
               {/* ------------------------------------------------------------------------------------ */}
 
