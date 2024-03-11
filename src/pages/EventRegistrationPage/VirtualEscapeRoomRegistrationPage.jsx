@@ -52,13 +52,13 @@ const VirtualEscapeRoomRegistrationPage = () => {
     eventRegistrationURL: `${
       import.meta.env.VITE_SERVER_URL
     }/api/event/register/virtualescaperoom`,
-    eventImageURL: "/img/events/live/Hackersummit.jpg",
+    eventImageURL: "/img/events/live/Virtual Escape FUNTOPIA.jpg",
     eventHeading: "Virtual Escape Room",
-    eventText: "Escape the virtual room. Crack puzzles, break systems.",
+    eventText: "Test your problem-solving skills, teamwork, and quick thinking in a thrilling virtual escape room experience.",
     eventMode: "Offline",
     eventTeamSize: "1-2",
     eventRegistrationFee: "All-CSA: 30Rs | Non-CSA: 50Rs",
-    eventDate: "16 Mar",
+    eventDate: "19-20 Mar",
     whatsGroup: "IhZNqicziPZDxzZ7Odvu3W",
   };
 

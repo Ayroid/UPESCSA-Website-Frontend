@@ -52,13 +52,13 @@ const FrenzyPitchRegistrationPage = () => {
     eventRegistrationURL: `${
       import.meta.env.VITE_SERVER_URL
     }/api/event/register/frenzypitch`,
-    eventImageURL: "/img/events/live/Hackersummit.jpg",
+    eventImageURL: "/img/events/live/FRENZY_PITCH-01.jpg",
     eventHeading: "Frenzy Pitch",
-    eventText: "?",
+    eventText: "A competition that challenges teams to rethink and redesign ordinary household items into innovative products, with a wildcard challenge to push your creative boundaries.",
     eventMode: "Offline",
     eventTeamSize: "2-4",
     eventRegistrationFee: "All-CSA: 60Rs | Non-CSA: 100Rs",
-    eventDate: "16 Mar",
+    eventDate: "19-20 Mar",
     whatsGroup: "IhZNqicziPZDxzZ7Odvu3W",
   };
 
