@@ -58,7 +58,7 @@ const VirtualEscapeRoomRegistrationPage = () => {
     eventMode: "Offline",
     eventTeamSize: "1-2",
     eventRegistrationFee: "All-CSA: 30Rs | Non-CSA: 50Rs",
-    eventDate: "19-20 Mar",
+    eventDate: "20 Mar",
     whatsGroup: "IhZNqicziPZDxzZ7Odvu3W",
   };
 

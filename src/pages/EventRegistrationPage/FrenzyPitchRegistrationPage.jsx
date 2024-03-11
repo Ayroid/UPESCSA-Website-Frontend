@@ -58,7 +58,7 @@ const FrenzyPitchRegistrationPage = () => {
     eventMode: "Offline",
     eventTeamSize: "2-4",
     eventRegistrationFee: "All-CSA: 60Rs | Non-CSA: 100Rs",
-    eventDate: "19-20 Mar",
+    eventDate: "19 Mar",
     whatsGroup: "IhZNqicziPZDxzZ7Odvu3W",
   };
 

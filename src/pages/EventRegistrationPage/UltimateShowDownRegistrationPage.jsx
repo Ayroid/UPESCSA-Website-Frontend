@@ -58,7 +58,7 @@ const UltimateShowdownRegistrationPage = () => {
     eventMode: "Offline",
     eventTeamSize: "1",
     eventRegistrationFee: "All-CSA: 20Rs | Non-CSA: 30Rs",
-    eventDate: "19-20 Mar",
+    eventDate: "20 Mar",
     whatsGroup: "IhZNqicziPZDxzZ7Odvu3W",
   };
 
