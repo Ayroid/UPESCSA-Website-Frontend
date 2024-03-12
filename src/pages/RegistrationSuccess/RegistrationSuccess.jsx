@@ -83,7 +83,13 @@ const RegistrationSuccess = () => {
         <div className={csatextBox} id="mainBoxText">
           <p>Please join our Whatsapp Group for further updates!</p>
           <br />
-          <a href={wgLink} className={csabackToHome} id="backToHome">
+          <a
+            href={wgLink}
+            target="_blank"
+            rel="noreferrer"
+            className={csabackToHome}
+            id="backToHome"
+          >
             Join Whatsapp
           </a>
         </div>
