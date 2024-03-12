@@ -54,12 +54,13 @@ const VirtualEscapeRoomRegistrationPage = () => {
     }/api/event/register/virtualescaperoom`,
     eventImageURL: "/img/events/live/Virtual Escape FUNTOPIA.jpg",
     eventHeading: "Virtual Escape Room",
-    eventText: "Test your problem-solving skills, teamwork, and quick thinking in a thrilling virtual escape room experience.",
+    eventText:
+      "Test your problem-solving skills, teamwork, and quick thinking in a thrilling virtual escape room experience.",
     eventMode: "Offline",
     eventTeamSize: "1-2",
     eventRegistrationFee: "All-CSA: 30Rs | Non-CSA: 50Rs",
     eventDate: "20 Mar",
-    whatsGroup: "IhZNqicziPZDxzZ7Odvu3W",
+    whatsGroup: "FwtiqPHV9vp98v9OiqkNad",
   };
 
   // FORM STATES
@@ -536,7 +537,12 @@ const VirtualEscapeRoomRegistrationPage = () => {
 
               {/* MEMBER TWO SECTION START */}
 
-              <div className={memberSection}>
+              <div
+                className={memberSection}
+                style={{
+                  display: parseInt(teamSize, 10) === 2 ? "block" : "none",
+                }}
+              >
                 <h3 className={sectionHeading}>Member Two</h3>
 
                 <InputField
@@ -545,7 +551,7 @@ const VirtualEscapeRoomRegistrationPage = () => {
                   inputLabel="Name"
                   value={memberTwoName}
                   valueUpdater={updateMemberTwoName}
-                  required={true}
+                  required={parseInt(teamSize, 10) === 2}
                 />
                 {!isMemberTwoNameValid && (
                   <span className={errorMessage}>Invalid Name</span>
@@ -556,7 +562,7 @@ const VirtualEscapeRoomRegistrationPage = () => {
                   inputLabel="Email"
                   value={memberTwoEmail}
                   valueUpdater={updateMemberTwoEmail}
-                  required={true}
+                  required={parseInt(teamSize, 10) === 2}
                 />
                 {!isMemberTwoEmailValid && (
                   <span className={errorMessage}>Invalid Email</span>
@@ -567,7 +573,7 @@ const VirtualEscapeRoomRegistrationPage = () => {
                   inputLabel="Phone Number"
                   value={memberTwoPhone}
                   valueUpdater={updateMemberTwoPhone}
-                  required={true}
+                  required={parseInt(teamSize, 10) === 2}
                 />
                 {!isMemberTwoPhoneValid && (
                   <span className={errorMessage}>Invalid Phone</span>
@@ -578,7 +584,7 @@ const VirtualEscapeRoomRegistrationPage = () => {
                   inputLabel="SAP ID"
                   value={memberTwoSapID}
                   valueUpdater={updateMemberTwoSapID}
-                  required={true}
+                  required={parseInt(teamSize, 10) === 2}
                 />
                 {!isMemberTwoSapIDValid && (
                   <span className={errorMessage}>Invalid SAP ID</span>
@@ -588,7 +594,7 @@ const VirtualEscapeRoomRegistrationPage = () => {
                   value={memberTwoCSAMember}
                   valueUpdater={updateMemberTwoCSAMember}
                   inputLabel="Are you a CSA Member?"
-                  required={true}
+                  required={parseInt(teamSize, 10) === 2}
                   options={["Yes", "No"]}
                   defaultOption="Select"
                 />
@@ -614,7 +620,7 @@ const VirtualEscapeRoomRegistrationPage = () => {
                   inputLabel="Course"
                   value={memberTwoCourse}
                   valueUpdater={updateMemberTwoCourse}
-                  required={true}
+                  required={parseInt(teamSize, 10) === 2}
                 />
                 {!isMemberTwoCourseValid && (
                   <span className={errorMessage}>Invalid Course</span>
@@ -625,7 +631,7 @@ const VirtualEscapeRoomRegistrationPage = () => {
                   inputLabel="Year of Study"
                   value={memberTwoYearOfStudy}
                   valueUpdater={updateMemberTwoYearOfStudy}
-                  required={true}
+                  required={parseInt(teamSize, 10) === 2}
                 />
                 {!isMemberTwoYearOfStudyValid && (
                   <span className={errorMessage}>Invalid Year of Study</span>
