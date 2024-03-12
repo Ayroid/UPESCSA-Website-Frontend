@@ -43,7 +43,8 @@ const EvortalPage = () => {
     {
       eventImageURL: "/img/events/live/Virtual Escape FUNTOPIA.jpg",
       eventHeading: "Virtual Escape Room",
-      eventText: "Test your problem-solving skills, teamwork, and quick thinking in a thrilling virtual escape room experience.",
+      eventText:
+        "Test your problem-solving skills, teamwork, and quick thinking in a thrilling virtual escape room experience.",
       eventMode: "Offline",
       eventTeamSize: "1-2",
       eventRegistrationFee: "Paid",
@@ -55,7 +56,8 @@ const EvortalPage = () => {
     {
       eventImageURL: "/img/events/live/Ultimate_Showdown-01.jpg",
       eventHeading: "The Ultimate Showdown",
-      eventText: 'Engage in a physical and mental test through the "Floor is Lava" and "Stack It Challenge", designed to test your agility, precision, and strategy.',
+      eventText:
+        'Engage in a physical and mental test through the "Floor is Lava" and "Stack It Challenge", designed to test your agility, precision, and strategy.',
       eventMode: "Offline",
       eventTeamSize: "1",
       eventRegistrationFee: "Paid",
@@ -81,7 +83,7 @@ const EvortalPage = () => {
 
   return (
     <div className={evortalContainer}>
-      <PageHeading imgURL="/img/events/live/FUNTOPIA 4.0 BANNER-01.jpg" text="EVORTAL" />
+      <PageHeading imgURL="/img/pageheaders/evortal.jpg" text="EVORTAL" />
       <div className={evortalDiv}>
         <EvortalSeparator text="Active Events" />
         {activeEvents.map((event) => (

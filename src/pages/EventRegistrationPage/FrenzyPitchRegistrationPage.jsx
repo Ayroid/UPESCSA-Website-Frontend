@@ -54,19 +54,21 @@ const FrenzyPitchRegistrationPage = () => {
     }/api/event/register/frenzypitch`,
     eventImageURL: "/img/events/live/FRENZY_PITCH-01.jpg",
     eventHeading: "Frenzy Pitch",
-    eventText: "A competition that challenges teams to rethink and redesign ordinary household items into innovative products, with a wildcard challenge to push your creative boundaries.",
+    eventText:
+      "A competition that challenges teams to rethink and redesign ordinary household items into innovative products, with a wildcard challenge to push your creative boundaries.",
     eventMode: "Offline",
     eventTeamSize: "2-4",
     eventRegistrationFee: "All-CSA: 60Rs | Non-CSA: 100Rs",
     eventDate: "19 Mar",
-    whatsGroup: "IhZNqicziPZDxzZ7Odvu3W",
+    whatsGroup: "EkQUCUaPhKj8Na5F1cFEMT",
   };
 
   // FORM STATES
 
   const [paymentPage, setPaymentPage] = useState(false);
   const [transactionID, setTransactionID] = useState("");
-  const [frenzyPitchTransactionSS, setFrenzyPitchTransactionSS] = useState(null);
+  const [frenzyPitchTransactionSS, setFrenzyPitchTransactionSS] =
+    useState(null);
 
   const [teamName, setTeamName] = useState("");
   const [teamSize, setTeamSize] = useState("2");

@@ -59,7 +59,7 @@ const UltimateShowdownRegistrationPage = () => {
     eventTeamSize: "1",
     eventRegistrationFee: "All-CSA: 20Rs | Non-CSA: 30Rs",
     eventDate: "20 Mar",
-    whatsGroup: "IhZNqicziPZDxzZ7Odvu3W",
+    whatsGroup: "KOs5eU309ktJzLEhSvkSLD",
   };
 
   // FORM STATES

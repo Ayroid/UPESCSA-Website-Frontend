@@ -32,8 +32,10 @@ const EvortalEvents = ({
         <img loading="lazy" src={eventImageURL} alt="eventPoster" />
       </div>
       <div className={evortalEventDescripton}>
-        <h4 className={evortalEventHeading}>{eventHeading}</h4>
-        <p className={evortalEventText}>{eventText}</p>
+        <div className="wrapper">
+          <h4 className={evortalEventHeading}>{eventHeading}</h4>
+          <p className={evortalEventText}>{eventText}</p>
+        </div>
         <div className={evortalEventDetails}>
           <div className={evortalEventDetailsDiv}>
             <div className={evortalEventDetail}>{eventMode}</div>
