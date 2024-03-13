@@ -51,7 +51,7 @@ function App() {
           element={<VirtualEscapeRoomRegistrationPage />}
         />
         <Route
-          path="/evortal/theultimateshowdown"
+          path="/evortal/ultimateshowdown"
           element={<UltimateShowdownRegistrationPage />}
         />
       </Routes>

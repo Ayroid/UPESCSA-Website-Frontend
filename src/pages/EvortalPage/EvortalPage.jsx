@@ -63,7 +63,7 @@ const EvortalPage = () => {
       eventRegistrationFee: "Paid",
       eventRegistrationType: "Mixed",
       eventDate: "20 Mar",
-      eventFormURL: "/evortal/theultimateshowdown",
+      eventFormURL: "/evortal/ultimateshowdown",
       activeEvent: true,
     },
   ];
