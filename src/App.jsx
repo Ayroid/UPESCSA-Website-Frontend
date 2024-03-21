@@ -24,38 +24,144 @@ import RegistrationSuccess from "./pages/RegistrationSuccess/RegistrationSuccess
 function App() {
   return (
     <div className="mainDiv">
-      <Navbar />
       <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/csr" element={<CsrPage />} />
-        <Route path="/team" element={<ManagementPage />} />
-        <Route path="/events" element={<EventsPage />} />
-        <Route path="/blogs" element={<BlogsPage />} />
-        <Route path="/evortal" element={<Evortal />} />
-        <Route path="/registrationSuccess" element={<RegistrationSuccess />} />
-        <Route path="/committees" element={<CommitteePage />} />
-        <Route path="/committees/*" element={<CommitteePageIndividual />} />
-        <Route path="*" element={<PageNotFound />} />
+        <Route
+          path="/"
+          element={
+            <>
+              <Navbar />
+              <HomePage />
+              <Contact />
+            </>
+          }
+        />
+        <Route
+          path="/csr"
+          element={
+            <>
+              <Navbar />
+              <CsrPage />
+              <Contact />
+            </>
+          }
+        />
+        <Route
+          path="/team"
+          element={
+            <>
+              <Navbar />
+              <ManagementPage />
+              <Contact />
+            </>
+          }
+        />
+        <Route
+          path="/events"
+          element={
+            <>
+              <Navbar />
+              <EventsPage />
+              <Contact />
+            </>
+          }
+        />
+        <Route
+          path="/blogs"
+          element={
+            <>
+              <Navbar />
+              <BlogsPage />
+              <Contact />
+            </>
+          }
+        />
+        <Route
+          path="/evortal"
+          element={
+            <>
+              <Navbar />
+              <Evortal />
+              <Contact />
+            </>
+          }
+        />
+        <Route
+          path="/registrationSuccess"
+          element={
+            <>
+              <Navbar />
+              <RegistrationSuccess />
+              <Contact />
+            </>
+          }
+        />
+        <Route
+          path="/committees"
+          element={
+            <>
+              <Navbar />
+              <CommitteePage />
+              <Contact />
+            </>
+          }
+        />
+        <Route
+          path="/committees/*"
+          element={
+            <>
+              <Navbar />
+              <CommitteePageIndividual />
+              <Contact />
+            </>
+          }
+        />
+        <Route
+          path="*"
+          element={
+            <>
+              <Navbar />
+              <PageNotFound />
+              <Contact />
+            </>
+          }
+        />
 
         {/* EVENT ROUTES */}
         {/* <Route
           path="/evortal/hackersummit"
-          element={<HackerSummitRegistrationPage />}
+          element={<>      <Navbar /><HackerSummitRegistrationPage /></>}
         /> */}
         <Route
           path="/evortal/frenzypitch"
-          element={<FrenzyPitchRegistrationPage />}
+          element={
+            <>
+              <Navbar />
+              <FrenzyPitchRegistrationPage />
+              <Contact />
+            </>
+          }
         />
         <Route
           path="/evortal/virtualescaperoom"
-          element={<VirtualEscapeRoomRegistrationPage />}
+          element={
+            <>
+              <Navbar />
+              <VirtualEscapeRoomRegistrationPage />
+              <Contact />
+            </>
+          }
         />
         <Route
           path="/evortal/ultimateshowdown"
-          element={<UltimateShowdownRegistrationPage />}
+          element={
+            <>
+              <Navbar />
+              <UltimateShowdownRegistrationPage />
+              <Contact />
+            </>
+          }
         />
       </Routes>
-      <Contact />
     </div>
   );
 }
