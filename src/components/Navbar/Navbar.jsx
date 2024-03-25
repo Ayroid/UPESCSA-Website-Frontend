@@ -145,10 +145,11 @@ const Navbar = () => {
             ))}
             <hr className={verticalLine} />
             <Navlinks
-              title={"Evortal"}
-              action={"/evortal"}
+              title={"Hackthon 3.0"}
+              action={"/hackathon3.0"}
               separatePage={true}
               closeNavbar={displayNavBar}
+              textStyle={{ color: "gold" }}
             />
             <hr className={mobileLine} />
           </ul>

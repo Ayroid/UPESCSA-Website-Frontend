@@ -1,0 +1,211 @@
+.mainDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100dvh;
+  width: 100%;
+  background: url("/img/bg3.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+  gap: 2rem;
+  font-family: "Barlow", sans-serif;
+  overflow-x: hidden;
+  color: var(--hacktextLight);
+  background-color: var(--hackbgDark);
+}
+
+.mainDiv::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0.9) 100%
+  );
+  width: 100%;
+  height: 100%;
+}
+
+.backArrow {
+  position: absolute;
+  rotate: 180deg;
+  filter: invert(1);
+  height: 2rem;
+  z-index: 10;
+  top: 5rem;
+  left: 5rem;
+}
+
+@media screen and (max-width: 1000px) {
+  .backArrow {
+    left: 1rem;
+  }
+}
+
+.loadingDiv {
+  position: absolute;
+  z-index: 100;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+
+.hackathonLogo {
+  height: max(200px, 20dvh);
+  width: max(200px, 20dvh);
+}
+
+.homeSubHeading {
+  text-align: center;
+}
+
+.registrationForm {
+  position: relative;
+  width: max(350px, 60dvw);
+  height: 70dvh;
+  background: var(--hackbgLight);
+  border-radius: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.formSideImage {
+  width: max(145px, 25dvw);
+  height: 70dvh;
+  background-color: var(--hackformSideColor);
+  border-radius: 10px 0 0 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.formSideImage img {
+  width: max(200px, 20dvw);
+  height: max(200px, 20dvw);
+}
+
+.registrationFormDiv {
+  width: max(205px, 35dvw);
+  height: 70dvh;
+  padding: 2rem 4rem;
+}
+
+.formPageDiv {
+  position: relative;
+  height: 70dvh;
+}
+
+.pageHeading {
+  font-size: var(--hacksubheading);
+  margin-bottom: 1rem;
+  color: var(--hacktextDark);
+}
+
+.sectionHeading {
+  font-size: var(--hackminisubheading);
+  margin-bottom: 0.75rem;
+  color: var(--hacktextDark);
+}
+
+.errorMessage {
+  color: #ff0000;
+  font-size: 0.8rem;
+  text-align: left;
+  width: 100%;
+  margin: 1rem 0.5rem;
+}
+
+.teamMemberDetails,
+.paymentDetails {
+  height: 45dvh;
+  overflow-y: scroll;
+}
+
+.paymentDetails {
+  color: black;
+}
+
+.qrCode {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.qrCode img {
+  width: 300px;
+  height: 350px;
+}
+
+@media screen and (max-width: 1000px) {
+  .formSideImage img {
+    width: max(150px, 15dvw);
+    height: max(150px, 15dvw);
+  }
+
+  .registrationForm {
+    flex-direction: column;
+    height: 90dvh;
+    justify-content: flex-start;
+    width: max(380px, 60dvw);
+  }
+
+  .registrationFormDiv {
+    width: max(380px, 60dvw);
+    padding: 0;
+  }
+
+  .formSideImage {
+    width: max(380px, 60dvw);
+    border-radius: 10px 10px 0 0;
+  }
+
+  .homeSubHeading {
+    display: none;
+  }
+
+  .formPageDiv {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .pageHeading {
+    text-align: center;
+    margin-block: 2rem 1rem;
+    width: 100%;
+  }
+
+  .paymentDetails {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .paymentInstructions {
+    padding: 0 4rem;
+  }
+
+  .errorMessage {
+    padding-left: 16dvw;
+  }
+}

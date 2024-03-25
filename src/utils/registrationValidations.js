@@ -1,3 +1,13 @@
+const validateTeam = (value, validatorFunction) => {
+  if (value !== "choose") {
+    validatorFunction(true);
+    return true;
+  } else {
+    validatorFunction(false);
+    return false;
+  }
+};
+
 const validateName = (value, validatorFunction) => {
   if (value !== null && value !== "") {
     validatorFunction(true);
@@ -53,7 +63,12 @@ const validateUpesStudent = (value, validatorFunction) => {
   }
 };
 
-const validateCSAMember = (value, validatorFunction) => {
+const validateCSAMember = (value, validatorFunction, upesStudent) => {
+  if (upesStudent === "no") {
+    validatorFunction(true);
+    return true;
+  }
+
   if (value === "yes" || value === "no") {
     validatorFunction(true);
     return true;
@@ -63,7 +78,11 @@ const validateCSAMember = (value, validatorFunction) => {
   }
 };
 
-const validateSAPID = (value, validatorFunction) => {
+const validateSAPID = (value, validatorFunction, upesStudent) => {
+  if (upesStudent === "no" || upesStudent === "select") {
+    validatorFunction(true);
+    return true;
+  }
   if (
     value !== null &&
     value !== "" &&
@@ -78,7 +97,30 @@ const validateSAPID = (value, validatorFunction) => {
   }
 };
 
-const validateCSAID = (value, validatorFunction) => {
+const validateCollegeName = (value, validatorFunction, upesStudent) => {
+  if (upesStudent === "yes") {
+    validatorFunction(true);
+    return true;
+  }
+  if (value !== null && value !== "") {
+    validatorFunction(true);
+    return true;
+  } else {
+    validatorFunction(false);
+    return false;
+  }
+};
+
+const validateCSAID = (value, validatorFunction, csaMember, upesStudent) => {
+  if (upesStudent === "no") {
+    validatorFunction(true);
+    return true;
+  }
+
+  if (csaMember === "no" || csaMember === "select") {
+    validatorFunction(true);
+    return true;
+  }
   if (
     value !== null &&
     value !== "" &&
@@ -109,10 +151,12 @@ const validateYearOfStudy = (value, validatorFunction) => {
 };
 
 export {
+  validateTeam as VALIDATETEAM,
   validateName as VALIDATENAME,
   validateEmail as VALIDATEEMAIL,
   validatePhone as VALIDATEPHONE,
   validateSAPID as VALIDATESAPID,
+  validateCollegeName as VALIDATECOLLEGENAME,
   validateCourse as VALIDATECOURSE,
   validateCSAID as VALIDATECSAID,
   validateYearOfStudy as VALIDATEYEAROFSTUDY,

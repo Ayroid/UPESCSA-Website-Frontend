@@ -19,6 +19,9 @@ import FrenzyPitchRegistrationPage from "./pages/EventRegistrationPage/FrenzyPit
 import UltimateShowdownRegistrationPage from "./pages/EventRegistrationPage/UltimateShowDownRegistrationPage";
 import VirtualEscapeRoomRegistrationPage from "./pages/EventRegistrationPage/VirtualEscapeRoomRegistrationPage";
 
+import HackathonHomePage from "./pages/Hackathon/HackathonHomePage/HackathonHomePage";
+import RegistrationPage from "./pages/Hackathon/RegistrationPage/RegistrationPage";
+
 import RegistrationSuccess from "./pages/RegistrationSuccess/RegistrationSuccess";
 
 function App() {
@@ -89,9 +92,9 @@ function App() {
           path="/registrationSuccess"
           element={
             <>
-              <Navbar />
+              {/* <Navbar /> */}
               <RegistrationSuccess />
-              <Contact />
+              {/* <Contact /> */}
             </>
           }
         />
@@ -161,6 +164,9 @@ function App() {
             </>
           }
         />
+
+        <Route path="/hackathon3.0/" element={<HackathonHomePage />} />
+        <Route path="/hackathon3.0/register" element={<RegistrationPage />} />
       </Routes>
     </div>
   );

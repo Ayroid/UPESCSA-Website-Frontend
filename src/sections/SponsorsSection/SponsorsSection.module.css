@@ -1,0 +1,91 @@
+.mainDiv {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  background: url("/img/sponsors2.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-block: 10rem 7rem;
+  padding: 5rem 12dvw 7rem 12dvw;
+  position: relative;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.mainDiv::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 1),
+    rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 1)
+  );
+  width: 100%;
+  height: 100%;
+}
+
+.sponsorsDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+  position: relative;
+  flex-wrap: wrap;
+}
+
+.sponsorsInfo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5rem;
+  flex-wrap: wrap;
+  background-color: var(--hackbuttonDark);
+  border-radius: 10px;
+  padding: 1rem;
+}
+
+.sponsorsHeadingDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+}
+
+#sponsorsHeading {
+  margin: 3rem;
+  z-index: 2;
+}
+
+.subHeading {
+  position: absolute;
+  color: transparent;
+  font-size: 6rem;
+  margin-top: 3.5rem;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: rgba(75, 75, 75, 0.493);
+  width: 100%;
+  text-align: center;
+}
+
+.sponsorImage {
+  height: 10rem;
+}
+
+@media screen and (max-width: 768px) {
+  .subHeading {
+    display: none;
+  }
+
+  .sponsorImage {
+    width: 100%;
+    height: 30dvw;
+  }
+}
