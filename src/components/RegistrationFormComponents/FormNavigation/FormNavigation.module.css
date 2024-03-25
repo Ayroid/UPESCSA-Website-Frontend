@@ -1,0 +1,27 @@
+.navigationButtons {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  bottom: 2rem;
+  right: 3rem;
+  gap: 1rem;
+}
+
+.navigationButton {
+  border: none;
+  outline: none;
+  background-color: var(--hackbuttonDark);
+  padding: 0.75rem 2rem;
+  border-radius: 5px;
+  color: var(--hackbgLight);
+  font-weight: 600;
+  transition: all 0.3s;
+  cursor: pointer;
+  &:hover {
+    background-color: transparent;
+    color: var(--hacktextDark);
+    outline: 1px solid var(--hackbuttonDark);
+    transition: all 0.3s;
+  }
+}

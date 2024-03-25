@@ -319,7 +319,6 @@ const FrenzyPitchRegistrationPage = () => {
       teamLeadSapIDValid &&
       teamLeadCSAMemberValid
     ) {
-      window.scrollTo({ top: 0, behavior: "instant" });
       return teamLeadCSAMember === "yes"
         ? VALIDATECSAID(teamLeadCSAID, setIsTeamLeadCSAIDValid)
         : true;

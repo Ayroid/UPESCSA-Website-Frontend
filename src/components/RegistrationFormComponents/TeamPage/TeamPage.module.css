@@ -1,0 +1,28 @@
+.mainDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: max(350px, 40dvw);
+  height: 70dvh;
+  background: rgba(255, 255, 255, 0.17);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(7.4px);
+  -webkit-backdrop-filter: blur(7.4px);
+}
+
+.formDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.errorMessage {
+  color: #ff0000;
+  font-size: 0.8rem;
+  text-align: left;
+  width: 100%;
+  margin-block: -1rem 1.25rem;
+}

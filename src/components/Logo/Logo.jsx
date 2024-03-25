@@ -4,12 +4,12 @@ import styles from "./Logo.module.css";
 // CSS STYLES
 const { logo } = styles;
 
-const Logo = ({ height }) => {
+const Logo = ({ height, src }) => {
   return (
     <img
       loading="lazy"
       className={logo}
-      src="/logo/upescsa_nobg_low.png"
+      src={src}
       alt="UPESCSA Logo"
       style={{ height }}
     />
@@ -18,6 +18,7 @@ const Logo = ({ height }) => {
 
 Logo.propTypes = {
   height: Proptypes.string,
+  src: Proptypes.string.isRequired,
 };
 
 export default Logo;

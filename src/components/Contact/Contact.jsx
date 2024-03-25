@@ -25,7 +25,7 @@ const Contact = () => {
           <Socials orientation="row" gap="1rem" />
         </div>
         <div className={logoDiv}>
-          <Logo />
+          <Logo src="/logo/upescsa.png" />
         </div>
         <div className={contactInfoDiv}>
           <div className={contactField}>

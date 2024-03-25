@@ -18,7 +18,7 @@ const { homepageContainer } = styles;
 const HomePage = () => {
   // STATES
   // SET THIS TO TRUE TO ENABLE THE POPUP
-  const eventActive = false;
+  const eventActive = true;
   const [popupOpen, setPopupOpen] = useState(false);
 
   // USE EFFECTS
@@ -52,10 +52,34 @@ const HomePage = () => {
     <div className={homepageContainer}>
       {popupOpen && (
         <Popup
-          eventPosterURL="/img/events/live/Hackersummit.jpg"
-          eventHeading="Hacker Summit"
-          eventText="UPES Cloud Security Alliance, in collaboration with DEF CON Delhi Group, with great enthusiasm extends an invitation to join on a significant venture – Hackers Summit 1.0. We aim to extend valuable prospects to young minds, aiding them in learning within the paramount realm of the Cyber World - encompassing “the Holy Grail” of the Cyber World i.e.  Protect, detect, and respond.A one-day with the core objective of providing a comprehensive educational platform for students, Hackers Summit is an initiative to bring these minds under one umbrella through engaging activities and proffer networking opportunities. From foundational principles to intermediate-level concepts, we've got you covered!  This one day venture will span from foundational principles to intermediate-level concepts, ensuring a comprehensive learning experience. Hands-on demonstrations will allow participants to apply their knowledge in practical scenarios, enhancing their skills in the dynamic field of cybersecurity.So, are you ready to embark on an exhilarating journey into the realm of cybersecurity? Mark your calendars and make a date with knowledge and innovation at Hackers Summit!"
-          eventFormURL="/evortal/hackersummit"
+          eventPosterURL="/img/events/live/hackathon3.0.jpg"
+          eventHeading="Hackathon 3.0"
+          eventText={
+            <>
+              🚀 Hackathon 3.0 Registration Now Open! 🚀 Get ready for the
+              ultimate tech showdown and join us for the most exhilarating tech
+              event of the year! Hackathon 3.0 is back and better than ever.
+              Whether you&apos;re a coding whiz or an aspiring innovator, this
+              is your chance to turn your ideas into reality, solve real-world
+              problems, and leave a lasting impact in the digital universe.
+              <br />
+              <br />
+              📅 Event Date: 19 - 21 April 2024
+              <br />
+              <br />
+              🌐 Mode: Online
+              <br />
+              <br />
+              🎨 Theme: Redefining Urban Horizons with Innovation & Secure
+              Digital Environment and Privacy
+              <br />
+              <br />
+              Register Now to join us for an exhilarating journey of creativity,
+              collaboration, and innovation. Don&apos;t miss out on this
+              opportunity to code your way to the stars!
+            </>
+          }
+          eventFormURL="/hackathon3.0"
           closePopup={togglePopup}
         />
       )}

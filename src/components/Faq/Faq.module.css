@@ -1,0 +1,34 @@
+.faqQuestionContent {
+  width: max(350px, 45dvw);
+  background-color: var(--hackbuttonDark);
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  overflow-y: hidden;
+  cursor: pointer;
+  transition: all 0.5s ease;
+  &:hover {
+    box-shadow: 0 0 5px 1px var(--hackneonHighlight);
+  }
+}
+
+.faqQuestion {
+  position: relative;
+  padding-right: 1.75rem;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.faqCross {
+  position: absolute;
+  right: 0rem;
+  top: 0rem;
+  height: 1rem;
+  transition: all 0.5s ease;
+}
+
+.faqAnswer {
+  padding-block: 0.1rem;
+  transition: all 0.5s ease;
+  max-height: 0;
+  line-height: 1.25rem;
+}

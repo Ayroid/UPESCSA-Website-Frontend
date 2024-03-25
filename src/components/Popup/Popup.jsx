@@ -46,7 +46,7 @@ const Popup = ({
 Popup.propTypes = {
   eventPosterURL: Proptypes.string.isRequired,
   eventHeading: Proptypes.string.isRequired,
-  eventText: Proptypes.string.isRequired,
+  eventText: Proptypes.element.isRequired,
   eventFormURL: Proptypes.string.isRequired,
   closePopup: Proptypes.func.isRequired,
 };

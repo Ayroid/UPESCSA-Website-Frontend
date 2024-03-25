@@ -1,0 +1,18 @@
+.socialsContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--hacktext);
+  gap: 0.5rem;
+}
+
+.socialsContainer img {
+  width: 1.5rem;
+  height: 1.5rem;
+  filter: invert(1);
+  animation: all ease 0.2s;
+  &:hover {
+    filter: invert(0.8);
+  }
+}

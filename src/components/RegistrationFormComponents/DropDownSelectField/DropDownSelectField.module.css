@@ -1,0 +1,71 @@
+.dropDownSelectDiv {
+  position: relative;
+  margin-top: 1.75rem;
+}
+
+.dropDownSelect {
+  background-color: transparent;
+  padding: 0.5rem;
+  border: none;
+  font-size: 1rem;
+  width: max(25dvw, 16rem);
+  color: var(--hacktextDark);
+  font-weight: 600;
+  transition: 0.1s ease-out;
+  outline: none;
+  border-bottom: 1px solid var(--hacktextDark);
+}
+
+.dropDownSelect:-webkit-autofill,
+.dropDownSelect:-webkit-autofill:hover,
+.dropDownSelect:-webkit-autofill:focus,
+.dropDownSelect:-webkit-autofill:active {
+  -webkit-text-fill-color: var(--hacktextDark) !important;
+}
+
+.dropDownSelect:focus {
+  outline: none;
+  border-bottom: 1px solid var(--hackhighlight);
+}
+
+.dropDownSelect::placeholder {
+  font-weight: 600;
+}
+
+.label {
+  position: absolute;
+  font-size: 1rem;
+  left: 0;
+  bottom: -1.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: transparent;
+  color: var(--hacktextDark);
+  font-weight: 500;
+  transition: 0.1s ease-out;
+  transform-origin: left top;
+  pointer-events: none;
+  padding: 0.5rem;
+}
+
+.dropDownSelect:focus + .label {
+  top: 0;
+  transform: translateY(-30%) scale(0.85);
+}
+
+.dropDownSelect:not(:placeholder-shown) + .label {
+  top: 0;
+  transform: translateY(-30%) scale(0.85);
+}
+
+.dropDownOption {
+  background-color: var(--hacktextLight);
+  color: var(--hacktextDark);
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.5rem;
+  width: max(25dvw, 16rem);
+  transition: 0.1s ease-out;
+  outline: none;
+  border: 1px solid blue;
+}
