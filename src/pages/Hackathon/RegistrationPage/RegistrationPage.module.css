@@ -150,6 +150,7 @@
 }
 
 .qrCode img {
+  margin-top: 10%;
   width: 300px;
   height: 350px;
 }
