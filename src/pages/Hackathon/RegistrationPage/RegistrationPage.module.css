@@ -109,6 +109,7 @@
 .formPageDiv {
   position: relative;
   height: 70dvh;
+  overflow-y: auto;
 }
 
 .pageHeading {
@@ -208,5 +209,11 @@
 
   .errorMessage {
     padding-left: 16dvw;
+  }
+
+  .teamMemberDetails,
+  .paymentDetails {
+    height: 50dvh;
+    overflow-y: scroll;
   }
 }
