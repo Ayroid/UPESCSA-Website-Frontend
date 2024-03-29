@@ -1455,6 +1455,9 @@ const RegistrationPage = () => {
               <h1 className={pageHeading}>Payment Section</h1>
               <div className={paymentDetails}>
                 <div className={paymentInstructions}>
+                  <h3 className={paymentText}>
+                    <strong>Registration Fee - ₹250</strong>
+                  </h3>
                   <h3 className={paymentHeading}>Payment Instructions</h3>
                   <p className={paymentText}>
                     1. Scan the QR code to make the payment.
@@ -1467,9 +1470,6 @@ const RegistrationPage = () => {
                     3. After the payment is verified, you will receive a
                     confirmation email.
                   </p>
-                  <h3 className={paymentText}>
-                    <strong>Registration Fee - ₹250</strong>
-                  </h3>
                 </div>
                 <div className={qrCode}>
                   <img

@@ -140,6 +140,8 @@
 
 .paymentDetails {
   color: black;
+  overflow-y: scroll;
+  max-height: 45dvh;
 }
 
 .qrCode {
@@ -151,9 +153,8 @@
 }
 
 .qrCode img {
-  margin-top: 5%;
   width: 300px;
-  height: 350px;
+  height: 350px, 35dvw;
 }
 
 @media screen and (max-width: 1000px) {
