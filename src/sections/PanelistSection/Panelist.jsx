@@ -1,5 +1,5 @@
 import styles from "./Panelist.module.css";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
 const {
   mainDiv,
@@ -9,7 +9,7 @@ const {
   panelInfo,
   panelImage,
   panelistName,
-  panelistsDesignation
+  panelistsDesignation,
 } = styles;
 
 const Panelist = () => {
@@ -54,12 +54,10 @@ const Panelist = () => {
       reverseOrder: true,
       height: "250px",
     },
-
-
   ];
 
   return (
-    <div className={mainDiv} id="campus">
+    <div className={mainDiv} id="panel">
       <div className={panelHeadingDiv}>
         <h1 className="heading" id={panelHeading}>
           Our Panelists
@@ -81,7 +79,7 @@ const Panelist = () => {
         ))}
       </div>
     </div>
- );
+  );
 };
 
 export default Panelist;

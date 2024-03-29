@@ -1,82 +1,79 @@
 .mainDiv {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    margin-bottom: 2rem;
-    padding: 0rem 12dvw 5rem 12dvw;
-    position: relative;
-  }
-  
-  .panelDiv {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: auto;
-    gap: 1rem;
-    
-    position: relative;
-    flex-wrap: wrap;
-  }
-  
-  .panelInfo {
-    flex-wrap: wrap;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 2rem;
+  padding: 0rem 12dvw 5rem 12dvw;
+  position: relative;
+}
+.panelDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  position: relative;
+}
+.panelInfo {
+  flex-wrap: wrap;
   width: 300px;
   height: max-content;
   background-color: var(--hackbuttonDark);
   border-radius: 10px;
   padding: 2rem;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 128, 0.5);
+}
+
+.panelInfo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid white;
+  box-shadow: 0 0 5px var(--hackneonHighlight),
+    0 0 10px var(--hackneonHighlight), 0 0 15px var(--hackneonHighlight),
+    0 0 20px var(--hackneonHighlight);
+}
+
+.panelistsDesignation {
+  color: var(--hackneonHighlight);
+  margin-block: -20px -15px;
+  font-size: 1rem;
+}
+
+.panelistName {
+  color: var(--hackneonHighlight);
+  margin-block: -20px -15px;
+  font-weight: 600;
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+@media screen and (max-width: 1500px) {
+  .mainDiv {
+    flex-wrap: wrap;
+    gap: 5rem;
   }
-  
-  .panelInfo img {
+}
+
+@media screen and (max-width: 768px) {
+  .mainDiv {
+    justify-content: center;
+  }
+
+  .subHeading {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 50%; 
-    border: 2px solid white;
-    box-shadow: 0 0 10px var(--hackneonHighlight), 
-                 0 0 20px var(--hackneonHighlight),
-                 0 0 30px var(--hackneonHighlight),
-                 0 0 40px var(--hackneonHighlight);
+    text-align: center;
+    margin: 0;
   }
-  
-  .panelistsDesignation {
-    color: var(--hackneonHighlight);
-    margin-block: -20px -15px;
-    font-size: 1rem;
+
+  #panelHeading {
+    font-size: 3rem;
+    width: 100%;
+    text-align: center;
   }
-  
-  .panelistName {
-    color: var(--hackneonHighlight);
-    margin-block: -20px -15px;
-    font-weight: 600;
-    font-size: 1.5rem;
-    margin-bottom: 2rem;
+
+  .panelDiv {
+    grid-template-columns: repeat(1, 1fr);
   }
-  @media screen and (max-width: 1500px) {
-    .mainDiv {
-      flex-wrap: wrap;
-      gap: 5rem;
-    }
-  }
-  
-  @media screen and (max-width: 768px) {
-    .mainDiv {
-      justify-content: center;
-    }
-  
-    .subHeading {
-      width: 100%;
-      text-align: center;
-      margin: 0;
-    }
-  
-    #panelHeading {
-      font-size: 3rem;
-      width: 100%;
-      text-align: center;
-    }
-  
-    .panelDiv {
-      grid-template-columns: repeat(1, 1fr);
-    }
-  }
+}
