@@ -1,0 +1,63 @@
+.mainDiv {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 2rem;
+    padding: 0rem 12dvw 5rem 12dvw;
+    position: relative;
+  }
+  
+  .problemStatementDiv {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    gap: 1rem;
+    position: relative;
+    flex-wrap: wrap;
+  }
+  
+  .problemStatementInfo {
+    flex-wrap: wrap;
+  width: 300px;
+  height: max-content;
+  background-color: var(--hackbuttonDark);
+  border-radius: 10px;
+  padding: 2rem;
+  }
+  
+  .problemStatementTitles {
+    color: var(--hackneonHighlight);
+    margin-block: -20px -15px;
+    font-weight: 600;
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  @media screen and (max-width: 1500px) {
+    .mainDiv {
+      flex-wrap: wrap;
+      gap: 5rem;
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    .mainDiv {
+      justify-content: center;
+    }
+  
+    .subHeading {
+      width: 100%;
+      text-align: center;
+      margin: 0;
+    }
+  
+    #problemStatementHeading {
+      font-size: 3rem;
+      width: 100%;
+      text-align: center;
+    }
+  
+    .problemStatementDiv {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
