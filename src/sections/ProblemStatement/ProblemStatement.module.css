@@ -1,50 +1,101 @@
 .mainDiv {
     display: flex;
-    justify-content: space-between;
+    justify-content: center; 
     align-items: center;
-    width: 100%;
+    width: 100%;    
     margin-bottom: 2rem;
     padding: 0rem 12dvw 5rem 12dvw;
     position: relative;
+}
+#problemStatementHeading {
+    font-size: 3rem;
+    text-align: center;
+    display: block;
   }
-  
-  .problemStatementDiv {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: auto;
-    gap: 1rem;
+.problemStatementDiv {
+    display: flex; 
+    overflow-x: auto; 
+    padding: 1rem; 
+    scrollbar-width: thin;
+    scrollbar-color: var(--scrollbar-thumb-color) var(--scrollbar-track-color); 
+    flex-wrap: nowrap;
+    width: 100%; 
     position: relative;
-    flex-wrap: wrap;
-  }
-  
-  .problemStatementInfo {
-    flex-wrap: wrap;
-  width: 300px;
-  height: max-content;
-  background-color: var(--hackbuttonDark);
-  border-radius: 10px;
-  padding: 2rem;
-  }
-  
-  .problemStatementTitles {
+    
+}
+
+.problemStatementInfo {
+    flex: 0 0 auto; 
+    width: 100%;
+    height: auto; 
+    background-color: var(--hackbuttonDark);
+    border-radius: 10px;
+    padding: 2rem;
+    margin-right: 1rem; 
+    box-shadow: 0 0 8px 3px  var(--hackneonHighlight);
+}
+
+.problemStatementTitles h4{
     color: var(--hackneonHighlight);
     margin-block: -20px -15px;
     font-weight: 600;
     font-size: 1.5rem;
+    margin-bottom: 4rem;
+    display: inline;
+    gap: 1rem;
+    margin-right: 0.5rem;
+}
+.problemStatementTitles div {
     margin-bottom: 2rem;
-  }
+}
+
+.problemStatementTitles h3{
+    color: var(--hackneonHighlight);
+    margin-block: -20px -15px;
+    font-weight: 600;
+    font-size: 1.5rem;
+    margin-bottom: 4rem;
+    display: inline;
+    margin-right: 0.5rem;
+}
+.problemStatementTitles p{
+    display: inline;
+}
+
+:root {
+    --scrollbar-thumb-color: #888;
+    --scrollbar-track-color: #f1f1f1;
+}
+.progressIndicator {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    z-index: 10;
+    display: block;
+    text-shadow: 0 0 3px white, 0 0 6px white, 0 0 9px white, 0 0 12px white; 
+   }
+
+   
   @media screen and (max-width: 1500px) {
     .mainDiv {
       flex-wrap: wrap;
       gap: 5rem;
     }
   }
-  
+
   @media screen and (max-width: 768px) {
     .mainDiv {
-      justify-content: center;
+        justify-content: center;
     }
-  
+
+    .problemStatementDiv {
+        flex-direction: column; 
+    }
     .subHeading {
       width: 100%;
       text-align: center;
@@ -56,8 +107,5 @@
       width: 100%;
       text-align: center;
     }
-  
-    .problemStatementDiv {
-      grid-template-columns: repeat(1, 1fr);
-    }
+
   }
