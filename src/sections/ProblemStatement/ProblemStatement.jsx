@@ -1,5 +1,6 @@
 import styles from "./ProblemStatement.module.css";
-import React from "react";
+import React, { useState } from "react";
+import ProblemStatementSelection from "../../components/ProblemStatementSelection/ProblemStatementSelection";
 
 const {
   mainDiv,
@@ -7,45 +8,48 @@ const {
   problemStatementInfo,
   problemStatementTitles,
   problemStatementHeading,
+  statementButton,
 } = styles;
 
 const ProblemStatement = () => {
+  const [selectedStatement, setSelectedStatement] = useState(null);
+  const [showSelection, setShowSelection] = useState(false);
+
   const panel = [
     {
       id: "PS001",
-      title: "Problem Statement Title",
-      byOrganization: "Organization Name",
-      sectorDomain: "Sector/Domain",
-      problemDescription: "This is the problem description.",
-      functionalRequirement: "Functional requirement of the solution.",
-      nonFunctionalRequirement: "Non-functional requirement of the solution.",
+      title: "Problem Statement Title 1",
+      byOrganization: "Organization Name 1",
+      sectorDomain: "Sector/Domain 1",
+      problemDescription: "This is the problem description 1.",
+      functionalRequirement: "Functional requirement of the solution 1.",
+      nonFunctionalRequirement: "Non-functional requirement of the solution 1.",
     },
     {
-      id: "PS001",
-      title: "Problem Statement Title",
-      byOrganization: "Organization Name",
-      sectorDomain: "Sector/Domain",
-      problemDescription: "This is the problem description.",
-      functionalRequirement: "Functional requirement of the solution.",
-      nonFunctionalRequirement: "Non-functional requirement of the solution.",
+      id: "PS002",
+      title: "Problem Statement Title 2",
+      byOrganization: "Organization Name 2",
+      sectorDomain: "Sector/Domain 2",
+      problemDescription: "This is the problem description 2.",
+      functionalRequirement: "Functional requirement of the solution 2.",
+      nonFunctionalRequirement: "Non-functional requirement of the solution 2.",
     },
-    {
-      id: "PS001",
-      title: "Problem Statement Title",
-      byOrganization: "Organization Name",
-      sectorDomain: "Sector/Domain",
-      problemDescription: "This is the problem description.",
-      functionalRequirement: "Functional requirement of the solution.",
-      nonFunctionalRequirement: "Non-functional requirement of the solution.",
-    },
-    ];
+  ];
+
+  const openPopup = (statement) => {
+    setSelectedStatement(statement);
+    setShowSelection(true);
+  };
+
+  const closePopup = () => {
+    setSelectedStatement(null);
+    setShowSelection(false);
+  };
 
   return (
     <div className={mainDiv} id="problemStatement">
       <div className={problemStatementHeading}>
-        <h1 className="heading">
-          Problem Statements
-        </h1>
+        <h1 className="heading">Problem Statements</h1>
       </div>
       <div className={problemStatementDiv}>
         {panel.map((statement, index) => (
@@ -71,9 +75,19 @@ const ProblemStatement = () => {
                 <p>{statement.nonFunctionalRequirement}</p>
               </div>
             </div>
+
+            <button className={statementButton} onClick={() => openPopup(statement)}>Choose This problem Statement</button>
           </div>
         ))}
       </div>
+
+      {showSelection && (
+        <ProblemStatementSelection
+          statement={selectedStatement}
+          onClose={closePopup}
+        />
+      )}
+
     </div>
   );
 };

@@ -1,50 +1,45 @@
-import Proptypes from "prop-types";
-import { Link } from "react-router-dom";
-import styles from "./ProblemStatementSelection.module.css";
+import React, { useState } from "react";
+import styles from './ProblemStatementSelection.module.css';
 
-// CSS STYLES
-const {
-  popupContainer,
-  popupDiv,
-  popupTextDiv,
-  popupHeading,
-  popupText,
-  popupRegisterButton,
-  popupCloseButton,
-} = styles;
+const ProblemStatementSelection = ({ statement, onClose }) => {
+  const [teamId, setTeamId] = useState("");
+  const [pwd, setPwd] = useState("");
 
-const Popup = ({
-  eventPosterURL,
-  eventHeading,
-  eventText,
-  eventFormURL,
-  closePopup,
-}) => {
+  const handleConfirm = () => {
+    console.log("Team ID:", teamId);
+    console.log("Password:", pwd);
+    onClose();
+  };
+
   return (
-    <div className={popupContainer}>
-      <div className={popupDiv}>
-        <div className={popupTextDiv}>
-          <h4 className={popupHeading}>{eventHeading}</h4>
-          <p className={popupText}>{eventText}</p>
-          <Link to={eventFormURL} className={popupRegisterButton}>
-            <p>Choose Problem Statement</p>
-            <img loading="lazy" src="/icons/rightArrow.png" alt="arrow" />
-          </Link>
+    <div className={styles["popup-overlay"]}>
+      <div className={styles["popup-box"]}>
+        <h2 className={styles["popup-heading"]}>Book Your PS</h2>
+        <div className={styles["popup-content"]}>
+          <label htmlFor="teamId">Team ID:</label>
+          <input
+            type="text"
+            id="teamId"
+            value={teamId}
+            onChange={(e) => setTeamId(e.target.value)}
+          />
         </div>
-        <div className={popupCloseButton} onClick={closePopup}>
-          <img loading="lazy" src="/icons/hamburgercross.png" alt="cross" />
+        <div className={styles["popup-content"]}>
+          <label htmlFor="pwd">Password:</label>
+          <input
+            type="password"
+            id="pwd"
+            value={pwd}
+            onChange={(e) => setPwd(e.target.value)}
+          />
+        </div>
+        <div className={styles["popup-buttons"]}>
+          <button onClick={handleConfirm}>Confirm</button>
+          <button onClick={onClose}>Cancel</button>
         </div>
       </div>
     </div>
   );
 };
 
-Popup.propTypes = {
-  eventPosterURL: Proptypes.string.isRequired,
-  eventHeading: Proptypes.string.isRequired,
-  eventText: Proptypes.element.isRequired,
-  eventFormURL: Proptypes.string.isRequired,
-  closePopup: Proptypes.func.isRequired,
-};
-
-export default Popup;
+export default ProblemStatementSelection;
