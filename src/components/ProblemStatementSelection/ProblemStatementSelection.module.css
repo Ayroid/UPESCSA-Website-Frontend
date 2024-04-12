@@ -59,12 +59,14 @@
   background-color: #007bff;
   color: white;
   border: none;
-  padding: 10px 20px;
+  padding: 1vw;
   font-size: 16px;
   cursor: pointer;
   border-radius: 5px;
   margin-left: 1rem;
   transition: background-color 0.3s;
+  width: calc(100% - 2rem);
+  width: 100%;
 }
 
 .popup-buttons button:hover {
