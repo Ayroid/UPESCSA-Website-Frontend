@@ -1,0 +1,136 @@
+.popupContainer {
+    position: absolute;
+    top: 20dvh;
+    z-index: 9999;
+    animation: popupAnimation 0.75s ease;
+  }
+
+  .popupDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  
+  .popupImage img {
+    height: max(25dvw, 25rem);
+    width: max(25dvw, 25rem);
+    object-fit: cover;
+  }
+  
+  .popupTextDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    box-sizing: border-box;
+    height: max(25dvw, 25rem);
+    width: max(25dvw, 25rem);
+    background-color: #0101017e;
+    backdrop-filter: blur(20px);
+    padding-left: 3rem;
+  }
+  
+  .popupHeading {
+    font-size: 2rem;
+    font-weight: 500;
+    color: var(--textLight);
+    margin: 1rem 0 0.25rem 0;
+  }
+  
+  .popupText {
+    font-size: 1.1rem;
+    overflow-y: scroll;
+    padding-right: 1rem;
+  }
+  
+  .popupRegisterButton {
+    background-color: var(--bgLight);
+    color: var(--textDark);
+    font-size: 1.5rem;
+    padding-inline: 2rem 3rem;
+    height: 3.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem 0 1.5rem 0;
+  }
+  
+  .popupRegisterButton:hover img {
+    transition: all 0.3s ease-in-out;
+    transform: translateX(0.5rem);
+  }
+  
+  .popupRegisterButton img {
+    height: 1.1rem;
+    margin-left: 1rem;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .popupCloseButton {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .popupCloseButton img {
+    height: 2rem;
+    width: 2rem;
+  }
+  
+  @media screen and (max-width: 1000px) {
+    .popupContainer {
+      top: 10dvh;
+    }
+  
+    .popupDiv {
+      flex-direction: column;
+      height: max(60dvw, 700px);
+      width: max(30dvw, 350px);
+    }
+  
+    .popupImage img {
+      height: max(30dvw, 350px);
+      width: max(30dvw, 350px);
+    }
+  
+    .popupTextDiv {
+      height: max(30dvw, 350px);
+      width: max(30dvw, 350px);
+      padding-left: 1rem;
+    }
+  
+    .popupCloseButton {
+      top: 0.5rem;
+      right: 0.5rem;
+    }
+  
+    .popupHeading {
+      font-size: 1.75rem;
+    }
+  
+    .popupText {
+      font-size: 1rem;
+    }
+  
+    .popupRegisterButton {
+      font-size: 1.1rem;
+      padding-inline: 1rem 1.5rem;
+      height: 2.5rem;
+      margin: 1rem 0 1.5rem 0;
+    }
+  
+    .popupRegisterButton:hover img {
+      transform: translateX(0.25rem);
+    }
+  
+    .popupRegisterButton img {
+      height: 0.75rem;
+      margin-left: 0.75rem;
+    }
+  }
+  

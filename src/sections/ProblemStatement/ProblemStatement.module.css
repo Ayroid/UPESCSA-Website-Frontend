@@ -1,113 +1,68 @@
 .mainDiv {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   width: 100%;
   margin-bottom: 2rem;
-  padding: 0rem 12dvw 5rem 12dvw;
+  padding: 0rem 12vw 5rem 12vw;
+  flex-direction: column;
   position: relative;
 }
+
 #problemStatementHeading {
   font-size: 3rem;
   text-align: center;
   display: block;
+  width: 100%;
 }
+
 .problemStatementDiv {
   display: flex;
-  overflow-x: auto;
-  padding: 1rem;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-  flex-wrap: nowrap;
+  flex-direction: column;
   width: 100%;
-  position: relative;
+  padding: 1rem;
+  overflow: visible;
 }
+
 .problemStatementInfo {
   flex: 0 0 auto;
   width: 100%;
-  height: auto;
   background-color: var(--hackbuttonDark);
   border-radius: 10px;
   padding: 2rem;
-  margin-right: 1rem;
+  margin-bottom: 2rem;
   box-shadow: 0 0 8px 3px var(--hackneonHighlight);
 }
 
-.problemStatementTitles h4 {
-  color: var(--hackneonHighlight);
-  margin-block: -20px -15px;
-  font-weight: 600;
-  font-size: 1.5rem;
-  margin-bottom: 4rem;
-  display: inline;
-  gap: 1rem;
-  margin-right: 0.5rem;
-}
-.problemStatementTitles div {
+.problemStatementTitles {
   margin-bottom: 2rem;
 }
 
-.problemStatementTitles h3 {
+.problemStatementTitles h3,
+.problemStatementTitles h4 {
   color: var(--hackneonHighlight);
-  margin-block: -20px -15px;
   font-weight: 600;
   font-size: 1.5rem;
-  margin-bottom: 4rem;
-  display: inline;
-  margin-right: 0.5rem;
-}
-.problemStatementTitles p {
-  display: inline;
+  margin-bottom: 0.5rem;
 }
 
-:root {
-  --scrollbar-thumb-color: #888;
-  --scrollbar-track-color: #f1f1f1;
-}
-.progressIndicator {
-  position: absolute;
-  top: 30%;
-  left: 50%;
-  transform: translateX(-50%);
-  color: white;
-  padding: 5px 10px;
-  border-radius: 5px;
-  font-size: 1.5rem;
-  z-index: 10;
+.problemStatementTitles p {
   display: block;
-  text-shadow: 0 0 3px white, 0 0 6px white, 0 0 9px white, 0 0 12px white;
+}
+
+.progressIndicator {
+  display: none;
 }
 
 @media screen and (max-width: 1500px) {
   .mainDiv {
-    flex-wrap: wrap;
     gap: 5rem;
   }
 }
 
 @media screen and (max-width: 768px) {
-  .mainDiv {
-    justify-content: center;
-  }
-
-  .problemStatementDiv {
-    flex-direction: column;
-  }
-  .subHeading {
-    width: 100%;
-    text-align: center;
-    margin: 0;
-  }
   .problemStatementInfo {
     width: 90%;
     margin: 1rem auto;
-  }
-  .progressIndicator {
-    display: none;
-  }
-  #problemStatementHeading {
-    font-size: 3rem;
-    width: 100%;
-    text-align: center;
   }
 }
