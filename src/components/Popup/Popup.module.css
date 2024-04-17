@@ -1,5 +1,5 @@
 .popupContainer {
-  position: absolute;
+  position: fixed;
   top: 20dvh;
   z-index: 9999;
   animation: popupAnimation 0.75s ease;
