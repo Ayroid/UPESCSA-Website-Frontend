@@ -145,7 +145,7 @@ const Navbar = () => {
             ))}
             <hr className={verticalLine} />
             <Navlinks
-              title={"Hacakthon 3.0"}
+              title={"Hackathon 3.0"}
               action={"/hackathon3.0"}
               separatePage={true}
               closeNavbar={displayNavBar}
