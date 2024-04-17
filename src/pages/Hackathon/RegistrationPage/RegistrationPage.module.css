@@ -5,7 +5,7 @@
   flex-direction: column;
   height: 100dvh;
   width: 100%;
-  background: url("/img/bg3.png");
+  background: url("/img/bg3.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -109,6 +109,7 @@
 .formPageDiv {
   position: relative;
   height: 70dvh;
+  overflow-y: auto;
 }
 
 .pageHeading {
@@ -139,6 +140,8 @@
 
 .paymentDetails {
   color: black;
+  overflow-y: scroll;
+  max-height: 45dvh;
 }
 
 .qrCode {
@@ -150,9 +153,8 @@
 }
 
 .qrCode img {
-  margin-top: 10%;
   width: 300px;
-  height: 350px;
+  height: 350px, 35dvw;
 }
 
 @media screen and (max-width: 1000px) {
@@ -208,5 +210,11 @@
 
   .errorMessage {
     padding-left: 16dvw;
+  }
+
+  .teamMemberDetails,
+  .paymentDetails {
+    height: 50dvh;
+    overflow-y: scroll;
   }
 }

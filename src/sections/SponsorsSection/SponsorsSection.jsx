@@ -9,9 +9,49 @@ const {
   sponsorsInfo,
   sponsorInfo,
   sponsorImage,
+  bluelearn,
 } = styles;
 
 const SponsorsSection = () => {
+  const sponsors = [
+    {
+      name: "HoverRobotix",
+      id: "hoverrobotix",
+      link: "https://hoverrobotix.com/",
+      image: "/sponsors/sponsors/hoverrobotix.png",
+    },
+    {
+      name: "Indian Hempstore",
+      id: "indianhempstore",
+      link: "https://indianhempstore.com/",
+      image: "/sponsors/sponsors/indianhempstore.png",
+    },
+    {
+      name: "Learning with Travelling",
+      id: "learningwithtravelling",
+      link: "https://learningwhiletravelling.com/",
+      image: "/sponsors/sponsors/lwt.png",
+    },
+    {
+      name: "MentorX",
+      id: "mentorx",
+      link: "https://thementorx.com/",
+      image: "/sponsors/sponsors/mentorx.png",
+    },
+    {
+      name: "GiveMyCertificate",
+      id: "givemycertificate",
+      link: "https://givemycertificate.com/",
+      image: "/sponsors/sponsors/givemycertificate.png",
+    },
+    {
+      name: "InterviewBuddy",
+      id: "interviewbuddy",
+      link: "https://www.interviewbuddy.in/",
+      image: "/sponsors/sponsors/interviewbuddy.png",
+    },
+  ];
+
   return (
     <div className={mainDiv} id="sponsors">
       <div className={sponsorsHeadingDiv}>
@@ -21,28 +61,35 @@ const SponsorsSection = () => {
         </h1>
       </div>
       <div className={sponsorsDiv}>
-        <div className={sponsorsInfo}>
-          <div className={sponsorInfo}>
-            <a target="_blank" href="https://givemycertificate.com/">
-              <img
-                className={sponsorImage}
-                src="/sponsors/sponsors/givemycertificate.png"
-                alt="Azure Developer Community"
-              />
+        {sponsors.map((sponsor) => (
+          <div className={sponsorsInfo} key={sponsor.name}>
+            <a href={sponsor.link} target="_blank" rel="noopener noreferrer">
+              <div className={sponsorInfo}>
+                <img
+                  src={sponsor.image}
+                  alt={sponsor.name}
+                  className={sponsorImage}
+                  id={sponsor.id}
+                />
+              </div>
             </a>
           </div>
-        </div>
-
+        ))}
         <div className={sponsorsInfo}>
-          <div className={sponsorInfo}>
-            <a target="_blank" href="https://www.interviewbuddy.in/">
+          <a
+            href="https://www.bluelearn.in/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <div className={sponsorInfo}>
               <img
+                src="/sponsors/sponsors/bluelearn.png"
+                alt="Blue Learn"
                 className={sponsorImage}
-                src="/sponsors/sponsors/interviewbuddy.png"
-                alt="Reskill"
+                id={bluelearn}
               />
-            </a>
-          </div>
+            </div>
+          </a>
         </div>
       </div>
     </div>
