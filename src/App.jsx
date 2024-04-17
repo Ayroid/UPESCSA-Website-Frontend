@@ -23,6 +23,7 @@ import HackathonHomePage from "./pages/Hackathon/HackathonHomePage/HackathonHome
 import RegistrationPage from "./pages/Hackathon/RegistrationPage/RegistrationPage";
 
 import RegistrationSuccess from "./pages/RegistrationSuccess/RegistrationSuccess";
+import ProblemStatementPage from "./pages/Hackathon/ProblemStatementPage/ProblemStatementPage";
 
 function App() {
   return (
@@ -167,6 +168,10 @@ function App() {
 
         <Route path="/hackathon3.0/" element={<HackathonHomePage />} />
         <Route path="/hackathon3.0/register" element={<RegistrationPage />} />
+        <Route
+          path="/hackathon3.0/sadj723h238"
+          element={<ProblemStatementPage />}
+        />
       </Routes>
     </div>
   );

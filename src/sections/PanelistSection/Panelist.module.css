@@ -1,0 +1,93 @@
+.mainDiv {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 600px;
+  height: 100%;
+  width: 100%;
+  margin-block: 2rem;
+  padding: 0rem 12dvw 0rem 12dvw;
+  position: relative;
+  flex-direction: column;
+}
+
+.panelHeadingDiv {
+  margin-bottom: 7rem;
+}
+
+.panelDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 7rem;
+  position: relative;
+}
+.panelInfo {
+  flex-wrap: wrap;
+  height: 440px;
+  width: 325px;
+  background-color: var(--hackbuttonDark);
+  border-radius: 10px;
+  padding: 2rem 1rem;
+}
+
+.panelInfoLink {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+}
+
+.panelImage {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 50%;
+  filter: drop-shadow(0px 0px 10px var(--hackneonHighlight));
+}
+
+.panelistsDesignation {
+  color: var(--textLight);
+  font-size: 1rem;
+  text-align: center;
+  margin-inline: 1rem;
+}
+
+.panelistName {
+  color: var(--textLight);
+  font-weight: 600;
+  font-size: 1.5rem;
+  margin-top: 3rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+@media screen and (max-width: 1500px) {
+  .mainDiv {
+    flex-wrap: wrap;
+    gap: 5rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .mainDiv {
+    justify-content: center;
+  }
+
+  .subHeading {
+    width: 100%;
+    text-align: center;
+    margin: 0;
+  }
+
+  #panelHeading {
+    font-size: 3rem;
+    width: 100%;
+    text-align: center;
+  }
+
+  .panelDiv {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

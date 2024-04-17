@@ -67,14 +67,14 @@
 
 .sectionDate {
   color: var(--hackneonHighlight);
-  margin-block: -20px -15px;
+  margin-block: 20px -15px;
   font-weight: 600;
   font-size: 1.25rem;
 }
 
 .sectionHeading {
   font-size: 1.55rem;
-  margin-top: -1.25rem;
+  margin-top: 1.25rem;
 }
 
 @media screen and (max-width: 1000px) {
