@@ -31,7 +31,7 @@ const Popup = ({
           <h4 className={popupHeading}>{eventHeading}</h4>
           <p className={popupText}>{eventText}</p>
           <Link to={eventFormURL} className={popupRegisterButton}>
-            <p>REGISTER NOW</p>
+            <p>Problem Statements</p>
             <img loading="lazy" src="/icons/rightArrow.png" alt="arrow" />
           </Link>
         </div>

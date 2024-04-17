@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
-import styles from "./Navbar.module.css";
+import styles from "./HackathonNavbarPS.module.css";
+
+import { Link } from "react-router-dom";
 
 // COMPONENTS
-// import Logo from "../Logo/Logo";
-import Navlinks from "../Navlinks/Navlinks";
-import Socials from "../Socials/Socials";
+import Logo from "../Logo/Logo";
+import Socials from "../HackathonSocials/HackathonSocials";
 
 // CSS STYLES
 const {
@@ -14,43 +15,18 @@ const {
   hamburgerDiv,
   hamburger,
   logoDiv,
-  navLinks,
-  verticalLine,
-  mobileLine,
   socialsDiv,
   scrollUp,
   scrollDown,
+  upescsaLogo,
+  upesLogo,
 } = styles;
 
-const Navbar = () => {
+const HackathonNavbarPS = () => {
   // STATES
   const [open, setOpen] = useState(false);
   const [scrollPosition, setScrollPosition] = useState(0);
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
-
-  // DATA
-  const navlinks = [
-    {
-      title: "Events",
-      action: "/events",
-    },
-    {
-      title: "Team",
-      action: "/team",
-    },
-    {
-      title: "Committees",
-      action: "/committees",
-    },
-    {
-      title: "CSR",
-      action: "/csr",
-    },
-    {
-      title: "Blogs",
-      action: "/blogs",
-    },
-  ];
 
   // FUNCTIONS
 
@@ -74,11 +50,12 @@ const Navbar = () => {
 
   if (screenWidth < 1100) {
     navbarStyle = {
-      backgroundColor: "var(--navDark)",
+      backgroundColor: "var(--hacknavDark)",
     };
   } else {
     navbarStyle = {
-      backgroundColor: scrollPosition > 50 ? "var(--navDark)" : "transparent",
+      backgroundColor:
+        scrollPosition > 50 ? "var(--hacknavDark)" : "transparent",
     };
   }
 
@@ -123,36 +100,16 @@ const Navbar = () => {
       </div>
       <div className={navBarDiv} id="navbardiv" onClick={displayNavBar}>
         <div className={navbar} id="navbar">
-          <div className={logoDiv}>
-            <Navlinks
-              title={"UPES CSA"}
-              size={"1.4rem"}
-              action={"/#"}
-              closeNavbar={displayNavBar}
-            />
-            {/* <Logo height="4rem" /> */}
+          <div className={logoDiv} id={upescsaLogo}>
+            <Link to={"/"}>
+              <Logo height="4.5rem" src="/logo/upescsa.png" />
+            </Link>
           </div>
-          <ul className={navLinks}>
-            <hr className={mobileLine} />
-            {navlinks.map((navlink) => (
-              <Navlinks
-                key={navlink.title}
-                title={navlink.title}
-                action={navlink.action}
-                separatePage={navlink.separatePage}
-                closeNavbar={displayNavBar}
-              />
-            ))}
-            <hr className={verticalLine} />
-            <Navlinks
-              title={"Hacakthon 3.0"}
-              action={"/hackathon3.0"}
-              separatePage={true}
-              closeNavbar={displayNavBar}
-              textStyle={{ color: "gold" }}
-            />
-            <hr className={mobileLine} />
-          </ul>
+          <div className={logoDiv} id={upesLogo}>
+            <a href="https://www.upes.ac.in/" target="_blank" rel="noreferrer">
+              <Logo height="3rem" src="/logo/upes.png" />
+            </a>
+          </div>
           <div className={socialsDiv}>
             <Socials orientation={"row"} />
           </div>
@@ -162,4 +119,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default HackathonNavbarPS;

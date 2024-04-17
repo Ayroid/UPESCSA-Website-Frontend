@@ -7,6 +7,7 @@ const {
   panelHeading,
   panelDiv,
   panelInfo,
+  panelInfoLink,
   panelImage,
   panelistName,
   panelistsDesignation,
@@ -15,45 +16,46 @@ const {
 const Panelist = () => {
   const panel = [
     {
-      img: "/panelist/a.jpg",
-      link: "https://www.linkedin.com/",
-      panelistName: "hey",
-      panelistsDesignation: "director",
+      img: "/panelist/vivekShridhar.png",
+      link: "https://www.linkedin.com/in/vivsridh/",
+      panelistName: "Vivek Sridhar",
+      panelistsDesignation: "CTO at Microsoft for Startups | Microsoft",
       reverseOrder: true,
       height: "250px",
     },
     {
-      img: "/panelist/a.jpg",
-      link: "https://www.linkedin.in/",
-      panelistName: "hey",
-      panelistsDesignation: "director",
+      img: "/panelist/maharshiBanerjee.png",
+      link: "https://www.linkedin.com/in/maharshibanerjee/",
+      panelistName: "Maharshi Banerjee",
+      panelistsDesignation: "Consultant Cyber Security | TCS",
       reverseOrder: true,
       height: "250px",
     },
     {
-      img: "/panelist/a.jpg",
-      link: "https://www.linkedin.in/",
-      panelistName: "hey",
-      panelistsDesignation: "director",
+      img: "/panelist/venkataSatishGuttula.png",
+      link: "https://www.linkedin.com/in/venkatasatishguttula/",
+      panelistName: "Venkata Satish Guttula",
+      panelistsDesignation:
+        "Co-Founder and CEO | Suven Cybersecurity Private Limited",
       reverseOrder: true,
       height: "250px",
     },
     {
-      img: "/panelist/a.jpg",
-      link: "https://www.linkedin.in/",
-      panelistName: "hey",
-      panelistsDesignation: "director",
+      img: "/panelist/anmolWassan.png",
+      link: "https://www.linkedin.com/in/anmolwassan/",
+      panelistName: "Anmol Wassan",
+      panelistsDesignation: "Senior Product Manager | Lemnisk",
       reverseOrder: true,
       height: "250px",
     },
-    {
-      img: "/panelist/a.jpg",
-      link: "https://www.linkedin.in/",
-      panelistName: "hey",
-      panelistsDesignation: "director",
-      reverseOrder: true,
-      height: "250px",
-    },
+    // {
+    //   img: "/panelist/a.jpg",
+    //   link: "https://www.linkedin.in/",
+    //   panelistName: "hey",
+    //   panelistsDesignation: "director",
+    //   reverseOrder: true,
+    //   height: "250px",
+    // },
   ];
 
   return (
@@ -66,13 +68,11 @@ const Panelist = () => {
       <div className={panelDiv}>
         {panel.map((panel, index) => (
           <div className={panelInfo} key={index}>
-            <Link target="_blank" to={panel.link}>
+            <Link className={panelInfoLink} target="_blank" to={panel.link}>
               <img className={panelImage} src={panel.img} alt={panel.name} />
-              <div className={panelistName}>
-                <p>{panel.panelistName}</p>
-              </div>
+              <div className={panelistName}>{panel.panelistName}</div>
               <div className={panelistsDesignation}>
-                <p>{panel.panelistsDesignation}</p>
+                {panel.panelistsDesignation}
               </div>
             </Link>
           </div>

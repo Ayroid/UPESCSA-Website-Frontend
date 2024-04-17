@@ -10,7 +10,6 @@ import SponsorsSection from "../../../sections/SponsorsSection/SponsorsSection";
 import ContactSection from "../../../sections/ContactSection/ContactSection";
 import Panelist from "../../../sections/PanelistSection/Panelist";
 import Timeline from "../../../sections/TimelineSection/TimelineSection";
-import ProblemStatement from "../../../sections/ProblemStatement/ProblemStatement";
 import styles from "./HackathonHomePage.module.css";
 import HomeSection from "../../../sections/HomeSection/HomeSection";
 
@@ -24,10 +23,9 @@ const HackathonHomePage = () => {
       <AboutHackathon />
       <CommunityPartnerSection />
       <Timeline />
-      <Panelist/>
+      <Panelist />
       <SponsorsSection />
       <CampusPartnersSection />
-      <ProblemStatement/>
       <FaqSection />
       <RegistrationPromptSection />
       <ContactSection />

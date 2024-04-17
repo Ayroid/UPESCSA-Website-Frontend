@@ -56,27 +56,55 @@ const HomePage = () => {
           eventHeading="Hackathon 3.0"
           eventText={
             <>
-              🚀 Hackathon 3.0 Registration Now Open! 🚀 Get ready for the
-              ultimate tech showdown and join us for the most exhilarating tech
-              event of the year! Hackathon 3.0 is back and better than ever.
-              Whether you&apos;re a coding whiz or an aspiring innovator, this
-              is your chance to turn your ideas into reality, solve real-world
-              problems, and leave a lasting impact in the digital universe.
+              UPES CSA&rsquo;s third iteration of the flagship event, Hackathon
+              3.0, is set to be a pinnacle event for innovation and
+              problem-solving, bringing together the brightest minds to tackle
+              real-world challenges. As we gear up for this exciting event,
+              it&rsquo;s crucial to ensure your team is registered in time to
+              participate.
               <br />
               <br />
-              📅 Event Date: 19 - 21 April 2024
+              The deadline to select your problem statement and fill the
+              submission form for Hackathon 3.0 is 6:00 PM on April 18, 2024.
+              Beyond this time, we will not be accepting any further
+              submissions, so be sure to act promptly to secure your spot in the
+              competition.
               <br />
               <br />
-              🌐 Mode: Online
+              Explore the diverse range of problem statements available on our
+              website. Choose the challenge that resonates most with your
+              team&rsquo;s interests and expertise. Remember, selecting the
+              right problem statement is key to unlocking your potential for
+              success in the competition.
               <br />
               <br />
-              🎨 Theme: Redefining Urban Horizons with Innovation & Secure
-              Digital Environment and Privacy
+              Once you&rsquo;ve finalized your problem statement, navigate to
+              the problem statement submission page on our website. Fill out the
+              form with accurate information, including your team name (as
+              filled in the registration form while registering for the
+              hackathon) and selected problem statement. Double-check all
+              details before submission to ensure accuracy.
               <br />
               <br />
-              Register Now to join us for an exhilarating journey of creativity,
-              collaboration, and innovation. Don&apos;t miss out on this
-              opportunity to code your way to the stars!
+              Important Notes:
+              <br />
+              <br />
+              - Only teams that have completed the problem selection and
+              submission form process before the deadline will be eligible to
+              participate in Hackathon 3.0.
+              <br />
+              <br />- Ensure that your team name is spelled correctly and
+              reflects your intended identity as filled in the initial
+              registration form.
+              <br />
+              <br />- Late submissions will not be accepted, so don&rsquo;t miss
+              the deadline!
+              <br />
+              <br />
+              Hackathon 3.0 promises to be an exhilarating journey of innovation
+              and collaboration. Lock in your problem statement before the
+              deadline, and prepare to embark on a coding odyssey that could
+              change the world, one&rsquo;step&rsquo;at&rsquo;a&rsquo;time.
             </>
           }
           eventFormURL="/hackathon3.0"
