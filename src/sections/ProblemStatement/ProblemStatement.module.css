@@ -36,6 +36,12 @@
   padding: 2rem;
   box-shadow: 0 0 8px 3px var(--hackneonHighlight);
   max-width: 400px;
+  cursor: pointer;
+  transition: all 0.3s;
+  &:hover {
+    transform: translateY(-5px);
+    transition: all 0.3s;
+  }
 }
 
 .problemStatementMetaData {

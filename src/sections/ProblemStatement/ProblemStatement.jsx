@@ -13,7 +13,6 @@ const {
   problemStatementHeading,
 } = styles;
 
-// const problemStatementBody = ({ statement, openPopup }) => {
 const ProblemStatementBody = ({ statement, openPopup }) => {
   return (
     <div className={problemStatementInfo} onClick={() => openPopup(statement)}>
