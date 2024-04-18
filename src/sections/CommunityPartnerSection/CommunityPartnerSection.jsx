@@ -25,7 +25,11 @@ const CommunityPartnerSection = () => {
       <div className={sponsorsDiv}>
         <div className={sponsorsInfo}>
           <div className={sponsorInfo}>
-            <a target="_blank" href="https://azdev.reskilll.com/">
+            <a
+              rel="noreferrer"
+              target="_blank"
+              href="https://azdev.reskilll.com/"
+            >
               <img
                 className={sponsorImage}
                 id={azdev}
@@ -38,7 +42,7 @@ const CommunityPartnerSection = () => {
 
         <div className={sponsorsInfo}>
           <div className={sponsorInfo}>
-            <a target="_blank" href="https://reskilll.com/">
+            <a rel="noreferrer" target="_blank" href="https://reskilll.com/">
               <img
                 className={sponsorImage}
                 id={reskill}

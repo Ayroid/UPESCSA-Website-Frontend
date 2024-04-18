@@ -48,14 +48,14 @@ const Panelist = () => {
       reverseOrder: true,
       height: "250px",
     },
-    // {
-    //   img: "/panelist/a.jpg",
-    //   link: "https://www.linkedin.in/",
-    //   panelistName: "hey",
-    //   panelistsDesignation: "director",
-    //   reverseOrder: true,
-    //   height: "250px",
-    // },
+    {
+      img: "/panelist/profile.jpg",
+      link: " ",
+      panelistName: "Lt. Col Anand Waiker",
+      panelistsDesignation: " ",
+      reverseOrder: true,
+      height: "250px",
+    },
   ];
 
   return (
