@@ -1,0 +1,163 @@
+.mainDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 5rem 12vw;
+  flex-direction: column;
+  position: relative;
+}
+
+.problemStatementHeading {
+  font-size: 2rem;
+  text-align: center;
+  display: block;
+  width: 100%;
+  margin-bottom: 3rem;
+}
+
+.problemStatementDiv {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+  gap: 5rem;
+  overflow: visible;
+}
+
+.problemStatementInfo {
+  flex: 0 0 auto;
+  width: 100%;
+  background-color: var(--hackbuttonDark);
+  border-radius: 10px;
+  padding: 2rem;
+  box-shadow: 0 0 8px 3px var(--hackneonHighlight);
+  max-width: 400px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.problemStatementMetaData {
+  font-size: 1.1rem;
+}
+
+h3,
+h4 {
+  color: var(--hackneonHighlight);
+  font-weight: 600;
+  font-size: 1.5rem;
+  margin-block: 0.5rem;
+}
+
+span {
+  color: var(--hackneonHighlight);
+  font-weight: 600;
+}
+
+.problemStatementDescription {
+  font-size: 1.1rem;
+  margin-top: 1rem;
+}
+
+.problemStatementDescription h4 {
+  margin-top: 2rem;
+  margin-bottom: 0;
+}
+
+.problemStatementDescription p {
+  margin-top: 0.5rem;
+}
+
+.problemStatementTitles p {
+  display: block;
+}
+
+.progressIndicator {
+  display: none;
+}
+.statementButton {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.statementButton:hover {
+  background-color: #0056b3;
+}
+@media screen and (max-width: 1500px) {
+  .mainDiv {
+    gap: 5rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .problemStatementHeading {
+    margin-block: 1rem;
+    padding-inline: 4rem;
+  }
+
+  .problemStatementHeading h1 {
+    font-size: 2rem;
+  }
+
+  .mainDiv {
+    padding: 2rem 0;
+    gap: 0;
+  }
+
+  .problemStatementInfo {
+    width: 100%;
+    margin: 1rem 0;
+    padding: 1.5rem;
+  }
+}
+
+.popupRegisterButton {
+  background-color: var(--bgLight);
+  color: var(--textDark);
+  font-size: 1.2 5rem;
+  padding-inline: 2rem 3rem;
+  height: 3.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem 0 1.5rem 0;
+  font-weight: 700;
+}
+
+.popupRegisterButton:hover img {
+  transition: all 0.3s ease-in-out;
+  transform: translateX(0.5rem);
+}
+
+.popupRegisterButton img {
+  height: 1.1rem;
+  margin-left: 1rem;
+  transition: all 0.3s ease-in-out;
+}
+
+@media screen and (max-width: 1000px) {
+  .popupRegisterButton {
+    font-size: 1.1rem;
+    padding-inline: 1rem 1.5rem;
+    height: 2.5rem;
+    margin: 1rem 0 1.5rem 0;
+  }
+
+  .popupRegisterButton:hover img {
+    transform: translateX(0.25rem);
+  }
+
+  .popupRegisterButton img {
+    height: 0.75rem;
+    margin-left: 0.75rem;
+  }
+}

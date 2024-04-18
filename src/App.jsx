@@ -24,6 +24,7 @@ import HackathonHomePage from "./pages/Hackathon/HackathonHomePage/HackathonHome
 
 import RegistrationSuccess from "./pages/RegistrationSuccess/RegistrationSuccess";
 import ProblemStatementPage from "./pages/Hackathon/ProblemStatementPage/ProblemStatementPage";
+import ProblemStatementDashboard from "./pages/Hackathon/ProblemStatementDashboard/ProblemStatementDashboard";
 
 function App() {
   return (
@@ -171,6 +172,10 @@ function App() {
         <Route
           path="/hackathon3.0/problemStatements"
           element={<ProblemStatementPage />}
+        />
+        <Route
+          path="/hackathon3.0/jdfsdjgf73428"
+          element={<ProblemStatementDashboard />}
         />
       </Routes>
     </div>
