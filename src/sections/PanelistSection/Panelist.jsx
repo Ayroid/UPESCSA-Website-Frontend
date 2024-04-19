@@ -15,14 +15,14 @@ const {
 
 const Panelist = () => {
   const panel = [
-    {
-      img: "/panelist/vivekShridhar.png",
-      link: "https://www.linkedin.com/in/vivsridh/",
-      panelistName: "Vivek Sridhar",
-      panelistsDesignation: "CTO at Microsoft for Startups | Microsoft",
-      reverseOrder: true,
-      height: "250px",
-    },
+    // {
+    //   img: "/panelist/vivekShridhar.png",
+    //   link: "https://www.linkedin.com/in/vivsridh/",
+    //   panelistName: "Vivek Sridhar",
+    //   panelistsDesignation: "CTO at Microsoft for Startups | Microsoft",
+    //   reverseOrder: true,
+    //   height: "250px",
+    // },
     {
       img: "/panelist/maharshiBanerjee.png",
       link: "https://www.linkedin.com/in/maharshibanerjee/",
