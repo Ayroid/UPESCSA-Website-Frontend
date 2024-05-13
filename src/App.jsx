@@ -136,7 +136,7 @@ function App() {
           path="/evortal/hackersummit"
           element={<>      <Navbar /><HackerSummitRegistrationPage /></>}
         /> */}
-        <Route
+        {/* <Route
           path="/evortal/frenzypitch"
           element={
             <>
@@ -165,18 +165,18 @@ function App() {
               <Contact />
             </>
           }
-        />
+        /> */}
 
-        <Route path="/hackathon3.0/" element={<HackathonHomePage />} />
+        {/* <Route path="/hackathon3.0/" element={<HackathonHomePage />} /> */}
         {/* <Route path="/hackathon3.0/register" element={<RegistrationPage />} /> */}
-        <Route
+        {/* <Route
           path="/hackathon3.0/problemStatements"
           element={<ProblemStatementPage />}
         />
         <Route
           path="/hackathon3.0/jdfsdjgf73428"
           element={<ProblemStatementDashboard />}
-        />
+        /> */}
       </Routes>
     </div>
   );

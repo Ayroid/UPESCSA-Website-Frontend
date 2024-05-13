@@ -143,15 +143,15 @@ const Navbar = () => {
                 closeNavbar={displayNavBar}
               />
             ))}
-            <hr className={verticalLine} />
+            {/* <hr className={verticalLine} />
             <Navlinks
-              title={"Hackathon 3.0"}
-              action={"/hackathon3.0"}
+              title={"Evortal"}
+              action={"/evortal"}
               separatePage={true}
               closeNavbar={displayNavBar}
               textStyle={{ color: "gold" }}
             />
-            <hr className={mobileLine} />
+            <hr className={mobileLine} /> */}
           </ul>
           <div className={socialsDiv}>
             <Socials orientation={"row"} />
