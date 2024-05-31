@@ -20,10 +20,11 @@ import UltimateShowdownRegistrationPage from "./pages/EventRegistrationPage/Ulti
 import VirtualEscapeRoomRegistrationPage from "./pages/EventRegistrationPage/VirtualEscapeRoomRegistrationPage";
 
 import HackathonHomePage from "./pages/Hackathon/HackathonHomePage/HackathonHomePage";
-import RegistrationPage from "./pages/Hackathon/RegistrationPage/RegistrationPage";
+// import RegistrationPage from "./pages/Hackathon/RegistrationPage/RegistrationPage";
 
 import RegistrationSuccess from "./pages/RegistrationSuccess/RegistrationSuccess";
 import ProblemStatementPage from "./pages/Hackathon/ProblemStatementPage/ProblemStatementPage";
+import ProblemStatementDashboard from "./pages/Hackathon/ProblemStatementDashboard/ProblemStatementDashboard";
 
 function App() {
   return (
@@ -135,7 +136,7 @@ function App() {
           path="/evortal/hackersummit"
           element={<>      <Navbar /><HackerSummitRegistrationPage /></>}
         /> */}
-        <Route
+        {/* <Route
           path="/evortal/frenzypitch"
           element={
             <>
@@ -164,14 +165,18 @@ function App() {
               <Contact />
             </>
           }
-        />
+        /> */}
 
-        <Route path="/hackathon3.0/" element={<HackathonHomePage />} />
-        <Route path="/hackathon3.0/register" element={<RegistrationPage />} />
-        <Route
-          path="/hackathon3.0/sadj723h238"
+        {/* <Route path="/hackathon3.0/" element={<HackathonHomePage />} /> */}
+        {/* <Route path="/hackathon3.0/register" element={<RegistrationPage />} /> */}
+        {/* <Route
+          path="/hackathon3.0/problemStatements"
           element={<ProblemStatementPage />}
         />
+        <Route
+          path="/hackathon3.0/jdfsdjgf73428"
+          element={<ProblemStatementDashboard />}
+        /> */}
       </Routes>
     </div>
   );

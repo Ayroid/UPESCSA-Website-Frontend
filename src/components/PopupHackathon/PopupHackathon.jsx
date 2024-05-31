@@ -21,6 +21,7 @@ const PopupHackathon = ({
   statementDescription,
   statementFunctionalRequirement,
   statementNonFunctionalRequirement,
+  statementActive,
   eventFormURL,
   closePopup,
 }) => {
@@ -31,7 +32,14 @@ const PopupHackathon = ({
           <p className={problemStatementMetaData}>
             <span>Problem Statement ID:</span> {statementID}
           </p>
-          <h4 className={popupHeading}>{statementTitle}</h4>
+          <h4
+            className={popupHeading}
+            style={{
+              color: statementActive ? "inherit" : "red",
+            }}
+          >
+            {statementTitle}
+          </h4>
           {statementOrganisation && (
             <p className={problemStatementMetaData}>
               <span>Organization:</span> {statementOrganisation}
@@ -64,15 +72,21 @@ const PopupHackathon = ({
               ))}
             </div>
           )}
-          <a
-            href={eventFormURL}
-            className={popupRegisterButton}
-            target="_blank"
-            rel="noreferrer"
-          >
-            <p>Select Problem Statement</p>
-            <img loading="lazy" src="/icons/rightArrow.png" alt="arrow" />
-          </a>
+          {statementActive ? (
+            <a
+              href={eventFormURL}
+              className={popupRegisterButton}
+              target="_blank"
+              rel="noreferrer"
+            >
+              <p>Select Problem Statement</p>
+              <img loading="lazy" src="/icons/rightArrow.png" alt="arrow" />
+            </a>
+          ) : (
+            <div className={popupRegisterButton}>
+              <p>Problem Statement Unavailable</p>
+            </div>
+          )}
         </div>
         <div className={popupCloseButton} onClick={closePopup}>
           <img loading="lazy" src="/icons/hamburgercross.png" alt="cross" />
@@ -90,6 +104,7 @@ PopupHackathon.propTypes = {
   statementDescription: Proptypes.string.isRequired,
   statementFunctionalRequirement: Proptypes.array,
   statementNonFunctionalRequirement: Proptypes.array,
+  statementActive: Proptypes.bool.isRequired,
   eventFormURL: Proptypes.string.isRequired,
   closePopup: Proptypes.func.isRequired,
 };

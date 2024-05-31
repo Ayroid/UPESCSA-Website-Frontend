@@ -6,7 +6,7 @@
   justify-content: center;
   height: 100dvh;
   width: 100dvw;
-  background-color: #fff;
+  background-color: transparent;
 }
 
 @keyframes loadingAnimation {
@@ -47,7 +47,7 @@
   height: 200px;
   display: inline-block;
   overflow: hidden;
-  background: #ffffff;
+  background: transparent;
 }
 .loadingInner {
   width: 100%;
