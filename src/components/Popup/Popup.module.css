@@ -9,9 +9,11 @@
   0% {
     scale: 0.5;
   }
+
   50% {
     scale: 1.1;
   }
+
   100% {
     scale: 1;
   }
@@ -59,7 +61,7 @@
 .popupRegisterButton {
   background-color: var(--bgLight);
   color: var(--textDark);
-  font-size: 1.5rem;
+  font-size: 1.35rem;
   padding-inline: 2rem 3rem;
   height: 3.5rem;
   display: flex;
